@@ -1,9 +1,0 @@
-program MJProgram
-
-	class Test(){
-		char x,y;
-	{
-		void main(){
-		}
-	}
-}
