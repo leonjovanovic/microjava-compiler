@@ -1,7 +1,8 @@
 
 terminal PROG, IDENT, LBRACE, RBRACE, CONST, SEMI, COMMA, EQUAL, NUMBER, CHAR, BOOL;
 terminal ENUM, LBRACKET, RBRACKET, VOID, LPAREN, RPAREN, IF, ELSE, FOR, BREAK, CONTINUE;
-terminal RETURN, READ, PRINT, INC, DEC, OR, AND, MINUS, NEW;
+terminal RETURN, READ, PRINT, INC, DEC, OR, AND, MINUS, NEW, EQUALS, DIFFERENT, MORE;
+terminal MOREEQUAL, LESS, LESSEQUAL, PLUS, MULTIPLY, DIVIDE, MOD;
 
 nonterminal Program,DeclList, MethodDeclList;
 nonterminal Decl, ConstDecl, VarDecl, ClassDecl, EnumDecl;
@@ -10,7 +11,7 @@ nonterminal VarList, Var, ClassPart, MethodDecl, FormPars, FormParamList;
 nonterminal Form, Type, Statement, StatementList, DesignatorStatement; 
 nonterminal Expr, Designator, DesignatorList, Assignop, ActPars;
 nonterminal ActParsList, CondTerm, CondTermList, CondFact, Addop, ExprList, Factor, Term;
-nonterminal ConditionList, Condition, TermList;
+nonterminal ConditionList, Condition, TermList, Assignop, Relop, Addop, Mulop;
 
 Program::= (Program) PROG IDENT DeclList LBRACE MethodDeclList RBRACE;
 
