@@ -1,0 +1,120 @@
+INFO  04:42:25,986 - Compiling source file: D:\Users\Leon\Desktop\Projekti\ProgramskiPrevodioci\MJCompiler\test\program.mj
+INFO  04:42:26,034 - #2 program
+INFO  04:42:26,034 - #42 MJProgram
+INFO  04:42:26,034 - #42 int
+INFO  04:42:26,035 - #42 x
+INFO  04:42:26,035 - #7 ,
+INFO  04:42:26,036 - #42 y
+INFO  04:42:26,036 - #6 ;
+INFO  04:42:26,036 - #42 int
+INFO  04:42:26,037 - #42 s
+INFO  04:42:26,037 - #7 ,
+INFO  04:42:26,037 - #42 g
+INFO  04:42:26,037 - #6 ;
+INFO  04:42:26,037 - #10 enum
+INFO  04:42:26,038 - #42 Num
+INFO  04:42:26,038 - #3 {
+INFO  04:42:26,038 - #42 ZERO
+INFO  04:42:26,038 - #7 ,
+INFO  04:42:26,038 - #42 ONE
+INFO  04:42:26,038 - #7 ,
+INFO  04:42:26,039 - #42 TEN
+INFO  04:42:26,039 - #8 =
+INFO  04:42:26,040 - #41 10
+INFO  04:42:26,040 - #4 }
+INFO  04:42:26,040 - #5 const
+INFO  04:42:26,040 - #42 int
+INFO  04:42:26,040 - #42 size
+INFO  04:42:26,040 - #8 =
+INFO  04:42:26,040 - #41 10
+INFO  04:42:26,041 - #6 ;
+INFO  04:42:26,041 - #3 {
+INFO  04:42:26,042 - #4 }
+INFO  04:42:26,043 - ProgramID(
+ MJProgram
+  Declarations(
+    Declarations(
+      Declarations(
+        Declarations(
+          NoDeclList(
+          ) [NoDeclList]
+          Declarations2(
+            VarDeclaration(
+              Types(
+               int
+              ) [Types]
+              VarListComma(
+                VarListNoComma(
+                  VarNoBrackets(
+                   x
+                  ) [VarNoBrackets]
+                ) [VarListNoComma]
+                VarNoBrackets(
+                 y
+                ) [VarNoBrackets]
+              ) [VarListComma]
+            ) [VarDeclaration]
+          ) [Declarations2]
+        ) [Declarations]
+        Declarations2(
+          VarDeclaration(
+            Types(
+             int
+            ) [Types]
+            VarListComma(
+              VarListNoComma(
+                VarNoBrackets(
+                 s
+                ) [VarNoBrackets]
+              ) [VarListNoComma]
+              VarNoBrackets(
+               g
+              ) [VarNoBrackets]
+            ) [VarListComma]
+          ) [VarDeclaration]
+        ) [Declarations2]
+      ) [Declarations]
+      Declarations4(
+        EnumDeclaration(
+         Num
+          EnumListComma(
+            EnumListComma(
+              EnumNoComma(
+                EnumNoNum(
+                 ZERO
+                ) [EnumNoNum]
+              ) [EnumNoComma]
+              EnumNoNum(
+               ONE
+              ) [EnumNoNum]
+            ) [EnumListComma]
+            EnumNum(
+             TEN
+             10
+            ) [EnumNum]
+          ) [EnumListComma]
+        ) [EnumDeclaration]
+      ) [Declarations4]
+    ) [Declarations]
+    Declarations1(
+      ConstantsDecl(
+        Types(
+         int
+        ) [Types]
+        ConstantsListNoComma(
+          ConstantsPart(
+           size
+            ConstNumber(
+             10
+            ) [ConstNumber]
+          ) [ConstantsPart]
+        ) [ConstantsListNoComma]
+      ) [ConstantsDecl]
+    ) [Declarations1]
+  ) [Declarations]
+  NoMethodDeclaration(
+  ) [NoMethodDeclaration]
+) [ProgramID]
+INFO  04:42:26,043 - ===================================
+INFO  04:42:26,046 -  Print count calls = 0
+INFO  04:42:26,046 -  Deklarisanih promenljivih ima = 0

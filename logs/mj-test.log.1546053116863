@@ -1,0 +1,46 @@
+INFO  04:10:54,634 - Compiling source file: D:\Users\Leon\Desktop\Projekti\ProgramskiPrevodioci\MJCompiler\test\program.mj
+INFO  04:10:54,679 - #2 program
+INFO  04:10:54,679 - #42 MJProgram
+INFO  04:10:54,679 - #42 int
+INFO  04:10:54,679 - #42 x
+INFO  04:10:54,680 - #7 ,
+INFO  04:10:54,680 - #42 y
+INFO  04:10:54,680 - #6 ;
+INFO  04:10:54,680 - #10 enum
+INFO  04:10:54,680 - #42 Num
+INFO  04:10:54,680 - #3 {
+INFO  04:10:54,681 - #42 ZERO
+INFO  04:10:54,681 - #7 ,
+INFO  04:10:54,681 - #42 ONE
+INFO  04:10:54,681 - #7 ,
+INFO  04:10:54,681 - #42 TEN
+INFO  04:10:54,681 - #8 =
+INFO  04:10:54,681 - #41 10
+INFO  04:10:54,681 - #4 }
+INFO  04:10:54,681 - #5 const
+INFO  04:10:54,682 - #42 int
+INFO  04:10:54,682 - #42 size
+INFO  04:10:54,682 - #8 =
+INFO  04:10:54,682 - #41 10
+INFO  04:10:54,682 - #6 ;
+INFO  04:10:54,683 - #9 class
+INFO  04:10:54,683 - #42 Table
+INFO  04:10:54,683 - #3 {
+INFO  04:10:54,683 - #42 int
+INFO  04:10:54,683 - #42 pos
+INFO  04:10:54,683 - #11 [
+INFO  04:10:54,683 - #12 ]
+INFO  04:10:54,683 - #7 ,
+INFO  04:10:54,683 - #42 neg
+INFO  04:10:54,683 - #11 [
+INFO  04:10:54,684 - #12 ]
+INFO  04:10:54,684 - #6 ;
+INFO  04:10:54,684 - #3 {
+INFO  04:10:54,684 - #13 void
+INFO  04:10:54,684 - #42 putp
+INFO  04:10:54,684 - #14 (
+INFO  04:10:54,684 - #15 )
+INFO  04:10:54,685 - #3 {
+ERROR 04:10:54,685 - 
+Sintaksna greska na liniji 8
+ERROR 04:10:54,685 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 8

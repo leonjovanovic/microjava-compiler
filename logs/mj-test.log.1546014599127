@@ -1,0 +1,22 @@
+INFO  16:54:00,522 - Compiling source file: D:\Users\Leon\Desktop\Projekti\ProgramskiPrevodioci\MJCompiler\test\program.mj
+INFO  16:54:00,528 - #1 program
+INFO  16:54:00,528 - #17 MJProgram
+INFO  16:54:00,528 - #3 class
+INFO  16:54:00,528 - #17 Test
+INFO  16:54:00,528 - #40 (
+INFO  16:54:00,528 - #41 )
+INFO  16:54:00,528 - #44 {
+INFO  16:54:00,528 - #17 char
+INFO  16:54:00,528 - #17 x
+INFO  16:54:00,528 - #38 ,
+INFO  16:54:00,528 - #17 y
+INFO  16:54:00,528 - #37 ;
+INFO  16:54:00,528 - #44 {
+INFO  16:54:00,528 - #13 void
+INFO  16:54:00,528 - #17 main
+INFO  16:54:00,528 - #40 (
+INFO  16:54:00,528 - #41 )
+INFO  16:54:00,528 - #44 {
+INFO  16:54:00,528 - #45 }
+INFO  16:54:00,528 - #45 }
+INFO  16:54:00,528 - #45 }

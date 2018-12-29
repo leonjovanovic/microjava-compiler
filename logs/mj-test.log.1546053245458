@@ -1,0 +1,29 @@
+INFO  04:12:47,295 - Compiling source file: D:\Users\Leon\Desktop\Projekti\ProgramskiPrevodioci\MJCompiler\test\program.mj
+INFO  04:12:47,341 - #2 program
+INFO  04:12:47,341 - #42 MJProgram
+INFO  04:12:47,341 - #42 int
+INFO  04:12:47,342 - #42 x
+INFO  04:12:47,342 - #7 ,
+INFO  04:12:47,342 - #42 y
+INFO  04:12:47,342 - #6 ;
+INFO  04:12:47,342 - #10 enum
+INFO  04:12:47,343 - #42 Num
+INFO  04:12:47,343 - #3 {
+INFO  04:12:47,343 - #42 ZERO
+INFO  04:12:47,343 - #7 ,
+INFO  04:12:47,343 - #42 ONE
+INFO  04:12:47,343 - #7 ,
+INFO  04:12:47,343 - #42 TEN
+INFO  04:12:47,343 - #8 =
+INFO  04:12:47,343 - #41 10
+INFO  04:12:47,343 - #4 }
+INFO  04:12:47,344 - #5 const
+INFO  04:12:47,344 - #42 int
+INFO  04:12:47,344 - #42 size
+INFO  04:12:47,344 - #8 =
+INFO  04:12:47,344 - #41 10
+INFO  04:12:47,344 - #6 ;
+INFO  04:12:47,345 - #13 void
+ERROR 04:12:47,345 - 
+Sintaksna greska na liniji 5
+ERROR 04:12:47,345 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 5

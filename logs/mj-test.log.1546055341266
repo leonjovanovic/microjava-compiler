@@ -1,0 +1,228 @@
+INFO  04:47:23,477 - Compiling source file: D:\Users\Leon\Desktop\Projekti\ProgramskiPrevodioci\MJCompiler\test\program.mj
+INFO  04:47:23,522 - #2 program
+INFO  04:47:23,523 - #42 MJProgram
+INFO  04:47:23,523 - #42 int
+INFO  04:47:23,523 - #42 x
+INFO  04:47:23,523 - #7 ,
+INFO  04:47:23,524 - #42 y
+INFO  04:47:23,524 - #6 ;
+INFO  04:47:23,524 - #42 int
+INFO  04:47:23,524 - #42 s
+INFO  04:47:23,524 - #7 ,
+INFO  04:47:23,524 - #42 g
+INFO  04:47:23,524 - #6 ;
+INFO  04:47:23,524 - #10 enum
+INFO  04:47:23,525 - #42 Num
+INFO  04:47:23,525 - #3 {
+INFO  04:47:23,525 - #42 ZERO
+INFO  04:47:23,525 - #7 ,
+INFO  04:47:23,525 - #42 ONE
+INFO  04:47:23,525 - #7 ,
+INFO  04:47:23,525 - #42 TEN
+INFO  04:47:23,525 - #8 =
+INFO  04:47:23,526 - #41 10
+INFO  04:47:23,526 - #4 }
+INFO  04:47:23,526 - #5 const
+INFO  04:47:23,526 - #42 int
+INFO  04:47:23,527 - #42 size
+INFO  04:47:23,527 - #8 =
+INFO  04:47:23,527 - #41 10
+INFO  04:47:23,527 - #6 ;
+INFO  04:47:23,527 - #3 {
+INFO  04:47:23,527 - #13 void
+INFO  04:47:23,528 - #42 main
+INFO  04:47:23,528 - #14 (
+INFO  04:47:23,528 - #15 )
+INFO  04:47:23,528 - #42 int
+INFO  04:47:23,528 - #42 f
+INFO  04:47:23,529 - #6 ;
+INFO  04:47:23,529 - #42 int
+INFO  04:47:23,529 - #42 p
+INFO  04:47:23,529 - #6 ;
+INFO  04:47:23,529 - #3 {
+INFO  04:47:23,529 - #42 this
+INFO  04:47:23,530 - #40 .
+INFO  04:47:23,530 - #42 pos
+INFO  04:47:23,530 - #11 [
+INFO  04:47:23,530 - #42 idx
+INFO  04:47:23,530 - #12 ]
+INFO  04:47:23,531 - #8 =
+INFO  04:47:23,531 - #42 a
+INFO  04:47:23,532 - #6 ;
+INFO  04:47:23,532 - #4 }
+INFO  04:47:23,532 - #4 }
+INFO  04:47:23,534 - ProgramID(
+ MJProgram
+  Declarations(
+    Declarations(
+      Declarations(
+        Declarations(
+          NoDeclList(
+          ) [NoDeclList]
+          Declarations2(
+            VarDeclaration(
+              Types(
+               int
+              ) [Types]
+              VarListComma(
+                VarListNoComma(
+                  VarNoBrackets(
+                   x
+                  ) [VarNoBrackets]
+                ) [VarListNoComma]
+                VarNoBrackets(
+                 y
+                ) [VarNoBrackets]
+              ) [VarListComma]
+            ) [VarDeclaration]
+          ) [Declarations2]
+        ) [Declarations]
+        Declarations2(
+          VarDeclaration(
+            Types(
+             int
+            ) [Types]
+            VarListComma(
+              VarListNoComma(
+                VarNoBrackets(
+                 s
+                ) [VarNoBrackets]
+              ) [VarListNoComma]
+              VarNoBrackets(
+               g
+              ) [VarNoBrackets]
+            ) [VarListComma]
+          ) [VarDeclaration]
+        ) [Declarations2]
+      ) [Declarations]
+      Declarations4(
+        EnumDeclaration(
+         Num
+          EnumListComma(
+            EnumListComma(
+              EnumNoComma(
+                EnumNoNum(
+                 ZERO
+                ) [EnumNoNum]
+              ) [EnumNoComma]
+              EnumNoNum(
+               ONE
+              ) [EnumNoNum]
+            ) [EnumListComma]
+            EnumNum(
+             TEN
+             10
+            ) [EnumNum]
+          ) [EnumListComma]
+        ) [EnumDeclaration]
+      ) [Declarations4]
+    ) [Declarations]
+    Declarations1(
+      ConstantsDecl(
+        Types(
+         int
+        ) [Types]
+        ConstantsListNoComma(
+          ConstantsPart(
+           size
+            ConstNumber(
+             10
+            ) [ConstNumber]
+          ) [ConstantsPart]
+        ) [ConstantsListNoComma]
+      ) [ConstantsDecl]
+    ) [Declarations1]
+  ) [Declarations]
+  MethodDeclarationList(
+    NoMethodDeclaration(
+    ) [NoMethodDeclaration]
+    MethodDeclarationVoid(
+     main
+      NoFormParsList(
+      ) [NoFormParsList]
+      MethodVarDecl(
+        MethodVarDecl(
+          NoMethodVarDecl(
+          ) [NoMethodVarDecl]
+          VarDeclaration(
+            Types(
+             int
+            ) [Types]
+            VarListNoComma(
+              VarNoBrackets(
+               f
+              ) [VarNoBrackets]
+            ) [VarListNoComma]
+          ) [VarDeclaration]
+        ) [MethodVarDecl]
+        VarDeclaration(
+          Types(
+           int
+          ) [Types]
+          VarListNoComma(
+            VarNoBrackets(
+             p
+            ) [VarNoBrackets]
+          ) [VarListNoComma]
+        ) [VarDeclaration]
+      ) [MethodVarDecl]
+      StatementLists(
+        NoStatements(
+        ) [NoStatements]
+        StatementMatched(
+          MatchedDesignator(
+            DesigStatement(
+              Designators(
+                DesignatorListExpr(
+                  DesignatorListDot(
+                    DesignatorListID(
+                     this
+                    ) [DesignatorListID]
+                   pos
+                  ) [DesignatorListDot]
+                  ExprNoMinus(
+                    ExprTermNoAddop(
+                      Terms(
+                        TermListNoMulop(
+                          FactorDesignator(
+                            Designators(
+                              DesignatorListID(
+                               idx
+                              ) [DesignatorListID]
+                            ) [Designators]
+                          ) [FactorDesignator]
+                        ) [TermListNoMulop]
+                      ) [Terms]
+                    ) [ExprTermNoAddop]
+                  ) [ExprNoMinus]
+                ) [DesignatorListExpr]
+              ) [Designators]
+              DesignatorPart1(
+                AssignopEq(
+                ) [AssignopEq]
+                ExprNoMinus(
+                  ExprTermNoAddop(
+                    Terms(
+                      TermListNoMulop(
+                        FactorDesignator(
+                          Designators(
+                            DesignatorListID(
+                             a
+                            ) [DesignatorListID]
+                          ) [Designators]
+                        ) [FactorDesignator]
+                      ) [TermListNoMulop]
+                    ) [Terms]
+                  ) [ExprTermNoAddop]
+                ) [ExprNoMinus]
+              ) [DesignatorPart1]
+            ) [DesigStatement]
+          ) [MatchedDesignator]
+        ) [StatementMatched]
+      ) [StatementLists]
+    ) [MethodDeclarationVoid]
+  ) [MethodDeclarationList]
+) [ProgramID]
+INFO  04:47:23,534 - ===================================
+INFO  04:47:23,536 -  Print count calls = 0
+INFO  04:47:23,536 -  Deklarisanih promenljivih ima = 0

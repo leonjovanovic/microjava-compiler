@@ -1,0 +1,42 @@
+INFO  04:45:11,331 - Compiling source file: D:\Users\Leon\Desktop\Projekti\ProgramskiPrevodioci\MJCompiler\test\program.mj
+INFO  04:45:11,380 - #2 program
+INFO  04:45:11,380 - #42 MJProgram
+INFO  04:45:11,380 - #42 int
+INFO  04:45:11,380 - #42 x
+INFO  04:45:11,381 - #7 ,
+INFO  04:45:11,381 - #42 y
+INFO  04:45:11,381 - #6 ;
+INFO  04:45:11,381 - #42 int
+INFO  04:45:11,381 - #42 s
+INFO  04:45:11,381 - #7 ,
+INFO  04:45:11,382 - #42 g
+INFO  04:45:11,382 - #6 ;
+INFO  04:45:11,382 - #10 enum
+INFO  04:45:11,382 - #42 Num
+INFO  04:45:11,382 - #3 {
+INFO  04:45:11,382 - #42 ZERO
+INFO  04:45:11,382 - #7 ,
+INFO  04:45:11,382 - #42 ONE
+INFO  04:45:11,382 - #7 ,
+INFO  04:45:11,383 - #42 TEN
+INFO  04:45:11,383 - #8 =
+INFO  04:45:11,383 - #41 10
+INFO  04:45:11,383 - #4 }
+INFO  04:45:11,384 - #5 const
+INFO  04:45:11,384 - #42 int
+INFO  04:45:11,384 - #42 size
+INFO  04:45:11,384 - #8 =
+INFO  04:45:11,384 - #41 10
+INFO  04:45:11,384 - #6 ;
+INFO  04:45:11,384 - #3 {
+INFO  04:45:11,385 - #13 void
+INFO  04:45:11,385 - #42 main
+INFO  04:45:11,385 - #14 (
+INFO  04:45:11,385 - #15 )
+INFO  04:45:11,386 - #42 int
+INFO  04:45:11,386 - #42 f
+INFO  04:45:11,386 - #6 ;
+INFO  04:45:11,386 - #42 int
+ERROR 04:45:11,386 - 
+Sintaksna greska na liniji 10
+ERROR 04:45:11,387 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 10

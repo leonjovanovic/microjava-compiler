@@ -1,0 +1,41 @@
+INFO  03:06:57,573 - Compiling source file: D:\Users\Leon\Desktop\Projekti\ProgramskiPrevodioci\MJCompiler\test\program.mj
+INFO  03:06:57,624 - #2 program
+INFO  03:06:57,624 - #42 MJProgram
+INFO  03:06:57,624 - #42 int
+INFO  03:06:57,625 - #42 x
+INFO  03:06:57,625 - #7 ,
+INFO  03:06:57,625 - #42 y
+INFO  03:06:57,625 - #6 ;
+INFO  03:06:57,625 - #10 enum
+INFO  03:06:57,626 - #42 Num
+INFO  03:06:57,626 - #3 {
+INFO  03:06:57,626 - #42 ZERO
+INFO  03:06:57,626 - #7 ,
+INFO  03:06:57,626 - #42 ONE
+INFO  03:06:57,626 - #7 ,
+INFO  03:06:57,626 - #42 TEN
+INFO  03:06:57,627 - #8 =
+INFO  03:06:57,627 - #41 10
+INFO  03:06:57,627 - #4 }
+INFO  03:06:57,627 - #5 const
+INFO  03:06:57,627 - #42 int
+INFO  03:06:57,627 - #42 size
+INFO  03:06:57,628 - #8 =
+INFO  03:06:57,628 - #41 10
+INFO  03:06:57,628 - #6 ;
+INFO  03:06:57,628 - #9 class
+INFO  03:06:57,628 - #42 Table
+INFO  03:06:57,629 - #3 {
+INFO  03:06:57,629 - #42 int
+INFO  03:06:57,629 - #42 pos
+INFO  03:06:57,629 - #11 [
+INFO  03:06:57,629 - #12 ]
+INFO  03:06:57,629 - #7 ,
+INFO  03:06:57,629 - #42 neg
+INFO  03:06:57,629 - #11 [
+INFO  03:06:57,629 - #12 ]
+INFO  03:06:57,629 - #6 ;
+INFO  03:06:57,629 - #3 {
+ERROR 03:06:57,629 - 
+Sintaksna greska na liniji 7
+ERROR 03:06:57,629 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 7

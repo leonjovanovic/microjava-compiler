@@ -1,0 +1,39 @@
+INFO  04:46:18,931 - Compiling source file: D:\Users\Leon\Desktop\Projekti\ProgramskiPrevodioci\MJCompiler\test\program.mj
+INFO  04:46:18,976 - #2 program
+INFO  04:46:18,976 - #42 MJProgram
+INFO  04:46:18,976 - #42 int
+INFO  04:46:18,976 - #42 x
+INFO  04:46:18,976 - #7 ,
+INFO  04:46:18,977 - #42 y
+INFO  04:46:18,977 - #6 ;
+INFO  04:46:18,977 - #42 int
+INFO  04:46:18,977 - #42 s
+INFO  04:46:18,977 - #7 ,
+INFO  04:46:18,977 - #42 g
+INFO  04:46:18,977 - #6 ;
+INFO  04:46:18,978 - #10 enum
+INFO  04:46:18,978 - #42 Num
+INFO  04:46:18,978 - #3 {
+INFO  04:46:18,978 - #42 ZERO
+INFO  04:46:18,978 - #7 ,
+INFO  04:46:18,978 - #42 ONE
+INFO  04:46:18,978 - #7 ,
+INFO  04:46:18,979 - #42 TEN
+INFO  04:46:18,979 - #8 =
+INFO  04:46:18,979 - #41 10
+INFO  04:46:18,979 - #4 }
+INFO  04:46:18,979 - #5 const
+INFO  04:46:18,980 - #42 int
+INFO  04:46:18,980 - #42 size
+INFO  04:46:18,980 - #8 =
+INFO  04:46:18,980 - #41 10
+INFO  04:46:18,980 - #6 ;
+INFO  04:46:18,980 - #3 {
+INFO  04:46:18,981 - #13 void
+INFO  04:46:18,981 - #42 main
+INFO  04:46:18,981 - #14 (
+INFO  04:46:18,981 - #15 )
+INFO  04:46:18,982 - #3 {
+ERROR 04:46:18,982 - 
+Sintaksna greska na liniji 9
+ERROR 04:46:18,982 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 9

@@ -1,0 +1,584 @@
+INFO  04:49:07,835 - Compiling source file: D:\Users\Leon\Desktop\Projekti\ProgramskiPrevodioci\MJCompiler\test\program.mj
+INFO  04:49:07,882 - #2 program
+INFO  04:49:07,882 - #42 MJProgram
+INFO  04:49:07,882 - #5 const
+INFO  04:49:07,883 - #42 int
+INFO  04:49:07,883 - #42 size
+INFO  04:49:07,883 - #8 =
+INFO  04:49:07,883 - #41 10
+INFO  04:49:07,883 - #6 ;
+INFO  04:49:07,883 - #10 enum
+INFO  04:49:07,884 - #42 Num
+INFO  04:49:07,884 - #3 {
+INFO  04:49:07,884 - #42 ZERO
+INFO  04:49:07,884 - #7 ,
+INFO  04:49:07,884 - #42 ONE
+INFO  04:49:07,884 - #7 ,
+INFO  04:49:07,884 - #42 TEN
+INFO  04:49:07,884 - #8 =
+INFO  04:49:07,884 - #41 10
+INFO  04:49:07,885 - #4 }
+INFO  04:49:07,885 - #9 class
+INFO  04:49:07,885 - #42 Table
+INFO  04:49:07,885 - #3 {
+INFO  04:49:07,885 - #42 int
+INFO  04:49:07,886 - #42 pos
+INFO  04:49:07,886 - #11 [
+INFO  04:49:07,886 - #12 ]
+INFO  04:49:07,886 - #7 ,
+INFO  04:49:07,886 - #42 neg
+INFO  04:49:07,886 - #11 [
+INFO  04:49:07,886 - #12 ]
+INFO  04:49:07,886 - #6 ;
+INFO  04:49:07,886 - #3 {
+INFO  04:49:07,886 - #13 void
+INFO  04:49:07,887 - #42 putp
+INFO  04:49:07,887 - #14 (
+INFO  04:49:07,887 - #42 int
+INFO  04:49:07,887 - #42 a
+INFO  04:49:07,887 - #7 ,
+INFO  04:49:07,887 - #42 int
+INFO  04:49:07,888 - #42 idx
+INFO  04:49:07,888 - #15 )
+INFO  04:49:07,888 - #3 {
+INFO  04:49:07,888 - #42 this
+INFO  04:49:07,889 - #40 .
+INFO  04:49:07,889 - #42 pos
+INFO  04:49:07,889 - #11 [
+INFO  04:49:07,889 - #42 idx
+INFO  04:49:07,889 - #12 ]
+INFO  04:49:07,890 - #8 =
+INFO  04:49:07,890 - #42 a
+INFO  04:49:07,891 - #6 ;
+INFO  04:49:07,892 - #4 }
+INFO  04:49:07,892 - #13 void
+INFO  04:49:07,892 - #42 putn
+INFO  04:49:07,893 - #14 (
+INFO  04:49:07,893 - #42 int
+INFO  04:49:07,893 - #42 a
+INFO  04:49:07,893 - #7 ,
+INFO  04:49:07,893 - #42 int
+INFO  04:49:07,893 - #42 idx
+INFO  04:49:07,894 - #15 )
+INFO  04:49:07,894 - #3 {
+INFO  04:49:07,894 - #42 this
+INFO  04:49:07,894 - #40 .
+INFO  04:49:07,895 - #42 neg
+INFO  04:49:07,895 - #11 [
+INFO  04:49:07,895 - #42 idx
+INFO  04:49:07,895 - #12 ]
+INFO  04:49:07,895 - #8 =
+INFO  04:49:07,895 - #42 a
+INFO  04:49:07,895 - #6 ;
+INFO  04:49:07,895 - #4 }
+INFO  04:49:07,895 - #42 int
+INFO  04:49:07,895 - #42 getp
+INFO  04:49:07,895 - #14 (
+INFO  04:49:07,895 - #42 int
+INFO  04:49:07,895 - #42 idx
+INFO  04:49:07,895 - #15 )
+INFO  04:49:07,895 - #3 {
+INFO  04:49:07,895 - #21 return
+INFO  04:49:07,895 - #42 pos
+INFO  04:49:07,896 - #11 [
+INFO  04:49:07,896 - #42 idx
+INFO  04:49:07,896 - #12 ]
+INFO  04:49:07,896 - #6 ;
+INFO  04:49:07,896 - #4 }
+INFO  04:49:07,896 - #42 int
+INFO  04:49:07,896 - #42 getn
+INFO  04:49:07,896 - #14 (
+INFO  04:49:07,896 - #42 int
+INFO  04:49:07,896 - #42 idx
+INFO  04:49:07,896 - #15 )
+INFO  04:49:07,896 - #3 {
+INFO  04:49:07,896 - #21 return
+INFO  04:49:07,897 - #42 neg
+INFO  04:49:07,897 - #11 [
+INFO  04:49:07,897 - #42 idx
+INFO  04:49:07,897 - #12 ]
+INFO  04:49:07,897 - #6 ;
+INFO  04:49:07,897 - #4 }
+INFO  04:49:07,897 - #4 }
+INFO  04:49:07,897 - #4 }
+INFO  04:49:07,897 - #42 Table
+INFO  04:49:07,898 - #42 val
+INFO  04:49:07,898 - #6 ;
+INFO  04:49:07,898 - #3 {
+INFO  04:49:07,898 - #13 void
+INFO  04:49:07,898 - #42 main
+INFO  04:49:07,898 - #14 (
+INFO  04:49:07,898 - #15 )
+INFO  04:49:07,899 - #42 int
+INFO  04:49:07,899 - #42 f
+INFO  04:49:07,899 - #6 ;
+INFO  04:49:07,899 - #42 int
+INFO  04:49:07,899 - #42 p
+INFO  04:49:07,899 - #6 ;
+INFO  04:49:07,899 - #3 {
+INFO  04:49:07,899 - #42 this
+INFO  04:49:07,899 - #40 .
+INFO  04:49:07,899 - #42 pos
+INFO  04:49:07,899 - #11 [
+INFO  04:49:07,899 - #42 idx
+INFO  04:49:07,899 - #12 ]
+INFO  04:49:07,899 - #8 =
+INFO  04:49:07,900 - #42 a
+INFO  04:49:07,900 - #6 ;
+INFO  04:49:07,900 - #4 }
+INFO  04:49:07,900 - #4 }
+INFO  04:49:07,902 - ProgramID(
+ MJProgram
+  Declarations(
+    Declarations(
+      Declarations(
+        Declarations(
+          NoDeclList(
+          ) [NoDeclList]
+          Declarations1(
+            ConstantsDecl(
+              Types(
+               int
+              ) [Types]
+              ConstantsListNoComma(
+                ConstantsPart(
+                 size
+                  ConstNumber(
+                   10
+                  ) [ConstNumber]
+                ) [ConstantsPart]
+              ) [ConstantsListNoComma]
+            ) [ConstantsDecl]
+          ) [Declarations1]
+        ) [Declarations]
+        Declarations4(
+          EnumDeclaration(
+           Num
+            EnumListComma(
+              EnumListComma(
+                EnumNoComma(
+                  EnumNoNum(
+                   ZERO
+                  ) [EnumNoNum]
+                ) [EnumNoComma]
+                EnumNoNum(
+                 ONE
+                ) [EnumNoNum]
+              ) [EnumListComma]
+              EnumNum(
+               TEN
+               10
+              ) [EnumNum]
+            ) [EnumListComma]
+          ) [EnumDeclaration]
+        ) [Declarations4]
+      ) [Declarations]
+      Declarations3(
+        ClassDeclaration(
+         Table
+          VarDeclaration(
+            Types(
+             int
+            ) [Types]
+            VarListComma(
+              VarListNoComma(
+                VarBrackets(
+                 pos
+                ) [VarBrackets]
+              ) [VarListNoComma]
+              VarBrackets(
+               neg
+              ) [VarBrackets]
+            ) [VarListComma]
+          ) [VarDeclaration]
+          ClassPartMethod(
+            MethodDeclarationList(
+              MethodDeclarationList(
+                MethodDeclarationList(
+                  MethodDeclarationList(
+                    NoMethodDeclaration(
+                    ) [NoMethodDeclaration]
+                    MethodDeclarationVoid(
+                     putp
+                      FormParameters(
+                        FormParametersList(
+                          FormParametersListSingle(
+                            FormNoBrackets(
+                              Types(
+                               int
+                              ) [Types]
+                             a
+                            ) [FormNoBrackets]
+                          ) [FormParametersListSingle]
+                          FormNoBrackets(
+                            Types(
+                             int
+                            ) [Types]
+                           idx
+                          ) [FormNoBrackets]
+                        ) [FormParametersList]
+                      ) [FormParameters]
+                      NoMethodVarDecl(
+                      ) [NoMethodVarDecl]
+                      StatementLists(
+                        NoStatements(
+                        ) [NoStatements]
+                        StatementMatched(
+                          MatchedDesignator(
+                            DesigStatement(
+                              Designators(
+                                DesignatorListExpr(
+                                  DesignatorListDot(
+                                    DesignatorListID(
+                                     this
+                                    ) [DesignatorListID]
+                                   pos
+                                  ) [DesignatorListDot]
+                                  ExprNoMinus(
+                                    ExprTermNoAddop(
+                                      Terms(
+                                        TermListNoMulop(
+                                          FactorDesignator(
+                                            Designators(
+                                              DesignatorListID(
+                                               idx
+                                              ) [DesignatorListID]
+                                            ) [Designators]
+                                          ) [FactorDesignator]
+                                        ) [TermListNoMulop]
+                                      ) [Terms]
+                                    ) [ExprTermNoAddop]
+                                  ) [ExprNoMinus]
+                                ) [DesignatorListExpr]
+                              ) [Designators]
+                              DesignatorPart1(
+                                AssignopEq(
+                                ) [AssignopEq]
+                                ExprNoMinus(
+                                  ExprTermNoAddop(
+                                    Terms(
+                                      TermListNoMulop(
+                                        FactorDesignator(
+                                          Designators(
+                                            DesignatorListID(
+                                             a
+                                            ) [DesignatorListID]
+                                          ) [Designators]
+                                        ) [FactorDesignator]
+                                      ) [TermListNoMulop]
+                                    ) [Terms]
+                                  ) [ExprTermNoAddop]
+                                ) [ExprNoMinus]
+                              ) [DesignatorPart1]
+                            ) [DesigStatement]
+                          ) [MatchedDesignator]
+                        ) [StatementMatched]
+                      ) [StatementLists]
+                    ) [MethodDeclarationVoid]
+                  ) [MethodDeclarationList]
+                  MethodDeclarationVoid(
+                   putn
+                    FormParameters(
+                      FormParametersList(
+                        FormParametersListSingle(
+                          FormNoBrackets(
+                            Types(
+                             int
+                            ) [Types]
+                           a
+                          ) [FormNoBrackets]
+                        ) [FormParametersListSingle]
+                        FormNoBrackets(
+                          Types(
+                           int
+                          ) [Types]
+                         idx
+                        ) [FormNoBrackets]
+                      ) [FormParametersList]
+                    ) [FormParameters]
+                    NoMethodVarDecl(
+                    ) [NoMethodVarDecl]
+                    StatementLists(
+                      NoStatements(
+                      ) [NoStatements]
+                      StatementMatched(
+                        MatchedDesignator(
+                          DesigStatement(
+                            Designators(
+                              DesignatorListExpr(
+                                DesignatorListDot(
+                                  DesignatorListID(
+                                   this
+                                  ) [DesignatorListID]
+                                 neg
+                                ) [DesignatorListDot]
+                                ExprNoMinus(
+                                  ExprTermNoAddop(
+                                    Terms(
+                                      TermListNoMulop(
+                                        FactorDesignator(
+                                          Designators(
+                                            DesignatorListID(
+                                             idx
+                                            ) [DesignatorListID]
+                                          ) [Designators]
+                                        ) [FactorDesignator]
+                                      ) [TermListNoMulop]
+                                    ) [Terms]
+                                  ) [ExprTermNoAddop]
+                                ) [ExprNoMinus]
+                              ) [DesignatorListExpr]
+                            ) [Designators]
+                            DesignatorPart1(
+                              AssignopEq(
+                              ) [AssignopEq]
+                              ExprNoMinus(
+                                ExprTermNoAddop(
+                                  Terms(
+                                    TermListNoMulop(
+                                      FactorDesignator(
+                                        Designators(
+                                          DesignatorListID(
+                                           a
+                                          ) [DesignatorListID]
+                                        ) [Designators]
+                                      ) [FactorDesignator]
+                                    ) [TermListNoMulop]
+                                  ) [Terms]
+                                ) [ExprTermNoAddop]
+                              ) [ExprNoMinus]
+                            ) [DesignatorPart1]
+                          ) [DesigStatement]
+                        ) [MatchedDesignator]
+                      ) [StatementMatched]
+                    ) [StatementLists]
+                  ) [MethodDeclarationVoid]
+                ) [MethodDeclarationList]
+                MethodDeclarationType(
+                  Types(
+                   int
+                  ) [Types]
+                 getp
+                  FormParameters(
+                    FormParametersListSingle(
+                      FormNoBrackets(
+                        Types(
+                         int
+                        ) [Types]
+                       idx
+                      ) [FormNoBrackets]
+                    ) [FormParametersListSingle]
+                  ) [FormParameters]
+                  NoMethodVarDecl(
+                  ) [NoMethodVarDecl]
+                  StatementLists(
+                    NoStatements(
+                    ) [NoStatements]
+                    StatementMatched(
+                      MatchedReturnExpr(
+                        ExprNoMinus(
+                          ExprTermNoAddop(
+                            Terms(
+                              TermListNoMulop(
+                                FactorDesignator(
+                                  Designators(
+                                    DesignatorListExpr(
+                                      DesignatorListID(
+                                       pos
+                                      ) [DesignatorListID]
+                                      ExprNoMinus(
+                                        ExprTermNoAddop(
+                                          Terms(
+                                            TermListNoMulop(
+                                              FactorDesignator(
+                                                Designators(
+                                                  DesignatorListID(
+                                                   idx
+                                                  ) [DesignatorListID]
+                                                ) [Designators]
+                                              ) [FactorDesignator]
+                                            ) [TermListNoMulop]
+                                          ) [Terms]
+                                        ) [ExprTermNoAddop]
+                                      ) [ExprNoMinus]
+                                    ) [DesignatorListExpr]
+                                  ) [Designators]
+                                ) [FactorDesignator]
+                              ) [TermListNoMulop]
+                            ) [Terms]
+                          ) [ExprTermNoAddop]
+                        ) [ExprNoMinus]
+                      ) [MatchedReturnExpr]
+                    ) [StatementMatched]
+                  ) [StatementLists]
+                ) [MethodDeclarationType]
+              ) [MethodDeclarationList]
+              MethodDeclarationType(
+                Types(
+                 int
+                ) [Types]
+               getn
+                FormParameters(
+                  FormParametersListSingle(
+                    FormNoBrackets(
+                      Types(
+                       int
+                      ) [Types]
+                     idx
+                    ) [FormNoBrackets]
+                  ) [FormParametersListSingle]
+                ) [FormParameters]
+                NoMethodVarDecl(
+                ) [NoMethodVarDecl]
+                StatementLists(
+                  NoStatements(
+                  ) [NoStatements]
+                  StatementMatched(
+                    MatchedReturnExpr(
+                      ExprNoMinus(
+                        ExprTermNoAddop(
+                          Terms(
+                            TermListNoMulop(
+                              FactorDesignator(
+                                Designators(
+                                  DesignatorListExpr(
+                                    DesignatorListID(
+                                     neg
+                                    ) [DesignatorListID]
+                                    ExprNoMinus(
+                                      ExprTermNoAddop(
+                                        Terms(
+                                          TermListNoMulop(
+                                            FactorDesignator(
+                                              Designators(
+                                                DesignatorListID(
+                                                 idx
+                                                ) [DesignatorListID]
+                                              ) [Designators]
+                                            ) [FactorDesignator]
+                                          ) [TermListNoMulop]
+                                        ) [Terms]
+                                      ) [ExprTermNoAddop]
+                                    ) [ExprNoMinus]
+                                  ) [DesignatorListExpr]
+                                ) [Designators]
+                              ) [FactorDesignator]
+                            ) [TermListNoMulop]
+                          ) [Terms]
+                        ) [ExprTermNoAddop]
+                      ) [ExprNoMinus]
+                    ) [MatchedReturnExpr]
+                  ) [StatementMatched]
+                ) [StatementLists]
+              ) [MethodDeclarationType]
+            ) [MethodDeclarationList]
+          ) [ClassPartMethod]
+        ) [ClassDeclaration]
+      ) [Declarations3]
+    ) [Declarations]
+    Declarations2(
+      VarDeclaration(
+        Types(
+         Table
+        ) [Types]
+        VarListNoComma(
+          VarNoBrackets(
+           val
+          ) [VarNoBrackets]
+        ) [VarListNoComma]
+      ) [VarDeclaration]
+    ) [Declarations2]
+  ) [Declarations]
+  MethodDeclarationList(
+    NoMethodDeclaration(
+    ) [NoMethodDeclaration]
+    MethodDeclarationVoid(
+     main
+      NoFormParsList(
+      ) [NoFormParsList]
+      MethodVarDecl(
+        MethodVarDecl(
+          NoMethodVarDecl(
+          ) [NoMethodVarDecl]
+          VarDeclaration(
+            Types(
+             int
+            ) [Types]
+            VarListNoComma(
+              VarNoBrackets(
+               f
+              ) [VarNoBrackets]
+            ) [VarListNoComma]
+          ) [VarDeclaration]
+        ) [MethodVarDecl]
+        VarDeclaration(
+          Types(
+           int
+          ) [Types]
+          VarListNoComma(
+            VarNoBrackets(
+             p
+            ) [VarNoBrackets]
+          ) [VarListNoComma]
+        ) [VarDeclaration]
+      ) [MethodVarDecl]
+      StatementLists(
+        NoStatements(
+        ) [NoStatements]
+        StatementMatched(
+          MatchedDesignator(
+            DesigStatement(
+              Designators(
+                DesignatorListExpr(
+                  DesignatorListDot(
+                    DesignatorListID(
+                     this
+                    ) [DesignatorListID]
+                   pos
+                  ) [DesignatorListDot]
+                  ExprNoMinus(
+                    ExprTermNoAddop(
+                      Terms(
+                        TermListNoMulop(
+                          FactorDesignator(
+                            Designators(
+                              DesignatorListID(
+                               idx
+                              ) [DesignatorListID]
+                            ) [Designators]
+                          ) [FactorDesignator]
+                        ) [TermListNoMulop]
+                      ) [Terms]
+                    ) [ExprTermNoAddop]
+                  ) [ExprNoMinus]
+                ) [DesignatorListExpr]
+              ) [Designators]
+              DesignatorPart1(
+                AssignopEq(
+                ) [AssignopEq]
+                ExprNoMinus(
+                  ExprTermNoAddop(
+                    Terms(
+                      TermListNoMulop(
+                        FactorDesignator(
+                          Designators(
+                            DesignatorListID(
+                             a
+                            ) [DesignatorListID]
+                          ) [Designators]
+                        ) [FactorDesignator]
+                      ) [TermListNoMulop]
+                    ) [Terms]
+                  ) [ExprTermNoAddop]
+                ) [ExprNoMinus]
+              ) [DesignatorPart1]
+            ) [DesigStatement]
+          ) [MatchedDesignator]
+        ) [StatementMatched]
+      ) [StatementLists]
+    ) [MethodDeclarationVoid]
+  ) [MethodDeclarationList]
+) [ProgramID]
+INFO  04:49:07,903 - ===================================
+INFO  04:49:07,906 -  Print count calls = 0
+INFO  04:49:07,906 -  Deklarisanih promenljivih ima = 0
