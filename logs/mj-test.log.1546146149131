@@ -1,0 +1,38 @@
+INFO  06:02:21,663 - Compiling source file: D:\Users\Leon\Desktop\Projekti\ProgramskiPrevodioci\MJCompiler\test\program.mj
+INFO  06:02:21,710 - #2 program
+INFO  06:02:21,710 - #42 MJProgram
+INFO  06:02:21,710 - #42 int
+INFO  06:02:21,710 - #42 a
+INFO  06:02:21,710 - #7 ,
+INFO  06:02:21,710 - #6 ;
+ERROR 06:02:21,710 - 
+Sintaksna greska na liniji 2
+INFO  06:02:21,710 - #3 {
+INFO  06:02:21,710 - #42 int
+INFO  06:02:21,710 - #42 main
+INFO  06:02:21,710 - #14 (
+INFO  06:02:21,710 - #15 )
+INFO  06:02:21,710 - #42 int
+INFO  06:02:21,710 - #42 x
+INFO  06:02:21,710 - #6 ;
+INFO  06:02:21,710 - #3 {
+INFO  06:02:21,710 - #23 print
+INFO  06:02:21,710 - #14 (
+INFO  06:02:21,710 - #41 1
+INFO  06:02:21,710 - #15 )
+INFO  06:02:21,710 - #6 ;
+INFO  06:02:21,710 - #42 x
+INFO  06:02:21,710 - #8 =
+INFO  06:02:21,710 - #42 y
+INFO  06:02:21,710 - #36 +
+INFO  06:02:21,710 - #41 5
+INFO  06:02:21,710 - #36 +
+INFO  06:02:21,710 - #6 ;
+INFO  06:02:21,710 - #23 print
+INFO  06:02:21,710 - #14 (
+INFO  06:02:21,710 - #41 2
+INFO  06:02:21,710 - #15 )
+INFO  06:02:21,710 - #6 ;
+INFO  06:02:21,710 - #4 }
+INFO  06:02:21,710 - #4 }
+ERROR 06:02:21,710 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 15

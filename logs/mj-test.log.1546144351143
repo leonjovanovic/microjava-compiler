@@ -1,0 +1,17 @@
+INFO  05:32:22,389 - Compiling source file: D:\Users\Leon\Desktop\Projekti\ProgramskiPrevodioci\MJCompiler\test\program.mj
+INFO  05:32:22,436 - #2 program
+INFO  05:32:22,436 - #42 MJProgram
+INFO  05:32:22,436 - #42 int
+INFO  05:32:22,436 - #7 ,
+ERROR 05:32:22,436 - 
+Sintaksna greska na liniji 2
+INFO  05:32:22,436 - #6 ;
+INFO  05:32:22,436 - #3 {
+INFO  05:32:22,436 - #42 int
+INFO  05:32:22,436 - #42 main
+ERROR 05:32:22,436 - Izvrsen oporavak do , u liniji 2
+INFO  05:32:22,436 - #14 (
+INFO  05:32:22,436 - #40 .
+ERROR 05:32:22,436 - 
+Sintaksna greska na liniji 5
+ERROR 05:32:22,436 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 5

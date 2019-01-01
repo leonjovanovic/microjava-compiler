@@ -52,7 +52,7 @@ terminal String IDENT;
 terminal String BOOL;
 terminal Character CHAR;
 
-nonterminal Program, DeclList, MethodDeclList, Decl, MethVarDecl;
+nonterminal DeclList, MethodDeclList, Decl, MethVarDecl;
 nonterminal ConstDecl, VarDecl, ClassDecl, EnumDecl;
 nonterminal ConstList, ConstPart, Consts, EnumList, Enums;
 nonterminal VarList, Var, ClassPart, MethodDecl, FormPars, FormParamList;
@@ -61,7 +61,15 @@ nonterminal Expr, Designator, DesignatorList, Assignop, ActPars;
 nonterminal ActParsList, CondTerm, CondTermList, CondFact, Addop, ExprList, Factor, Term;
 nonterminal ConditionList, Condition, TermList, Relop, Mulop, Matched, Unmatched, Unmatched_For, Matched_For, For;
 
-Program::= (ProgramID) PROG IDENT DeclList LBRACE MethodDeclList RBRACE;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program;
+
+/* ---------------------------------------- Program ------------------------------------------------------------- */
+
+Program::= (Program) PROG ProgName:p DeclList LBRACE MethodDeclList RBRACE;
+
+ProgName ::= (ProgName) IDENT:progName;
+
+/* ---------------------------------------- Declarations ------------------------------------------------------------- */
 
 DeclList::=(Declarations) DeclList Decl	| (NoDeclList) /* epsilon */;
 
@@ -88,11 +96,11 @@ EnumList ::= (EnumListComma) EnumList COMMA Enums | (EnumNoComma) Enums;
 Enums ::= (EnumNoNum) IDENT:name | (EnumNum)IDENT:name EQUAL NUMBER;
 
 
-/* ---------------------------------------- Local Variables ------------------------------------------------------------- */
+/* ---------------------------------------- Variables ------------------------------------------------------------- */
 
-VarDecl ::= (VarDeclaration) Type VarList SEMI;
+VarDecl ::= (VarDeclaration) Type:varType VarList:varName SEMI;
 
-VarList ::= (VarListComma) VarList COMMA Var | (VarListNoComma) Var;
+VarList ::= (VarListComma) VarList COMMA Var:v | (VarListNoComma) Var ;
 
 Var::= (VarNoBrackets) IDENT:varName | (VarBrackets) IDENT:varName LBRACKET RBRACKET;
 
@@ -142,7 +150,9 @@ Unmatched ::= (UnmatchedIfNoElse) IF LPAREN Condition RPAREN Statement
 			|
 			(UnmatchedFor) Unmatched_For;
 
-Matched ::= (MatchedDesignator) DesignatorStatement SEMI		
+Matched ::= (MatchedDesignator) DesignatorStatement SEMI	
+		|
+		(MatchedDesignatorError) error SEMI:l {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null); :}	
 		| 
 		(MatchedIfElse) IF LPAREN Condition RPAREN Matched ELSE Matched
 		| 

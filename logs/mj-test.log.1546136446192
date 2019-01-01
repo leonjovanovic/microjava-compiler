@@ -1,0 +1,37 @@
+INFO  03:20:17,164 - Compiling source file: D:\Users\Leon\Desktop\Projekti\ProgramskiPrevodioci\MJCompiler\test\program.mj
+INFO  03:20:17,215 - #2 program
+INFO  03:20:17,215 - #42 MJProgram
+INFO  03:20:17,215 - #42 int
+INFO  03:20:17,215 - #7 ,
+INFO  03:20:17,215 - #6 ;
+ERROR 03:20:17,215 - 
+Sintaksna greska na liniji 2
+INFO  03:20:17,215 - #3 {
+INFO  03:20:17,215 - #42 int
+INFO  03:20:17,215 - #42 main
+ERROR 03:20:17,215 - Izvrsen oporavak do ; u liniji 2
+INFO  03:20:17,215 - #14 (
+INFO  03:20:17,215 - #15 )
+INFO  03:20:17,215 - #3 {
+INFO  03:20:17,221 - #23 print
+INFO  03:20:17,221 - #14 (
+INFO  03:20:17,221 - #41 1
+INFO  03:20:17,221 - #15 )
+INFO  03:20:17,221 - #6 ;
+INFO  03:20:17,221 - #42 x
+INFO  03:20:17,221 - #8 =
+INFO  03:20:17,221 - #42 y
+INFO  03:20:17,224 - #36 +
+INFO  03:20:17,224 - #41 5
+INFO  03:20:17,224 - #6 ;
+INFO  03:20:17,224 - #23 print
+INFO  03:20:17,224 - #14 (
+INFO  03:20:17,224 - #41 2
+INFO  03:20:17,224 - #15 )
+INFO  03:20:17,224 - #6 ;
+INFO  03:20:17,224 - #4 }
+INFO  03:20:17,224 - #42 int
+INFO  03:20:17,224 - #40 .
+ERROR 03:20:17,224 - 
+Sintaksna greska na liniji 13
+ERROR 03:20:17,224 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 13

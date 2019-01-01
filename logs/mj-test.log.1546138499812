@@ -1,0 +1,10 @@
+INFO  03:54:22,916 - Compiling source file: D:\Users\Leon\Desktop\Projekti\ProgramskiPrevodioci\MJCompiler\test\program.mj
+INFO  03:54:22,960 - #2 program
+INFO  03:54:22,960 - #42 MJProgram
+INFO  03:54:22,960 - #42 int
+INFO  03:54:22,960 - #42 asd
+INFO  03:54:22,960 - #7 ,
+INFO  03:54:22,960 - #6 ;
+ERROR 03:54:22,960 - 
+Sintaksna greska na liniji 2
+ERROR 03:54:22,960 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 2

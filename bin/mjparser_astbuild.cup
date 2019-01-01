@@ -52,7 +52,6 @@ terminal String IDENT;
 terminal String BOOL;
 terminal Character CHAR;
 
-nonterminal Program Program;
 nonterminal DeclList DeclList;
 nonterminal MethodDeclList MethodDeclList;
 nonterminal Decl Decl;
@@ -102,7 +101,15 @@ nonterminal Unmatched_For Unmatched_For;
 nonterminal Matched_For Matched_For;
 nonterminal For For;
 
-Program::= (ProgramID) PROG IDENT:I1 DeclList:D2 LBRACE MethodDeclList:M3 RBRACE {: RESULT=new ProgramID(I1, D2, M3); RESULT.setLine(I1left); :};
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program;
+
+/* ---------------------------------------- Program ------------------------------------------------------------- */
+
+Program::= (Program) PROG ProgName:p DeclList:D1 LBRACE MethodDeclList:M2 RBRACE {: RESULT=new Program(p, D1, M2); RESULT.setLine(pleft); :};
+
+ProgName ::= (ProgName) IDENT:progName {: RESULT=new ProgName(progName); RESULT.setLine(progNameleft); :};
+
+/* ---------------------------------------- Declarations ------------------------------------------------------------- */
 
 DeclList::=(Declarations) DeclList:D1 Decl:D2 {: RESULT=new Declarations(D1, D2); RESULT.setLine(D1left); :}	| (NoDeclList) {: RESULT=new NoDeclList(); :} /* epsilon */;
 
@@ -129,11 +136,11 @@ EnumList ::= (EnumListComma) EnumList:E1 COMMA Enums:E2 {: RESULT=new EnumListCo
 Enums ::= (EnumNoNum) IDENT:name {: RESULT=new EnumNoNum(name); RESULT.setLine(nameleft); :} | (EnumNum)IDENT:name EQUAL NUMBER:N1 {: RESULT=new EnumNum(name, N1); RESULT.setLine(nameleft); :};
 
 
-/* ---------------------------------------- Local Variables ------------------------------------------------------------- */
+/* ---------------------------------------- Variables ------------------------------------------------------------- */
 
-VarDecl ::= (VarDeclaration) Type:T1 VarList:V2 SEMI {: RESULT=new VarDeclaration(T1, V2); RESULT.setLine(T1left); :};
+VarDecl ::= (VarDeclaration) Type:varType VarList:varName SEMI {: RESULT=new VarDeclaration(varType, varName); RESULT.setLine(varTypeleft); :};
 
-VarList ::= (VarListComma) VarList:V1 COMMA Var:V2 {: RESULT=new VarListComma(V1, V2); RESULT.setLine(V1left); :} | (VarListNoComma) Var:V1 {: RESULT=new VarListNoComma(V1); RESULT.setLine(V1left); :};
+VarList ::= (VarListComma) VarList:V1 COMMA Var:v | (VarListNoComma {: RESULT=new VarListComma(V1, Var); RESULT.setLine(V1left); :}) Var:V1 {: RESULT=new VarListNoComma(V1); RESULT.setLine(V1left); :} ;
 
 Var::= (VarNoBrackets) IDENT:varName {: RESULT=new VarNoBrackets(varName); RESULT.setLine(varNameleft); :} | (VarBrackets) IDENT:varName LBRACKET RBRACKET {: RESULT=new VarBrackets(varName); RESULT.setLine(varNameleft); :};
 
@@ -183,7 +190,9 @@ Unmatched ::= (UnmatchedIfNoElse) IF LPAREN Condition:C1 RPAREN Statement:S2 {: 
 			|
 			(UnmatchedFor) Unmatched_For:U1 {: RESULT=new UnmatchedFor(U1); RESULT.setLine(U1left); :};
 
-Matched ::= (MatchedDesignator) DesignatorStatement:D1 SEMI {: RESULT=new MatchedDesignator(D1); RESULT.setLine(D1left); :}		
+Matched ::= (MatchedDesignator) DesignatorStatement:D1 SEMI {: RESULT=new MatchedDesignator(D1); RESULT.setLine(D1left); :}	
+		|
+		(MatchedDesignatorError) error SEMI:l {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null); :} {: RESULT=new MatchedDesignatorError(); :}	
 		| 
 		(MatchedIfElse) IF LPAREN Condition:C1 RPAREN Matched:M2 ELSE Matched:M3 {: RESULT=new MatchedIfElse(C1, M2, M3); RESULT.setLine(C1left); :}
 		| 

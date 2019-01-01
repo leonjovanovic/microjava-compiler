@@ -1,0 +1,151 @@
+INFO  05:17:11,305 - Compiling source file: D:\Users\Leon\Desktop\Projekti\ProgramskiPrevodioci\MJCompiler\test\program.mj
+INFO  05:17:11,351 - #2 program
+INFO  05:17:11,351 - #42 MJProgram
+INFO  05:17:11,351 - #42 int
+INFO  05:17:11,351 - #42 a
+INFO  05:17:11,351 - #7 ,
+INFO  05:17:11,351 - #6 ;
+ERROR 05:17:11,351 - 
+Sintaksna greska na liniji 2
+INFO  05:17:11,351 - #3 {
+INFO  05:17:11,351 - #42 int
+INFO  05:17:11,351 - #42 main
+ERROR 05:17:11,351 - Izvrsen oporavak do , u liniji 
+INFO  05:17:11,351 - #14 (
+INFO  05:17:11,351 - #42 int
+INFO  05:17:11,351 - #42 c
+INFO  05:17:11,351 - #7 ,
+INFO  05:17:11,351 - #42 int
+INFO  05:17:11,351 - #42 b
+INFO  05:17:11,351 - #15 )
+INFO  05:17:11,351 - #42 int
+INFO  05:17:11,351 - #42 x
+INFO  05:17:11,351 - #6 ;
+INFO  05:17:11,351 - #3 {
+INFO  05:17:11,351 - #23 print
+INFO  05:17:11,351 - #14 (
+INFO  05:17:11,351 - #41 1
+INFO  05:17:11,351 - #15 )
+INFO  05:17:11,351 - #6 ;
+INFO  05:17:11,351 - #42 x
+INFO  05:17:11,351 - #8 =
+INFO  05:17:11,351 - #42 y
+INFO  05:17:11,351 - #36 +
+INFO  05:17:11,351 - #41 5
+INFO  05:17:11,351 - #36 +
+INFO  05:17:11,351 - #6 ;
+ERROR 05:17:11,351 - 
+Sintaksna greska na liniji 10
+INFO  05:17:11,351 - #23 print
+INFO  05:17:11,351 - #14 (
+INFO  05:17:11,351 - #41 2
+ERROR 05:17:11,351 - Izvrsen oporavak do ; u liniji 10
+INFO  05:17:11,351 - #15 )
+INFO  05:17:11,351 - #6 ;
+INFO  05:17:11,351 - #4 }
+INFO  05:17:11,351 - #4 }
+INFO  05:17:11,351 - ProgramID(
+ MJProgram
+  Declarations(
+    NoDeclList(
+    ) [NoDeclList]
+    Declarations2(
+      VarDeclaration(
+        Types(
+         int
+        ) [Types]
+        VarListlError(
+        ) [VarListlError]
+      ) [VarDeclaration]
+    ) [Declarations2]
+  ) [Declarations]
+  MethodDeclarationList(
+    NoMethodDeclaration(
+    ) [NoMethodDeclaration]
+    MethodDeclarationType(
+      Types(
+       int
+      ) [Types]
+     main
+      FormParameters(
+        FormParametersList(
+          FormParametersListSingle(
+            FormNoBrackets(
+              Types(
+               int
+              ) [Types]
+             c
+            ) [FormNoBrackets]
+          ) [FormParametersListSingle]
+          FormNoBrackets(
+            Types(
+             int
+            ) [Types]
+           b
+          ) [FormNoBrackets]
+        ) [FormParametersList]
+      ) [FormParameters]
+      MethodVarDecl(
+        NoMethodVarDecl(
+        ) [NoMethodVarDecl]
+        VarDeclaration(
+          Types(
+           int
+          ) [Types]
+          VarListNoComma(
+            VarNoBrackets(
+             x
+            ) [VarNoBrackets]
+          ) [VarListNoComma]
+        ) [VarDeclaration]
+      ) [MethodVarDecl]
+      StatementLists(
+        StatementLists(
+          StatementLists(
+            NoStatements(
+            ) [NoStatements]
+            StatementMatched(
+              MatchedPrint(
+                ExprNoMinus(
+                  ExprTermNoAddop(
+                    Terms(
+                      TermListNoMulop(
+                        FactorNum(
+                         1
+                        ) [FactorNum]
+                      ) [TermListNoMulop]
+                    ) [Terms]
+                  ) [ExprTermNoAddop]
+                ) [ExprNoMinus]
+              ) [MatchedPrint]
+            ) [StatementMatched]
+          ) [StatementLists]
+          StatementMatched(
+            MatchedDesignatorError(
+            ) [MatchedDesignatorError]
+          ) [StatementMatched]
+        ) [StatementLists]
+        StatementMatched(
+          MatchedPrint(
+            ExprNoMinus(
+              ExprTermNoAddop(
+                Terms(
+                  TermListNoMulop(
+                    FactorNum(
+                     2
+                    ) [FactorNum]
+                  ) [TermListNoMulop]
+                ) [Terms]
+              ) [ExprTermNoAddop]
+            ) [ExprNoMinus]
+          ) [MatchedPrint]
+        ) [StatementMatched]
+      ) [StatementLists]
+    ) [MethodDeclarationType]
+  ) [MethodDeclarationList]
+) [ProgramID]
+INFO  05:17:11,351 - ===================================
+INFO  05:17:11,351 - Prepoznata naredba print!
+INFO  05:17:11,351 - Prepoznata naredba print!
+INFO  05:17:11,351 -  Print count calls = 2
+INFO  05:17:11,351 -  Deklarisanih promenljivih ima = 1

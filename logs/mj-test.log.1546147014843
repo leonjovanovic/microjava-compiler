@@ -1,0 +1,145 @@
+INFO  06:11:59,910 - Compiling source file: D:\Users\Leon\Desktop\Projekti\ProgramskiPrevodioci\MJCompiler\test\program.mj
+INFO  06:11:59,979 - #2 program
+INFO  06:11:59,979 - #42 MJProgram
+INFO  06:11:59,979 - #42 int
+INFO  06:11:59,979 - #42 b
+INFO  06:11:59,979 - #7 ,
+INFO  06:11:59,979 - #41 2
+ERROR 06:11:59,979 - 
+Sintaksna greska na liniji 2
+INFO  06:11:59,979 - #7 ,
+INFO  06:11:59,979 - #42 c
+INFO  06:11:59,979 - #6 ;
+INFO  06:11:59,979 - #3 {
+ERROR 06:11:59,979 - Izvrsen oporavak do , u liniji 2
+INFO  06:11:59,979 - #42 int
+INFO  06:11:59,979 - #42 main
+INFO  06:11:59,979 - #14 (
+INFO  06:11:59,979 - #15 )
+INFO  06:11:59,979 - #42 int
+INFO  06:11:59,979 - #42 x
+INFO  06:11:59,979 - #6 ;
+INFO  06:11:59,979 - #3 {
+INFO  06:11:59,979 - #23 print
+INFO  06:11:59,979 - #14 (
+INFO  06:11:59,979 - #41 1
+INFO  06:11:59,979 - #15 )
+INFO  06:11:59,979 - #6 ;
+INFO  06:11:59,979 - #42 x
+INFO  06:11:59,979 - #8 =
+INFO  06:11:59,979 - #42 y
+INFO  06:11:59,979 - #36 +
+INFO  06:11:59,979 - #41 5
+INFO  06:11:59,979 - #36 +
+INFO  06:11:59,979 - #6 ;
+ERROR 06:11:59,979 - 
+Sintaksna greska na liniji 10
+INFO  06:11:59,979 - #23 print
+INFO  06:11:59,979 - #14 (
+INFO  06:11:59,979 - #41 2
+ERROR 06:11:59,979 - Izvrsen oporavak do ; u liniji 10
+INFO  06:11:59,979 - #15 )
+INFO  06:11:59,979 - #6 ;
+INFO  06:11:59,979 - #4 }
+INFO  06:11:59,979 - #4 }
+INFO  06:11:59,979 - ProgramID(
+ MJProgram
+  Declarations(
+    NoDeclList(
+    ) [NoDeclList]
+    Declarations2(
+      VarDeclaration(
+        Types(
+         int
+        ) [Types]
+        VarListComma(
+          VarListComma(
+            VarListNoComma(
+              VarNoBrackets(
+               b
+              ) [VarNoBrackets]
+            ) [VarListNoComma]
+            VarDeclError1(
+            ) [VarDeclError1]
+          ) [VarListComma]
+          VarNoBrackets(
+           c
+          ) [VarNoBrackets]
+        ) [VarListComma]
+      ) [VarDeclaration]
+    ) [Declarations2]
+  ) [Declarations]
+  MethodDeclarationList(
+    NoMethodDeclaration(
+    ) [NoMethodDeclaration]
+    MethodDeclarationType(
+      Types(
+       int
+      ) [Types]
+     main
+      NoFormParsList(
+      ) [NoFormParsList]
+      MethodVarDecl(
+        NoMethodVarDecl(
+        ) [NoMethodVarDecl]
+        VarDeclaration(
+          Types(
+           int
+          ) [Types]
+          VarListNoComma(
+            VarNoBrackets(
+             x
+            ) [VarNoBrackets]
+          ) [VarListNoComma]
+        ) [VarDeclaration]
+      ) [MethodVarDecl]
+      StatementLists(
+        StatementLists(
+          StatementLists(
+            NoStatements(
+            ) [NoStatements]
+            StatementMatched(
+              MatchedPrint(
+                ExprNoMinus(
+                  ExprTermNoAddop(
+                    Terms(
+                      TermListNoMulop(
+                        FactorNum(
+                         1
+                        ) [FactorNum]
+                      ) [TermListNoMulop]
+                    ) [Terms]
+                  ) [ExprTermNoAddop]
+                ) [ExprNoMinus]
+              ) [MatchedPrint]
+            ) [StatementMatched]
+          ) [StatementLists]
+          StatementMatched(
+            MatchedDesignatorError(
+            ) [MatchedDesignatorError]
+          ) [StatementMatched]
+        ) [StatementLists]
+        StatementMatched(
+          MatchedPrint(
+            ExprNoMinus(
+              ExprTermNoAddop(
+                Terms(
+                  TermListNoMulop(
+                    FactorNum(
+                     2
+                    ) [FactorNum]
+                  ) [TermListNoMulop]
+                ) [Terms]
+              ) [ExprTermNoAddop]
+            ) [ExprNoMinus]
+          ) [MatchedPrint]
+        ) [StatementMatched]
+      ) [StatementLists]
+    ) [MethodDeclarationType]
+  ) [MethodDeclarationList]
+) [ProgramID]
+INFO  06:11:59,979 - ===================================
+INFO  06:11:59,979 - Prepoznata naredba print!
+INFO  06:11:59,979 - Prepoznata naredba print!
+INFO  06:11:59,994 -  Print count calls = 2
+INFO  06:11:59,994 -  Deklarisanih promenljivih ima = 3

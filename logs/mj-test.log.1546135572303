@@ -1,0 +1,12 @@
+INFO  03:05:32,406 - Compiling source file: D:\Users\Leon\Desktop\Projekti\ProgramskiPrevodioci\MJCompiler\test\program.mj
+INFO  03:05:32,457 - #2 program
+INFO  03:05:32,457 - #42 MJProgram
+INFO  03:05:32,461 - #42 int
+INFO  03:05:32,461 - #42 x
+INFO  03:05:32,461 - #7 ,
+INFO  03:05:32,461 - #6 ;
+ERROR 03:05:32,461 - 
+Sintaksna greska na liniji 2
+INFO  03:05:32,461 - #42 int
+INFO  03:05:32,461 - #42 y
+INFO  03:05:32,461 - #6 ;

@@ -1,0 +1,135 @@
+INFO  05:43:01,744 - Compiling source file: D:\Users\Leon\Desktop\Projekti\ProgramskiPrevodioci\MJCompiler\test\program.mj
+INFO  05:43:01,798 - #2 program
+INFO  05:43:01,798 - #42 MJProgram
+INFO  05:43:01,798 - #42 int
+INFO  05:43:01,798 - #7 ,
+ERROR 05:43:01,798 - 
+Sintaksna greska na liniji 2
+INFO  05:43:01,798 - #42 a
+INFO  05:43:01,798 - #6 ;
+INFO  05:43:01,798 - #3 {
+ERROR 05:43:01,798 - Izvrsen oporavak do , u liniji 2
+INFO  05:43:01,798 - #42 int
+INFO  05:43:01,798 - #42 main
+INFO  05:43:01,798 - #14 (
+INFO  05:43:01,798 - #15 )
+INFO  05:43:01,798 - #42 int
+INFO  05:43:01,798 - #42 x
+INFO  05:43:01,798 - #6 ;
+INFO  05:43:01,798 - #3 {
+INFO  05:43:01,798 - #23 print
+INFO  05:43:01,798 - #14 (
+INFO  05:43:01,798 - #41 1
+INFO  05:43:01,798 - #15 )
+INFO  05:43:01,798 - #6 ;
+INFO  05:43:01,798 - #42 x
+INFO  05:43:01,798 - #8 =
+INFO  05:43:01,798 - #42 y
+INFO  05:43:01,798 - #36 +
+INFO  05:43:01,798 - #41 5
+INFO  05:43:01,798 - #36 +
+INFO  05:43:01,798 - #6 ;
+ERROR 05:43:01,798 - 
+Sintaksna greska na liniji 10
+INFO  05:43:01,798 - #23 print
+INFO  05:43:01,798 - #14 (
+INFO  05:43:01,798 - #41 2
+ERROR 05:43:01,798 - Izvrsen oporavak do ; u liniji 10
+INFO  05:43:01,798 - #15 )
+INFO  05:43:01,798 - #6 ;
+INFO  05:43:01,798 - #4 }
+INFO  05:43:01,798 - #4 }
+INFO  05:43:01,798 - ProgramID(
+ MJProgram
+  Declarations(
+    NoDeclList(
+    ) [NoDeclList]
+    Declarations2(
+      VarDeclaration(
+        Types(
+         int
+        ) [Types]
+        VarListComma(
+          VarDeclError3(
+          ) [VarDeclError3]
+          VarNoBrackets(
+           a
+          ) [VarNoBrackets]
+        ) [VarListComma]
+      ) [VarDeclaration]
+    ) [Declarations2]
+  ) [Declarations]
+  MethodDeclarationList(
+    NoMethodDeclaration(
+    ) [NoMethodDeclaration]
+    MethodDeclarationType(
+      Types(
+       int
+      ) [Types]
+     main
+      NoFormParsList(
+      ) [NoFormParsList]
+      MethodVarDecl(
+        NoMethodVarDecl(
+        ) [NoMethodVarDecl]
+        VarDeclaration(
+          Types(
+           int
+          ) [Types]
+          VarListNoComma(
+            VarNoBrackets(
+             x
+            ) [VarNoBrackets]
+          ) [VarListNoComma]
+        ) [VarDeclaration]
+      ) [MethodVarDecl]
+      StatementLists(
+        StatementLists(
+          StatementLists(
+            NoStatements(
+            ) [NoStatements]
+            StatementMatched(
+              MatchedPrint(
+                ExprNoMinus(
+                  ExprTermNoAddop(
+                    Terms(
+                      TermListNoMulop(
+                        FactorNum(
+                         1
+                        ) [FactorNum]
+                      ) [TermListNoMulop]
+                    ) [Terms]
+                  ) [ExprTermNoAddop]
+                ) [ExprNoMinus]
+              ) [MatchedPrint]
+            ) [StatementMatched]
+          ) [StatementLists]
+          StatementMatched(
+            MatchedDesignatorError(
+            ) [MatchedDesignatorError]
+          ) [StatementMatched]
+        ) [StatementLists]
+        StatementMatched(
+          MatchedPrint(
+            ExprNoMinus(
+              ExprTermNoAddop(
+                Terms(
+                  TermListNoMulop(
+                    FactorNum(
+                     2
+                    ) [FactorNum]
+                  ) [TermListNoMulop]
+                ) [Terms]
+              ) [ExprTermNoAddop]
+            ) [ExprNoMinus]
+          ) [MatchedPrint]
+        ) [StatementMatched]
+      ) [StatementLists]
+    ) [MethodDeclarationType]
+  ) [MethodDeclarationList]
+) [ProgramID]
+INFO  05:43:01,798 - ===================================
+INFO  05:43:01,813 - Prepoznata naredba print!
+INFO  05:43:01,813 - Prepoznata naredba print!
+INFO  05:43:01,813 -  Print count calls = 2
+INFO  05:43:01,813 -  Deklarisanih promenljivih ima = 2
