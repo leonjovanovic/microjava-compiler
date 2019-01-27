@@ -1,0 +1,216 @@
+INFO  17:55:49,936 - Compiling source file: D:\Users\Leon\Desktop\Projekti\ProgramskiPrevodioci\MJCompiler\test\program.mj
+INFO  17:55:49,983 - #2 program
+INFO  17:55:49,983 - #42 MJProgram
+INFO  17:55:49,983 - #42 int
+INFO  17:55:49,983 - #42 a
+INFO  17:55:49,983 - #8 =
+ERROR 17:55:49,983 - 
+Sintaksna greska na liniji 2
+INFO  17:55:49,983 - #7 ,
+INFO  17:55:49,983 - #42 b
+INFO  17:55:49,983 - #7 ,
+INFO  17:55:49,983 - #42 c
+ERROR 17:55:49,983 - Izvrsen oporavak do ; u liniji 2
+INFO  17:55:49,983 - #8 =
+ERROR 17:55:49,983 - 
+Sintaksna greska na liniji 2
+INFO  17:55:49,983 - #42 c
+INFO  17:55:49,983 - #7 ,
+INFO  17:55:49,983 - #42 h
+INFO  17:55:49,983 - #6 ;
+INFO  17:55:49,983 - #42 int
+ERROR 17:55:49,987 - Izvrsen oporavak do ; u liniji 2
+INFO  17:55:49,987 - #42 s
+INFO  17:55:49,987 - #7 ,
+INFO  17:55:49,987 - #42 h
+INFO  17:55:49,987 - #6 ;
+INFO  17:55:49,987 - #3 {
+INFO  17:55:49,987 - #42 int
+INFO  17:55:49,987 - #42 main
+INFO  17:55:49,987 - #14 (
+INFO  17:55:49,987 - #15 )
+INFO  17:55:49,987 - #42 int
+INFO  17:55:49,987 - #42 v
+INFO  17:55:49,987 - #6 ;
+INFO  17:55:49,987 - #3 {
+INFO  17:55:49,987 - #23 print
+INFO  17:55:49,987 - #14 (
+INFO  17:55:49,987 - #41 1
+INFO  17:55:49,987 - #15 )
+INFO  17:55:49,987 - #6 ;
+INFO  17:55:49,987 - #42 x
+INFO  17:55:49,987 - #8 =
+INFO  17:55:49,987 - #42 y
+INFO  17:55:49,987 - #36 +
+INFO  17:55:49,987 - #41 5
+INFO  17:55:49,993 - #6 ;
+INFO  17:55:49,993 - #23 print
+INFO  17:55:49,993 - #14 (
+INFO  17:55:49,993 - #41 2
+INFO  17:55:49,993 - #15 )
+INFO  17:55:49,993 - #6 ;
+INFO  17:55:49,993 - #4 }
+INFO  17:55:49,993 - #4 }
+INFO  17:55:49,993 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  Declarations(
+    Declarations(
+      NoDeclList(
+      ) [NoDeclList]
+      Declarations2(
+        GlobVarDeclaration(
+          Types(
+           int
+          ) [Types]
+          GlobVarListComma(
+            GlobVarListComma(
+              GlobVarListComma(
+                GlobVarListNoComma(
+                  GlobVarDeclarationError(
+                  ) [GlobVarDeclarationError]
+                ) [GlobVarListNoComma]
+                GlobVarNoBrackets(
+                 b
+                ) [GlobVarNoBrackets]
+              ) [GlobVarListComma]
+              GlobVarDeclarationError(
+              ) [GlobVarDeclarationError]
+            ) [GlobVarListComma]
+            GlobVarNoBrackets(
+             h
+            ) [GlobVarNoBrackets]
+          ) [GlobVarListComma]
+        ) [GlobVarDeclaration]
+      ) [Declarations2]
+    ) [Declarations]
+    Declarations2(
+      GlobVarDeclaration(
+        Types(
+         int
+        ) [Types]
+        GlobVarListComma(
+          GlobVarListNoComma(
+            GlobVarNoBrackets(
+             s
+            ) [GlobVarNoBrackets]
+          ) [GlobVarListNoComma]
+          GlobVarNoBrackets(
+           h
+          ) [GlobVarNoBrackets]
+        ) [GlobVarListComma]
+      ) [GlobVarDeclaration]
+    ) [Declarations2]
+  ) [Declarations]
+  MethodDeclarationList(
+    NoMethodDeclaration(
+    ) [NoMethodDeclaration]
+    MethodDeclarationType(
+      Types(
+       int
+      ) [Types]
+     main
+      NoFormParsList(
+      ) [NoFormParsList]
+      MethodVarDecl(
+        NoMethodVarDecl(
+        ) [NoMethodVarDecl]
+        LoclVarDeclaration(
+          Types(
+           int
+          ) [Types]
+          LoclVarListNoComma(
+            LoclVarNoBrackets(
+             v
+            ) [LoclVarNoBrackets]
+          ) [LoclVarListNoComma]
+        ) [LoclVarDeclaration]
+      ) [MethodVarDecl]
+      StatementLists(
+        StatementLists(
+          StatementLists(
+            NoStatements(
+            ) [NoStatements]
+            StatementMatched(
+              MatchedPrint(
+                ExprNoMinus(
+                  ExprTermNoAddop(
+                    Terms(
+                      TermListNoMulop(
+                        FactorNum(
+                         1
+                        ) [FactorNum]
+                      ) [TermListNoMulop]
+                    ) [Terms]
+                  ) [ExprTermNoAddop]
+                ) [ExprNoMinus]
+              ) [MatchedPrint]
+            ) [StatementMatched]
+          ) [StatementLists]
+          StatementMatched(
+            MatchedDesignator(
+              DesigStatement(
+                Designators(
+                  DesignatorListID(
+                   x
+                  ) [DesignatorListID]
+                ) [Designators]
+                DesignatorPart1(
+                  AssignopEq(
+                  ) [AssignopEq]
+                  ExprNoMinus(
+                    ExprListAddop(
+                      ExprTermNoAddop(
+                        Terms(
+                          TermListNoMulop(
+                            FactorDesignator(
+                              Designators(
+                                DesignatorListID(
+                                 y
+                                ) [DesignatorListID]
+                              ) [Designators]
+                            ) [FactorDesignator]
+                          ) [TermListNoMulop]
+                        ) [Terms]
+                      ) [ExprTermNoAddop]
+                      AddopPlus(
+                      ) [AddopPlus]
+                      Terms(
+                        TermListNoMulop(
+                          FactorNum(
+                           5
+                          ) [FactorNum]
+                        ) [TermListNoMulop]
+                      ) [Terms]
+                    ) [ExprListAddop]
+                  ) [ExprNoMinus]
+                ) [DesignatorPart1]
+              ) [DesigStatement]
+            ) [MatchedDesignator]
+          ) [StatementMatched]
+        ) [StatementLists]
+        StatementMatched(
+          MatchedPrint(
+            ExprNoMinus(
+              ExprTermNoAddop(
+                Terms(
+                  TermListNoMulop(
+                    FactorNum(
+                     2
+                    ) [FactorNum]
+                  ) [TermListNoMulop]
+                ) [Terms]
+              ) [ExprTermNoAddop]
+            ) [ExprNoMinus]
+          ) [MatchedPrint]
+        ) [StatementMatched]
+      ) [StatementLists]
+    ) [MethodDeclarationType]
+  ) [MethodDeclarationList]
+) [Program]
+INFO  17:55:49,998 - ===================================
+INFO  17:55:49,998 - Prepoznata naredba print!
+INFO  17:55:49,998 - Prepoznata naredba print!
+INFO  17:55:49,998 -  Print count calls = 2
+INFO  17:55:49,998 -  Deklarisanih globalnih promenljivih ima = 4

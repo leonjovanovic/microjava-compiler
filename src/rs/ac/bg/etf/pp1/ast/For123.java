@@ -1,31 +1,31 @@
 // generated with ast extension for cup
 // version 0.8
-// 29/11/2018 4:58:38
+// 27/0/2019 5:2:17
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class For123 extends For {
 
-    private DesignatorStatement DesignatorStatement;
+    private DesignatorStatementOpt DesignatorStatementOpt;
     private Condition Condition;
-    private DesignatorStatement DesignatorStatement1;
+    private DesignatorStatementOpt DesignatorStatementOpt1;
 
-    public For123 (DesignatorStatement DesignatorStatement, Condition Condition, DesignatorStatement DesignatorStatement1) {
-        this.DesignatorStatement=DesignatorStatement;
-        if(DesignatorStatement!=null) DesignatorStatement.setParent(this);
+    public For123 (DesignatorStatementOpt DesignatorStatementOpt, Condition Condition, DesignatorStatementOpt DesignatorStatementOpt1) {
+        this.DesignatorStatementOpt=DesignatorStatementOpt;
+        if(DesignatorStatementOpt!=null) DesignatorStatementOpt.setParent(this);
         this.Condition=Condition;
         if(Condition!=null) Condition.setParent(this);
-        this.DesignatorStatement1=DesignatorStatement1;
-        if(DesignatorStatement1!=null) DesignatorStatement1.setParent(this);
+        this.DesignatorStatementOpt1=DesignatorStatementOpt1;
+        if(DesignatorStatementOpt1!=null) DesignatorStatementOpt1.setParent(this);
     }
 
-    public DesignatorStatement getDesignatorStatement() {
-        return DesignatorStatement;
+    public DesignatorStatementOpt getDesignatorStatementOpt() {
+        return DesignatorStatementOpt;
     }
 
-    public void setDesignatorStatement(DesignatorStatement DesignatorStatement) {
-        this.DesignatorStatement=DesignatorStatement;
+    public void setDesignatorStatementOpt(DesignatorStatementOpt DesignatorStatementOpt) {
+        this.DesignatorStatementOpt=DesignatorStatementOpt;
     }
 
     public Condition getCondition() {
@@ -36,12 +36,12 @@ public class For123 extends For {
         this.Condition=Condition;
     }
 
-    public DesignatorStatement getDesignatorStatement1() {
-        return DesignatorStatement1;
+    public DesignatorStatementOpt getDesignatorStatementOpt1() {
+        return DesignatorStatementOpt1;
     }
 
-    public void setDesignatorStatement1(DesignatorStatement DesignatorStatement1) {
-        this.DesignatorStatement1=DesignatorStatement1;
+    public void setDesignatorStatementOpt1(DesignatorStatementOpt DesignatorStatementOpt1) {
+        this.DesignatorStatementOpt1=DesignatorStatementOpt1;
     }
 
     public void accept(Visitor visitor) {
@@ -49,22 +49,22 @@ public class For123 extends For {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(DesignatorStatement!=null) DesignatorStatement.accept(visitor);
+        if(DesignatorStatementOpt!=null) DesignatorStatementOpt.accept(visitor);
         if(Condition!=null) Condition.accept(visitor);
-        if(DesignatorStatement1!=null) DesignatorStatement1.accept(visitor);
+        if(DesignatorStatementOpt1!=null) DesignatorStatementOpt1.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(DesignatorStatement!=null) DesignatorStatement.traverseTopDown(visitor);
+        if(DesignatorStatementOpt!=null) DesignatorStatementOpt.traverseTopDown(visitor);
         if(Condition!=null) Condition.traverseTopDown(visitor);
-        if(DesignatorStatement1!=null) DesignatorStatement1.traverseTopDown(visitor);
+        if(DesignatorStatementOpt1!=null) DesignatorStatementOpt1.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(DesignatorStatement!=null) DesignatorStatement.traverseBottomUp(visitor);
+        if(DesignatorStatementOpt!=null) DesignatorStatementOpt.traverseBottomUp(visitor);
         if(Condition!=null) Condition.traverseBottomUp(visitor);
-        if(DesignatorStatement1!=null) DesignatorStatement1.traverseBottomUp(visitor);
+        if(DesignatorStatementOpt1!=null) DesignatorStatementOpt1.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -73,8 +73,8 @@ public class For123 extends For {
         buffer.append(tab);
         buffer.append("For123(\n");
 
-        if(DesignatorStatement!=null)
-            buffer.append(DesignatorStatement.toString("  "+tab));
+        if(DesignatorStatementOpt!=null)
+            buffer.append(DesignatorStatementOpt.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");
@@ -85,8 +85,8 @@ public class For123 extends For {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(DesignatorStatement1!=null)
-            buffer.append(DesignatorStatement1.toString("  "+tab));
+        if(DesignatorStatementOpt1!=null)
+            buffer.append(DesignatorStatementOpt1.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

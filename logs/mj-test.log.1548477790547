@@ -1,0 +1,44 @@
+INFO  05:42:55,244 - Compiling source file: D:\Users\Leon\Desktop\Projekti\ProgramskiPrevodioci\MJCompiler\test\program.mj
+INFO  05:42:55,295 - #2 program
+INFO  05:42:55,295 - #42 MJProgram
+INFO  05:42:55,295 - #42 int
+INFO  05:42:55,295 - #42 x
+INFO  05:42:55,295 - #7 ,
+INFO  05:42:55,295 - #42 y
+INFO  05:42:55,299 - #6 ;
+INFO  05:42:55,299 - #42 char
+INFO  05:42:55,299 - #42 a
+INFO  05:42:55,299 - #7 ,
+INFO  05:42:55,299 - #42 b
+INFO  05:42:55,299 - #11 [
+INFO  05:42:55,299 - #12 ]
+INFO  05:42:55,299 - #6 ;
+INFO  05:42:55,299 - #42 bool
+INFO  05:42:55,299 - #42 cc
+INFO  05:42:55,299 - #6 ;
+INFO  05:42:55,299 - #5 const
+INFO  05:42:55,299 - #42 bool
+INFO  05:42:55,299 - #42 gg
+INFO  05:42:55,299 - #8 =
+INFO  05:42:55,299 - #42 True
+ERROR 05:42:55,299 - 
+Sintaksna greska na liniji 5
+INFO  05:42:55,299 - #6 ;
+INFO  05:42:55,299 - #3 {
+INFO  05:42:55,299 - #42 int
+INFO  05:42:55,299 - #42 k
+ERROR 05:42:55,299 - Izvrsen oporavak do ; u liniji 5
+INFO  05:42:55,299 - #14 (
+INFO  05:42:55,299 - #15 )
+INFO  05:42:55,299 - #42 int
+INFO  05:42:55,305 - #42 c
+INFO  05:42:55,305 - #6 ;
+INFO  05:42:55,305 - #3 {
+INFO  05:42:55,305 - #42 c
+INFO  05:42:55,305 - #8 =
+INFO  05:42:55,305 - #41 2
+INFO  05:42:55,305 - #6 ;
+INFO  05:42:55,305 - #42 cc
+INFO  05:42:55,305 - #8 =
+INFO  05:42:55,305 - #43 false
+INFO  05:42:55,305 - #6 ;

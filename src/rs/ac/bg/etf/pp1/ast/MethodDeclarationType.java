@@ -1,22 +1,20 @@
 // generated with ast extension for cup
 // version 0.8
-// 29/11/2018 4:58:37
+// 27/0/2019 5:2:17
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class MethodDeclarationType extends MethodDecl {
 
-    private Type Type;
-    private String methodName;
+    private MethodNameType MethodNameType;
     private FormPars FormPars;
     private MethVarDecl MethVarDecl;
     private StatementList StatementList;
 
-    public MethodDeclarationType (Type Type, String methodName, FormPars FormPars, MethVarDecl MethVarDecl, StatementList StatementList) {
-        this.Type=Type;
-        if(Type!=null) Type.setParent(this);
-        this.methodName=methodName;
+    public MethodDeclarationType (MethodNameType MethodNameType, FormPars FormPars, MethVarDecl MethVarDecl, StatementList StatementList) {
+        this.MethodNameType=MethodNameType;
+        if(MethodNameType!=null) MethodNameType.setParent(this);
         this.FormPars=FormPars;
         if(FormPars!=null) FormPars.setParent(this);
         this.MethVarDecl=MethVarDecl;
@@ -25,20 +23,12 @@ public class MethodDeclarationType extends MethodDecl {
         if(StatementList!=null) StatementList.setParent(this);
     }
 
-    public Type getType() {
-        return Type;
+    public MethodNameType getMethodNameType() {
+        return MethodNameType;
     }
 
-    public void setType(Type Type) {
-        this.Type=Type;
-    }
-
-    public String getMethodName() {
-        return methodName;
-    }
-
-    public void setMethodName(String methodName) {
-        this.methodName=methodName;
+    public void setMethodNameType(MethodNameType MethodNameType) {
+        this.MethodNameType=MethodNameType;
     }
 
     public FormPars getFormPars() {
@@ -70,7 +60,7 @@ public class MethodDeclarationType extends MethodDecl {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(Type!=null) Type.accept(visitor);
+        if(MethodNameType!=null) MethodNameType.accept(visitor);
         if(FormPars!=null) FormPars.accept(visitor);
         if(MethVarDecl!=null) MethVarDecl.accept(visitor);
         if(StatementList!=null) StatementList.accept(visitor);
@@ -78,14 +68,14 @@ public class MethodDeclarationType extends MethodDecl {
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(Type!=null) Type.traverseTopDown(visitor);
+        if(MethodNameType!=null) MethodNameType.traverseTopDown(visitor);
         if(FormPars!=null) FormPars.traverseTopDown(visitor);
         if(MethVarDecl!=null) MethVarDecl.traverseTopDown(visitor);
         if(StatementList!=null) StatementList.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(Type!=null) Type.traverseBottomUp(visitor);
+        if(MethodNameType!=null) MethodNameType.traverseBottomUp(visitor);
         if(FormPars!=null) FormPars.traverseBottomUp(visitor);
         if(MethVarDecl!=null) MethVarDecl.traverseBottomUp(visitor);
         if(StatementList!=null) StatementList.traverseBottomUp(visitor);
@@ -97,13 +87,10 @@ public class MethodDeclarationType extends MethodDecl {
         buffer.append(tab);
         buffer.append("MethodDeclarationType(\n");
 
-        if(Type!=null)
-            buffer.append(Type.toString("  "+tab));
+        if(MethodNameType!=null)
+            buffer.append(MethodNameType.toString("  "+tab));
         else
             buffer.append(tab+"  null");
-        buffer.append("\n");
-
-        buffer.append(" "+tab+methodName);
         buffer.append("\n");
 
         if(FormPars!=null)

@@ -1,15 +1,26 @@
 program MJProgram
-	int 2;
+	int x,y;
+	char a, b[];
+	bool cc;
+	const bool gg = true;
 	
 {
-	int main()
-	int x;
+	int k () int c; {
+		c=2;
+		cc=false;
+		return c+2;
+	}
+	int main ()
 	{
 		print(1);
 		
-		x = y + 5+;
+		x = y + 5 + 3;
 		
 		print(2);
+		
+		k();
+		
+		return 1;
 	}
 	
 }

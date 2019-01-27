@@ -1,23 +1,23 @@
 // generated with ast extension for cup
 // version 0.8
-// 29/11/2018 4:58:38
+// 27/0/2019 5:2:17
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class FactorBool extends Factor {
 
-    private String B1;
+    private Boolean B1;
 
-    public FactorBool (String B1) {
+    public FactorBool (Boolean B1) {
         this.B1=B1;
     }
 
-    public String getB1() {
+    public Boolean getB1() {
         return B1;
     }
 
-    public void setB1(String B1) {
+    public void setB1(Boolean B1) {
         this.B1=B1;
     }
 

@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 29/11/2018 4:58:37
+// 27/0/2019 5:2:17
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,13 +8,13 @@ package rs.ac.bg.etf.pp1.ast;
 public class ClassDeclaration extends ClassDecl {
 
     private String className;
-    private VarDecl VarDecl;
+    private LoclVarDecl LoclVarDecl;
     private ClassPart ClassPart;
 
-    public ClassDeclaration (String className, VarDecl VarDecl, ClassPart ClassPart) {
+    public ClassDeclaration (String className, LoclVarDecl LoclVarDecl, ClassPart ClassPart) {
         this.className=className;
-        this.VarDecl=VarDecl;
-        if(VarDecl!=null) VarDecl.setParent(this);
+        this.LoclVarDecl=LoclVarDecl;
+        if(LoclVarDecl!=null) LoclVarDecl.setParent(this);
         this.ClassPart=ClassPart;
         if(ClassPart!=null) ClassPart.setParent(this);
     }
@@ -27,12 +27,12 @@ public class ClassDeclaration extends ClassDecl {
         this.className=className;
     }
 
-    public VarDecl getVarDecl() {
-        return VarDecl;
+    public LoclVarDecl getLoclVarDecl() {
+        return LoclVarDecl;
     }
 
-    public void setVarDecl(VarDecl VarDecl) {
-        this.VarDecl=VarDecl;
+    public void setLoclVarDecl(LoclVarDecl LoclVarDecl) {
+        this.LoclVarDecl=LoclVarDecl;
     }
 
     public ClassPart getClassPart() {
@@ -48,18 +48,18 @@ public class ClassDeclaration extends ClassDecl {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(VarDecl!=null) VarDecl.accept(visitor);
+        if(LoclVarDecl!=null) LoclVarDecl.accept(visitor);
         if(ClassPart!=null) ClassPart.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(VarDecl!=null) VarDecl.traverseTopDown(visitor);
+        if(LoclVarDecl!=null) LoclVarDecl.traverseTopDown(visitor);
         if(ClassPart!=null) ClassPart.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(VarDecl!=null) VarDecl.traverseBottomUp(visitor);
+        if(LoclVarDecl!=null) LoclVarDecl.traverseBottomUp(visitor);
         if(ClassPart!=null) ClassPart.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -72,8 +72,8 @@ public class ClassDeclaration extends ClassDecl {
         buffer.append(" "+tab+className);
         buffer.append("\n");
 
-        if(VarDecl!=null)
-            buffer.append(VarDecl.toString("  "+tab));
+        if(LoclVarDecl!=null)
+            buffer.append(LoclVarDecl.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

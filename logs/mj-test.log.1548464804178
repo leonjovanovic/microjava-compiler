@@ -1,0 +1,43 @@
+INFO  02:05:41,916 - Compiling source file: D:\Users\Leon\Desktop\Projekti\ProgramskiPrevodioci\MJCompiler\test\program.mj
+INFO  02:05:42,003 - #2 program
+INFO  02:05:42,003 - #42 MJProgram
+INFO  02:05:42,003 - #42 int
+INFO  02:05:42,004 - #42 x
+INFO  02:05:42,004 - #7 ,
+INFO  02:05:42,005 - #42 y
+INFO  02:05:42,005 - #6 ;
+INFO  02:05:42,005 - #3 {
+INFO  02:05:42,005 - #4 }
+INFO  02:05:42,016 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  Declarations(
+    NoDeclList(
+    ) [NoDeclList]
+    Declarations2(
+      GlobVarDeclaration(
+        Types(
+         int
+        ) [Types]
+        GlobVarListComma(
+          GlobVarListNoComma(
+            GlobVarNoBrackets(
+             x
+            ) [GlobVarNoBrackets]
+          ) [GlobVarListNoComma]
+          GlobVarNoBrackets(
+           y
+          ) [GlobVarNoBrackets]
+        ) [GlobVarListComma]
+      ) [GlobVarDeclaration]
+    ) [Declarations2]
+  ) [Declarations]
+  NoMethod(
+  ) [NoMethod]
+) [Program]
+INFO  02:05:42,016 - ===================================
+INFO  02:05:42,019 - Deklarisana globalna promenjljiva bez zagrada x na liniji 2
+INFO  02:05:42,020 - Deklarisana globalna promenjljiva bez zagrada y na liniji 2
+INFO  02:05:42,020 - ===================================
+ERROR 02:05:42,020 - Parsiranje nije uspesno zavrseno

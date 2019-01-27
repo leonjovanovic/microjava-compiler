@@ -1,0 +1,32 @@
+INFO  17:58:56,244 - Compiling source file: D:\Users\Leon\Desktop\Projekti\ProgramskiPrevodioci\MJCompiler\test\program.mj
+INFO  17:58:56,289 - #2 program
+INFO  17:58:56,289 - #42 MJProgram
+INFO  17:58:56,289 - #42 int
+INFO  17:58:56,295 - #42 b
+INFO  17:58:56,295 - #7 ,
+INFO  17:58:56,295 - #41 2
+ERROR 17:58:56,297 - 
+Sintaksna greska na liniji 2
+INFO  17:58:56,297 - #7 ,
+INFO  17:58:56,297 - #42 a
+INFO  17:58:56,297 - #6 ;
+INFO  17:58:56,297 - #42 int
+ERROR 17:58:56,297 - Izvrsen oporavak do ; u liniji 2
+INFO  17:58:56,297 - #42 s
+INFO  17:58:56,297 - #7 ,
+INFO  17:58:56,297 - #42 h
+INFO  17:58:56,297 - #6 ;
+INFO  17:58:56,297 - #42 int
+INFO  17:58:56,297 - #42 y
+INFO  17:58:56,297 - #8 =
+ERROR 17:58:56,297 - 
+Sintaksna greska na liniji 4
+INFO  17:58:56,297 - #7 ,
+INFO  17:58:56,297 - #42 p
+INFO  17:58:56,297 - #6 ;
+INFO  17:58:56,297 - #3 {
+ERROR 17:58:56,297 - Izvrsen oporavak do ; u liniji 4
+INFO  17:58:56,297 - #42 int
+ERROR 17:58:56,297 - 
+Sintaksna greska na liniji 7
+ERROR 17:58:56,297 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 7

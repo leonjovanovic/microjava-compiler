@@ -1,25 +1,25 @@
 // generated with ast extension for cup
 // version 0.8
-// 29/11/2018 4:58:37
+// 27/0/2019 5:2:16
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class Declarations2 extends Decl {
 
-    private VarDecl VarDecl;
+    private GlobVarDecl GlobVarDecl;
 
-    public Declarations2 (VarDecl VarDecl) {
-        this.VarDecl=VarDecl;
-        if(VarDecl!=null) VarDecl.setParent(this);
+    public Declarations2 (GlobVarDecl GlobVarDecl) {
+        this.GlobVarDecl=GlobVarDecl;
+        if(GlobVarDecl!=null) GlobVarDecl.setParent(this);
     }
 
-    public VarDecl getVarDecl() {
-        return VarDecl;
+    public GlobVarDecl getGlobVarDecl() {
+        return GlobVarDecl;
     }
 
-    public void setVarDecl(VarDecl VarDecl) {
-        this.VarDecl=VarDecl;
+    public void setGlobVarDecl(GlobVarDecl GlobVarDecl) {
+        this.GlobVarDecl=GlobVarDecl;
     }
 
     public void accept(Visitor visitor) {
@@ -27,16 +27,16 @@ public class Declarations2 extends Decl {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(VarDecl!=null) VarDecl.accept(visitor);
+        if(GlobVarDecl!=null) GlobVarDecl.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(VarDecl!=null) VarDecl.traverseTopDown(visitor);
+        if(GlobVarDecl!=null) GlobVarDecl.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(VarDecl!=null) VarDecl.traverseBottomUp(visitor);
+        if(GlobVarDecl!=null) GlobVarDecl.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -45,8 +45,8 @@ public class Declarations2 extends Decl {
         buffer.append(tab);
         buffer.append("Declarations2(\n");
 
-        if(VarDecl!=null)
-            buffer.append(VarDecl.toString("  "+tab));
+        if(GlobVarDecl!=null)
+            buffer.append(GlobVarDecl.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

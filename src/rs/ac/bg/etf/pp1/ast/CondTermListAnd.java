@@ -1,28 +1,28 @@
 // generated with ast extension for cup
 // version 0.8
-// 29/11/2018 4:58:38
+// 27/0/2019 5:2:17
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class CondTermListAnd extends CondTermList {
+public class CondTermListAnd extends CondTerm {
 
-    private CondTermList CondTermList;
+    private CondTerm CondTerm;
     private CondFact CondFact;
 
-    public CondTermListAnd (CondTermList CondTermList, CondFact CondFact) {
-        this.CondTermList=CondTermList;
-        if(CondTermList!=null) CondTermList.setParent(this);
+    public CondTermListAnd (CondTerm CondTerm, CondFact CondFact) {
+        this.CondTerm=CondTerm;
+        if(CondTerm!=null) CondTerm.setParent(this);
         this.CondFact=CondFact;
         if(CondFact!=null) CondFact.setParent(this);
     }
 
-    public CondTermList getCondTermList() {
-        return CondTermList;
+    public CondTerm getCondTerm() {
+        return CondTerm;
     }
 
-    public void setCondTermList(CondTermList CondTermList) {
-        this.CondTermList=CondTermList;
+    public void setCondTerm(CondTerm CondTerm) {
+        this.CondTerm=CondTerm;
     }
 
     public CondFact getCondFact() {
@@ -38,18 +38,18 @@ public class CondTermListAnd extends CondTermList {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(CondTermList!=null) CondTermList.accept(visitor);
+        if(CondTerm!=null) CondTerm.accept(visitor);
         if(CondFact!=null) CondFact.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(CondTermList!=null) CondTermList.traverseTopDown(visitor);
+        if(CondTerm!=null) CondTerm.traverseTopDown(visitor);
         if(CondFact!=null) CondFact.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(CondTermList!=null) CondTermList.traverseBottomUp(visitor);
+        if(CondTerm!=null) CondTerm.traverseBottomUp(visitor);
         if(CondFact!=null) CondFact.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -59,8 +59,8 @@ public class CondTermListAnd extends CondTermList {
         buffer.append(tab);
         buffer.append("CondTermListAnd(\n");
 
-        if(CondTermList!=null)
-            buffer.append(CondTermList.toString("  "+tab));
+        if(CondTerm!=null)
+            buffer.append(CondTerm.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

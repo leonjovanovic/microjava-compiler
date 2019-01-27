@@ -1,0 +1,189 @@
+INFO  14:22:20,778 - Compiling source file: D:\Users\Leon\Desktop\Projekti\ProgramskiPrevodioci\MJCompiler\test\program.mj
+INFO  14:22:20,827 - #2 program
+INFO  14:22:20,828 - #42 MJProgram
+INFO  14:22:20,828 - #42 int
+INFO  14:22:20,829 - #42 a
+INFO  14:22:20,829 - #7 ,
+INFO  14:22:20,829 - #41 2
+ERROR 14:22:20,829 - 
+Sintaksna greska na liniji 2
+INFO  14:22:20,829 - #7 ,
+INFO  14:22:20,829 - #42 g
+INFO  14:22:20,829 - #8 =
+INFO  14:22:20,830 - #41 6
+INFO  14:22:20,830 - #6 ;
+INFO  14:22:20,830 - #42 int
+INFO  14:22:20,830 - #42 s
+INFO  14:22:20,830 - #7 ,
+ERROR 14:22:20,831 - Izvrsen oporavak do ; u liniji 2
+INFO  14:22:20,831 - #42 h
+INFO  14:22:20,832 - #6 ;
+INFO  14:22:20,832 - #3 {
+INFO  14:22:20,832 - #42 int
+INFO  14:22:20,833 - #42 main
+INFO  14:22:20,833 - #14 (
+INFO  14:22:20,833 - #15 )
+INFO  14:22:20,834 - #42 int
+INFO  14:22:20,834 - #42 v
+INFO  14:22:20,834 - #6 ;
+INFO  14:22:20,834 - #3 {
+INFO  14:22:20,835 - #23 print
+INFO  14:22:20,835 - #14 (
+INFO  14:22:20,835 - #41 1
+INFO  14:22:20,835 - #15 )
+INFO  14:22:20,836 - #6 ;
+INFO  14:22:20,836 - #42 x
+INFO  14:22:20,836 - #8 =
+INFO  14:22:20,836 - #42 y
+INFO  14:22:20,837 - #36 +
+INFO  14:22:20,837 - #41 5
+INFO  14:22:20,838 - #6 ;
+INFO  14:22:20,838 - #23 print
+INFO  14:22:20,839 - #14 (
+INFO  14:22:20,839 - #41 2
+INFO  14:22:20,839 - #15 )
+INFO  14:22:20,839 - #6 ;
+INFO  14:22:20,839 - #4 }
+INFO  14:22:20,839 - #4 }
+INFO  14:22:20,841 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  Declarations(
+    Declarations(
+      NoDeclList(
+      ) [NoDeclList]
+      Declarations2(
+        VarDeclarationError(
+        ) [VarDeclarationError]
+      ) [Declarations2]
+    ) [Declarations]
+    Declarations2(
+      VarDeclaration(
+        Types(
+         int
+        ) [Types]
+        VarListComma(
+          VarListNoComma(
+            VarNoBrackets(
+             s
+            ) [VarNoBrackets]
+          ) [VarListNoComma]
+          VarNoBrackets(
+           h
+          ) [VarNoBrackets]
+        ) [VarListComma]
+      ) [VarDeclaration]
+    ) [Declarations2]
+  ) [Declarations]
+  MethodDeclarationList(
+    NoMethodDeclaration(
+    ) [NoMethodDeclaration]
+    MethodDeclarationType(
+      Types(
+       int
+      ) [Types]
+     main
+      NoFormParsList(
+      ) [NoFormParsList]
+      MethodVarDecl(
+        NoMethodVarDecl(
+        ) [NoMethodVarDecl]
+        VarDeclaration(
+          Types(
+           int
+          ) [Types]
+          VarListNoComma(
+            VarNoBrackets(
+             v
+            ) [VarNoBrackets]
+          ) [VarListNoComma]
+        ) [VarDeclaration]
+      ) [MethodVarDecl]
+      StatementLists(
+        StatementLists(
+          StatementLists(
+            NoStatements(
+            ) [NoStatements]
+            StatementMatched(
+              MatchedPrint(
+                ExprNoMinus(
+                  ExprTermNoAddop(
+                    Terms(
+                      TermListNoMulop(
+                        FactorNum(
+                         1
+                        ) [FactorNum]
+                      ) [TermListNoMulop]
+                    ) [Terms]
+                  ) [ExprTermNoAddop]
+                ) [ExprNoMinus]
+              ) [MatchedPrint]
+            ) [StatementMatched]
+          ) [StatementLists]
+          StatementMatched(
+            MatchedDesignator(
+              DesigStatement(
+                Designators(
+                  DesignatorListID(
+                   x
+                  ) [DesignatorListID]
+                ) [Designators]
+                DesignatorPart1(
+                  AssignopEq(
+                  ) [AssignopEq]
+                  ExprNoMinus(
+                    ExprListAddop(
+                      ExprTermNoAddop(
+                        Terms(
+                          TermListNoMulop(
+                            FactorDesignator(
+                              Designators(
+                                DesignatorListID(
+                                 y
+                                ) [DesignatorListID]
+                              ) [Designators]
+                            ) [FactorDesignator]
+                          ) [TermListNoMulop]
+                        ) [Terms]
+                      ) [ExprTermNoAddop]
+                      AddopPlus(
+                      ) [AddopPlus]
+                      Terms(
+                        TermListNoMulop(
+                          FactorNum(
+                           5
+                          ) [FactorNum]
+                        ) [TermListNoMulop]
+                      ) [Terms]
+                    ) [ExprListAddop]
+                  ) [ExprNoMinus]
+                ) [DesignatorPart1]
+              ) [DesigStatement]
+            ) [MatchedDesignator]
+          ) [StatementMatched]
+        ) [StatementLists]
+        StatementMatched(
+          MatchedPrint(
+            ExprNoMinus(
+              ExprTermNoAddop(
+                Terms(
+                  TermListNoMulop(
+                    FactorNum(
+                     2
+                    ) [FactorNum]
+                  ) [TermListNoMulop]
+                ) [Terms]
+              ) [ExprTermNoAddop]
+            ) [ExprNoMinus]
+          ) [MatchedPrint]
+        ) [StatementMatched]
+      ) [StatementLists]
+    ) [MethodDeclarationType]
+  ) [MethodDeclarationList]
+) [Program]
+INFO  14:22:20,842 - ===================================
+INFO  14:22:20,844 - Prepoznata naredba print!
+INFO  14:22:20,844 - Prepoznata naredba print!
+INFO  14:22:20,844 -  Print count calls = 2
+INFO  14:22:20,845 -  Deklarisanih promenljivih ima = 3

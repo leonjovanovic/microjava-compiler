@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 29/11/2018 4:58:37
+// 27/0/2019 5:2:17
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,13 +8,13 @@ package rs.ac.bg.etf.pp1.ast;
 public class MethodVarDecl extends MethVarDecl {
 
     private MethVarDecl MethVarDecl;
-    private VarDecl VarDecl;
+    private LoclVarDecl LoclVarDecl;
 
-    public MethodVarDecl (MethVarDecl MethVarDecl, VarDecl VarDecl) {
+    public MethodVarDecl (MethVarDecl MethVarDecl, LoclVarDecl LoclVarDecl) {
         this.MethVarDecl=MethVarDecl;
         if(MethVarDecl!=null) MethVarDecl.setParent(this);
-        this.VarDecl=VarDecl;
-        if(VarDecl!=null) VarDecl.setParent(this);
+        this.LoclVarDecl=LoclVarDecl;
+        if(LoclVarDecl!=null) LoclVarDecl.setParent(this);
     }
 
     public MethVarDecl getMethVarDecl() {
@@ -25,12 +25,12 @@ public class MethodVarDecl extends MethVarDecl {
         this.MethVarDecl=MethVarDecl;
     }
 
-    public VarDecl getVarDecl() {
-        return VarDecl;
+    public LoclVarDecl getLoclVarDecl() {
+        return LoclVarDecl;
     }
 
-    public void setVarDecl(VarDecl VarDecl) {
-        this.VarDecl=VarDecl;
+    public void setLoclVarDecl(LoclVarDecl LoclVarDecl) {
+        this.LoclVarDecl=LoclVarDecl;
     }
 
     public void accept(Visitor visitor) {
@@ -39,18 +39,18 @@ public class MethodVarDecl extends MethVarDecl {
 
     public void childrenAccept(Visitor visitor) {
         if(MethVarDecl!=null) MethVarDecl.accept(visitor);
-        if(VarDecl!=null) VarDecl.accept(visitor);
+        if(LoclVarDecl!=null) LoclVarDecl.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(MethVarDecl!=null) MethVarDecl.traverseTopDown(visitor);
-        if(VarDecl!=null) VarDecl.traverseTopDown(visitor);
+        if(LoclVarDecl!=null) LoclVarDecl.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(MethVarDecl!=null) MethVarDecl.traverseBottomUp(visitor);
-        if(VarDecl!=null) VarDecl.traverseBottomUp(visitor);
+        if(LoclVarDecl!=null) LoclVarDecl.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -65,8 +65,8 @@ public class MethodVarDecl extends MethVarDecl {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(VarDecl!=null)
-            buffer.append(VarDecl.toString("  "+tab));
+        if(LoclVarDecl!=null)
+            buffer.append(LoclVarDecl.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

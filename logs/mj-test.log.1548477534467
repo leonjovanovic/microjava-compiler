@@ -1,0 +1,24 @@
+INFO  05:38:21,045 - Compiling source file: D:\Users\Leon\Desktop\Projekti\ProgramskiPrevodioci\MJCompiler\test\program.mj
+INFO  05:38:21,113 - #2 program
+INFO  05:38:21,113 - #42 MJProgram
+INFO  05:38:21,113 - #42 int
+INFO  05:38:21,115 - #42 x
+INFO  05:38:21,115 - #7 ,
+INFO  05:38:21,115 - #42 y
+INFO  05:38:21,115 - #6 ;
+INFO  05:38:21,115 - #42 char
+INFO  05:38:21,115 - #42 a
+INFO  05:38:21,115 - #7 ,
+INFO  05:38:21,115 - #42 b
+INFO  05:38:21,115 - #11 [
+INFO  05:38:21,115 - #12 ]
+INFO  05:38:21,115 - #6 ;
+INFO  05:38:21,115 - #42 bool
+INFO  05:38:21,115 - #42 cc
+INFO  05:38:21,115 - #6 ;
+INFO  05:38:21,115 - #5 const
+INFO  05:38:21,115 - #42 gg
+INFO  05:38:21,115 - #8 =
+ERROR 05:38:21,115 - 
+Sintaksna greska na liniji 5
+ERROR 05:38:21,115 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 5

@@ -9,6 +9,7 @@ import rs.ac.bg.etf.pp1.ast.*;
 
 parser code {:
 
+	boolean errorDetected;
 	Logger log = Logger.getLogger(getClass());
    
         
@@ -26,6 +27,7 @@ parser code {:
     }
 
     public void report_error(String message, Object info) {
+    	errorDetected = true;
     	StringBuilder msg = new StringBuilder(message); 
     	if (info instanceof Symbol)
             msg.append (" na liniji ").append(((Symbol)info).left);
@@ -34,6 +36,9 @@ parser code {:
 
 :}
 
+init with {:
+	errorDetected = false;
+:}
 
 scan with {:
 	Symbol s = this.getScanner().next_token(); /*Presrecemo Scanner*/
@@ -49,19 +54,20 @@ terminal RETURN, READ, PRINT, INC, DEC, OR, AND, MINUS, NEW, EQUALS, DIFFERENT, 
 terminal MOREEQUAL, LESS, LESSEQUAL, PLUS, MULTIPLY, DIVIDE, MOD, DOT;
 terminal Integer NUMBER;
 terminal String IDENT;
-terminal String BOOL;
+terminal Boolean BOOL;
 terminal Character CHAR;
 
-nonterminal DeclList, MethodDeclList, Decl, MethVarDecl;
-nonterminal ConstDecl, VarDecl, ClassDecl, EnumDecl;
-nonterminal ConstList, ConstPart, Consts, EnumList, Enums;
-nonterminal VarList, Var, ClassPart, MethodDecl, FormPars, FormParamList;
-nonterminal Form, Type, Statement, StatementList, DesignatorStatement, DesignatorPart; 
-nonterminal Expr, Designator, DesignatorList, Assignop, ActPars;
-nonterminal ActParsList, CondTerm, CondTermList, CondFact, Addop, ExprList, Factor, Term;
-nonterminal ConditionList, Condition, TermList, Relop, Mulop, Matched, Unmatched, Unmatched_For, Matched_For, For;
+nonterminal DeclList, MethodDeclList, Decl;
+nonterminal ConstDecl, GlobVarDecl, LoclVarDecl, ClassDecl, EnumDecl;
+nonterminal EnumList, Enums;
+nonterminal GlobVarList, GlobVar, LoclVarList, LoclVar, ClassPart, FormPars, FormParamList;
+nonterminal Form, Statement, StatementList, DesignatorStatement, DesignatorStatementOpt; 
+nonterminal Assignop, ActPars;
+nonterminal ActParsList, Addop;
+nonterminal Relop, Mulop, Matched, Unmatched, Unmatched_For, Matched_For, For;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodDecl, MethodNameType, MethVarDecl, Designator;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Expr, ExprOpt, ExprList, Factor, Term, ConstList, ConstPart, Consts, CondFact, CondTerm, Condition;
 
 /* ---------------------------------------- Program ------------------------------------------------------------- */
 
@@ -73,7 +79,7 @@ ProgName ::= (ProgName) IDENT:progName;
 
 DeclList::=(Declarations) DeclList Decl	| (NoDeclList) /* epsilon */;
 
-Decl ::= (Declarations1) ConstDecl | (Declarations2) VarDecl | (Declarations3) ClassDecl | (Declarations4) EnumDecl ;
+Decl ::= (Declarations1) ConstDecl | (Declarations2) GlobVarDecl | (Declarations3) ClassDecl | (Declarations4) EnumDecl ;
 
 
 /* ---------------------------------------- Constants ------------------------------------------------------------- */
@@ -84,8 +90,10 @@ ConstList ::= (ConstantsListComma) ConstList COMMA ConstPart | (ConstantsListNoC
 
 ConstPart ::= (ConstantsPart) IDENT:constName EQUAL Consts:c;
 
-Consts ::= (ConstNumber) NUMBER | (ConstChar) CHAR | (ConstBool) BOOL;
-
+Consts ::= (ConstNumber) NUMBER | (ConstChar) CHAR | (ConstBool) BOOL
+		|
+		(ConstError) error:l {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null); :};
+	
 
 /* ---------------------------------------- Enums ------------------------------------------------------------- */
 
@@ -96,43 +104,64 @@ EnumList ::= (EnumListComma) EnumList COMMA Enums | (EnumNoComma) Enums;
 Enums ::= (EnumNoNum) IDENT:name | (EnumNum)IDENT:name EQUAL NUMBER;
 
 
-/* ---------------------------------------- Variables ------------------------------------------------------------- */
+/* ----------------------------------------Global Variables ------------------------------------------------------------- */
 
-VarDecl ::= (VarDeclaration) Type:varType VarList:varName SEMI;
+GlobVarDecl ::= (GlobVarDeclaration) Type:varType GlobVarList SEMI;
 
-VarList ::= (VarListComma) VarList COMMA Var:v | (VarListNoComma) Var ;
+GlobVarList ::= (GlobVarListComma) GlobVarList COMMA GlobVar | (GlobVarListNoComma) GlobVar;
+		
+GlobVar::= (GlobVarNoBrackets) IDENT:varName | (GlobVarBrackets) IDENT:varName LBRACKET RBRACKET
+		|
+		(GlobVarDeclarationError) error:l {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null); :};
+	
 
-Var::= (VarNoBrackets) IDENT:varName | (VarBrackets) IDENT:varName LBRACKET RBRACKET;
+
+/* ----------------------------------------Local Variables ------------------------------------------------------------- */
+
+LoclVarDecl ::= (LoclVarDeclaration) Type:varType LoclVarList:varName SEMI;
+
+LoclVarList ::= (LoclVarListComma) LoclVarList COMMA LoclVar | (LoclVarListNoComma) LoclVar;
+		
+LoclVar::= (LoclVarNoBrackets) IDENT:varName | (LoclVarBrackets) IDENT:varName LBRACKET RBRACKET 
+		|
+		(LoclVarDeclarationError) error:l {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null); :};
+	
 
 
 /* ----------------------------------------- Class ------------------------------------------------------------------------ */
 
-ClassDecl ::= (ClassDeclaration) CLASS IDENT:className LBRACE VarDecl ClassPart RBRACE;
+ClassDecl ::= (ClassDeclaration) CLASS IDENT:className LBRACE LoclVarDecl ClassPart RBRACE;
 
 ClassPart ::= (ClassPartMethod) LBRACE MethodDeclList RBRACE
 			|
+			(NoClassPartMethod) /* epsilon */
 			;
 
 
-/* ---------------------------------------Class methods ------------------------------------------------------------------- */
+/* --------------------------------------- Methods ------------------------------------------------------------------- */
 
-MethodDeclList ::=(MethodDeclarationList) MethodDeclList MethodDecl | (NoMethodDeclaration) /* epsilon */;
+MethodDeclList ::=(MethodDeclarationList) MethodDeclList MethodDecl | (NoMethod) /* epsilon */;
 
-MethodDecl ::= (MethodDeclarationType) Type:classType IDENT:methodName LPAREN FormPars RPAREN MethVarDecl LBRACE StatementList RBRACE
-			|
-			(MethodDeclarationVoid) VOID IDENT:methodName LPAREN FormPars RPAREN MethVarDecl LBRACE StatementList RBRACE
-			;
+MethodDecl ::= (MethodDeclarationType) MethodNameType LPAREN FormPars RPAREN MethVarDecl LBRACE StatementList RBRACE ;
 			
-MethVarDecl ::= (MethodVarDecl) MethVarDecl VarDecl | (NoMethodVarDecl) /* epsilon */;
+MethodNameType ::= (MethNameType) Type:retType IDENT:methodName
+				|
+				(MethNameVoid) VOID IDENT:methodName;
+			
+MethVarDecl ::= (MethodVarDecl) MethVarDecl LoclVarDecl | (NoMethodVarDecl) /* epsilon */;
 
 
-/* ---------------Function and method parameters -------------------------------------------------------------------------- */
+/* ----------------------------Function and method parameters ------------------------------------------------------------- */
 
 FormPars ::= (FormParameters) FormParamList | (NoFormParsList) /* epsilon */;
 
 FormParamList ::= (FormParametersList) FormParamList COMMA Form | (FormParametersListSingle) Form;
 
-Form ::= (FormNoBrackets) Type IDENT:formName | (FormBrackets) Type IDENT:formName LBRACKET RBRACKET;
+Form ::= (FormNoBrackets) Type IDENT:formName 
+		| 
+		(FormBrackets) Type IDENT:formName LBRACKET RBRACKET
+		|
+		(FormParsError) error:l {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null); :};
 
 /* ---------------------------------------- Type ------------------------------------------------------------- */
 
@@ -162,9 +191,7 @@ Matched ::= (MatchedDesignator) DesignatorStatement SEMI
 		| 
 		(MatchedContinue) CONTINUE SEMI
 		| 
-		(MatchedReturnNoExpr) RETURN SEMI
-		| 
-		(MatchedReturnExpr) RETURN Expr SEMI
+		(MatchedReturnExpr) RETURN ExprOpt:t SEMI
 		| 
 		(MatchedRead) READ LPAREN Designator RPAREN SEMI
 		| 
@@ -176,79 +203,71 @@ Matched ::= (MatchedDesignator) DesignatorStatement SEMI
 		;
 		
 Unmatched_For ::= (UnmatchedForSeparation) For Unmatched ;
+
 Matched_For   ::= (MatchedForSeparation) For Matched ;
 
-For ::= (ForEmpty) FOR LPAREN SEMI SEMI RPAREN
-		|
-		(For1) FOR LPAREN DesignatorStatement SEMI SEMI RPAREN
-		|
-		(For2) FOR LPAREN SEMI Condition SEMI RPAREN
-		| 
-		(For3) FOR LPAREN SEMI SEMI DesignatorStatement RPAREN
-		| 
-		(For12) FOR LPAREN DesignatorStatement SEMI Condition SEMI RPAREN
-		| 
-		(For13) FOR LPAREN DesignatorStatement SEMI SEMI DesignatorStatement RPAREN
-		| 
-		(For23) FOR LPAREN SEMI Condition SEMI DesignatorStatement RPAREN
-		| 
-		(For123) FOR LPAREN DesignatorStatement SEMI Condition SEMI DesignatorStatement RPAREN;
+For ::= (For123) FOR LPAREN DesignatorStatementOpt SEMI Condition SEMI DesignatorStatementOpt RPAREN;
 
 /* ---------------------------------------- DesignatorStatement ------------------------------------------------------- */		
 
-DesignatorStatement ::= (DesigStatement) Designator DesignatorPart;
+DesignatorStatementOpt ::= (DesigStatementY) DesignatorStatement 
+						|
+						(NoDesigStatement) /* epsilon */
+						; 
 
-DesignatorPart ::=(DesignatorPart1) Assignop Expr 
-				| 
-				(DesignatorPart2) LPAREN RPAREN 
-				| 
-				(DesignatorPart3) INC 
-				| 
-				(DesignatorPart4) DEC
-				|
-				(DesignatorPart5) LPAREN ActPars RPAREN
-				;
+DesignatorStatement ::=(DesignatorAssign) Designator:dest Assignop Expr:e 
+					|
+					(DesignatorParams) Designator:dest LPAREN ActPars RPAREN
+					| 
+					(DesignatorInc) Designator:dest INC 
+					| 
+					(DesignatorDec) Designator:dest DEC
+					|
+					(DesignatorError) Designator Assignop error:l {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null); :}
+					;
 				
 		
 /* ---------------------------------------- ActualParameters ------------------------------------------------------- */
 
-ActPars ::= (ActualParameters) ActParsList;
+ActPars ::= (ActualParameters) ActParsList | (NoActPars) /* epsilon */;
 
 ActParsList ::= (ActParsListComma) ActParsList COMMA Expr | (ActParsListNoComma) Expr;
 
 /* ---------------------------------------- Condition ------------------------------------------------------- */
 
-Condition ::= (Conditions) ConditionList ;
-
-ConditionList ::= (ConditionListOr) ConditionList OR CondTerm | (ConditionListNoOr) CondTerm;
+Condition ::= (ConditionListOr) Condition OR CondTerm 
+			| 
+			(ConditionListNoOr) CondTerm
+			|
+			(ConditionError) error:l {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null); :}	
+			|
+			(NoConditions) /* epsilon */
+			;
 
 /* ---------------------------------------- CondTerm ------------------------------------------------------- */
 
-CondTerm ::= (ConditionTerm) CondTermList;
-
-CondTermList ::= (CondTermListAnd) CondTermList AND CondFact | (CondTermListNoAnd) CondFact;		
+CondTerm ::= (CondTermListAnd) CondTerm AND CondFact | (CondTermListNoAnd) CondFact;		
 		
 /* ---------------------------------------- CondFact ------------------------------------------------------- */		
 
-CondFact ::= (ContFactNoRelop) Expr | (ContFactRelop) Expr Relop Expr;
+CondFact ::= (CondFactNoRelop) Expr | (CondFactRelop) Expr Relop Expr;
 
 /* ---------------------------------------- Expr ------------------------------------------------------- */		
 
-Expr ::= (ExprNoMinus) ExprList:el | (ExprMinus) MINUS ExprList:el;
+ExprOpt ::= (Exprs) Expr:te | (NoExpr) /* epsilon */;
 
-ExprList ::= (ExprListAddop) ExprList:el Addop:ad Term:t | (ExprTermNoAddop) Term:t2;
+Expr ::= (ExprNoMinus) ExprList:te | (ExprMinus) MINUS ExprList:te;
+
+ExprList ::= (ExprListAddop) ExprList:te Addop:ad Term:t | (ExprTermNoAddop) Term:t;
 
 /* ---------------------------------------- Term ------------------------------------------------------- */		
 
-Term ::= (Terms) TermList:tl;
-
-TermList ::= (TermListMulop) TermList Mulop:m Factor:f | (TermListNoMulop) Factor:f;
+Term ::= (Terms) Term:t Mulop:m Factor:f | (TermNoMulop) Factor:t;
 
 /* ---------------------------------------- Factor ------------------------------------------------------- */		
 
-Factor ::= (FactorDesignator) Designator:des
-		| (FactorNoActPars) Designator:des LPAREN RPAREN
-		| (FactorActPars) Designator:des LPAREN ActPars:ap RPAREN
+Factor ::= (FactorDesignator) Designator:d
+		| (FactorDesignatorActPars) Designator:func LPAREN ActPars RPAREN
 		| (FactorNum) NUMBER
 		| (FactorChar) CHAR
 		| (FactorBool) BOOL
@@ -257,19 +276,17 @@ Factor ::= (FactorDesignator) Designator:des
 		| (FactorExpr) LPAREN Expr:e RPAREN;
 
 /* ---------------------------------------- Designator ------------------------------------------------------- */		
-		
-Designator ::= (Designators) DesignatorList;
 
-DesignatorList ::= (DesignatorListDot) DesignatorList DOT IDENT 
+Designator ::= (DesignatorDot) Designator DOT IDENT 
 				| 
-				(DesignatorListExpr) DesignatorList LBRACKET Expr RBRACKET 
+				(DesignatorExpr) Designator:d LBRACKET Expr:pos RBRACKET 
 				| 
-				(DesignatorListID) IDENT;
+				(DesignatorID) IDENT:name;
 		
 		
 /* ---------------------------------------- Assignop ------------------------------------------------------- */		
 		
-Assignop ::= (AssignopEq)	EQUAL;
+Assignop ::= (AssignopEq) EQUAL;
 
 /* ---------------------------------------- Relop ------------------------------------------------------- */		
 		
