@@ -1,27 +1,28 @@
 // generated with ast extension for cup
 // version 0.8
-// 27/0/2019 5:2:17
+// 28/0/2019 6:42:7
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class EnumDeclaration extends EnumDecl {
 
-    private String enumName;
+    private EnumStart EnumStart;
     private EnumList EnumList;
 
-    public EnumDeclaration (String enumName, EnumList EnumList) {
-        this.enumName=enumName;
+    public EnumDeclaration (EnumStart EnumStart, EnumList EnumList) {
+        this.EnumStart=EnumStart;
+        if(EnumStart!=null) EnumStart.setParent(this);
         this.EnumList=EnumList;
         if(EnumList!=null) EnumList.setParent(this);
     }
 
-    public String getEnumName() {
-        return enumName;
+    public EnumStart getEnumStart() {
+        return EnumStart;
     }
 
-    public void setEnumName(String enumName) {
-        this.enumName=enumName;
+    public void setEnumStart(EnumStart EnumStart) {
+        this.EnumStart=EnumStart;
     }
 
     public EnumList getEnumList() {
@@ -37,15 +38,18 @@ public class EnumDeclaration extends EnumDecl {
     }
 
     public void childrenAccept(Visitor visitor) {
+        if(EnumStart!=null) EnumStart.accept(visitor);
         if(EnumList!=null) EnumList.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
+        if(EnumStart!=null) EnumStart.traverseTopDown(visitor);
         if(EnumList!=null) EnumList.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
+        if(EnumStart!=null) EnumStart.traverseBottomUp(visitor);
         if(EnumList!=null) EnumList.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -55,7 +59,10 @@ public class EnumDeclaration extends EnumDecl {
         buffer.append(tab);
         buffer.append("EnumDeclaration(\n");
 
-        buffer.append(" "+tab+enumName);
+        if(EnumStart!=null)
+            buffer.append(EnumStart.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
         buffer.append("\n");
 
         if(EnumList!=null)

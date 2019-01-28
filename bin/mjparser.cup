@@ -59,14 +59,14 @@ terminal Character CHAR;
 
 nonterminal DeclList, MethodDeclList, Decl;
 nonterminal ConstDecl, GlobVarDecl, LoclVarDecl, ClassDecl, EnumDecl;
-nonterminal EnumList, Enums;
+nonterminal EnumList;
 nonterminal GlobVarList, GlobVar, LoclVarList, LoclVar, ClassPart, FormPars, FormParamList;
 nonterminal Form, Statement, StatementList, DesignatorStatement, DesignatorStatementOpt; 
 nonterminal Assignop, ActPars;
-nonterminal ActParsList, Addop;
+nonterminal ActParsList, Addop, ConditionEnd, StartElse;
 nonterminal Relop, Mulop, Matched, Unmatched, Unmatched_For, Matched_For, For;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodDecl, MethodNameType, MethVarDecl, Designator;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodDecl, MethodNameType, MethVarDecl, Designator, EnumStart, Enums;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Expr, ExprOpt, ExprList, Factor, Term, ConstList, ConstPart, Consts, CondFact, CondTerm, Condition;
 
 /* ---------------------------------------- Program ------------------------------------------------------------- */
@@ -90,18 +90,20 @@ ConstList ::= (ConstantsListComma) ConstList COMMA ConstPart | (ConstantsListNoC
 
 ConstPart ::= (ConstantsPart) IDENT:constName EQUAL Consts:c;
 
-Consts ::= (ConstNumber) NUMBER | (ConstChar) CHAR | (ConstBool) BOOL
+Consts ::= (ConstNumber) NUMBER:value | (ConstChar) CHAR:value | (ConstBool) BOOL:value
 		|
 		(ConstError) error:l {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null); :};
 	
 
 /* ---------------------------------------- Enums ------------------------------------------------------------- */
 
-EnumDecl ::= (EnumDeclaration) ENUM IDENT:enumName LBRACE EnumList RBRACE;
+EnumDecl ::= (EnumDeclaration) ENUM EnumStart LBRACE EnumList RBRACE;
+
+EnumStart ::= (StartEnum) IDENT:enumName;
 
 EnumList ::= (EnumListComma) EnumList COMMA Enums | (EnumNoComma) Enums;
 
-Enums ::= (EnumNoNum) IDENT:name | (EnumNum)IDENT:name EQUAL NUMBER;
+Enums ::= (EnumNoNum) IDENT:name | (EnumNum)IDENT:name EQUAL NUMBER:value;
 
 
 /* ----------------------------------------Global Variables ------------------------------------------------------------- */
@@ -173,9 +175,9 @@ StatementList ::= (StatementLists) StatementList Statement | (NoStatements) /* e
 
 Statement ::= (StatementMatched) Matched | (StatementUnatched)Unmatched ;
 
-Unmatched ::= (UnmatchedIfNoElse) IF LPAREN Condition RPAREN Statement
+Unmatched ::= (UnmatchedIfNoElse) IF LPAREN Condition ConditionEnd Statement
 			|
-			(UnmatchedIfElse) IF LPAREN Condition RPAREN Matched ELSE Unmatched
+			(UnmatchedIfElse) IF LPAREN Condition ConditionEnd Matched StartElse Unmatched
 			|
 			(UnmatchedFor) Unmatched_For;
 
@@ -183,7 +185,7 @@ Matched ::= (MatchedDesignator) DesignatorStatement SEMI
 		|
 		(MatchedDesignatorError) error SEMI:l {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null); :}	
 		| 
-		(MatchedIfElse) IF LPAREN Condition RPAREN Matched ELSE Matched
+		(MatchedIfElse) IF LPAREN Condition:value ConditionEnd Matched StartElse Matched
 		| 
 		(MatchedFor) Matched_For
 		| 
@@ -201,6 +203,8 @@ Matched ::= (MatchedDesignator) DesignatorStatement SEMI
 		|
 		(MatchedStatement) LBRACE StatementList RBRACE
 		;
+ConditionEnd ::= (CondEnd) RPAREN;
+StartElse ::= (ElseStart) ELSE;
 		
 Unmatched_For ::= (UnmatchedForSeparation) For Unmatched ;
 
@@ -237,7 +241,7 @@ ActParsList ::= (ActParsListComma) ActParsList COMMA Expr | (ActParsListNoComma)
 
 Condition ::= (ConditionListOr) Condition OR CondTerm 
 			| 
-			(ConditionListNoOr) CondTerm
+			(ConditionListNoOr) CondTerm:value
 			|
 			(ConditionError) error:l {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null); :}	
 			|

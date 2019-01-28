@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 27/0/2019 5:2:17
+// 28/0/2019 6:42:7
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,11 +8,11 @@ package rs.ac.bg.etf.pp1.ast;
 public class EnumNum extends Enums {
 
     private String name;
-    private Integer N1;
+    private Integer value;
 
-    public EnumNum (String name, Integer N1) {
+    public EnumNum (String name, Integer value) {
         this.name=name;
-        this.N1=N1;
+        this.value=value;
     }
 
     public String getName() {
@@ -23,12 +23,12 @@ public class EnumNum extends Enums {
         this.name=name;
     }
 
-    public Integer getN1() {
-        return N1;
+    public Integer getValue() {
+        return value;
     }
 
-    public void setN1(Integer N1) {
-        this.N1=N1;
+    public void setValue(Integer value) {
+        this.value=value;
     }
 
     public void accept(Visitor visitor) {
@@ -54,7 +54,7 @@ public class EnumNum extends Enums {
         buffer.append(" "+tab+name);
         buffer.append("\n");
 
-        buffer.append(" "+tab+N1);
+        buffer.append(" "+tab+value);
         buffer.append("\n");
 
         buffer.append(tab);

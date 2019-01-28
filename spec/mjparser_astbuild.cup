@@ -66,7 +66,6 @@ nonterminal LoclVarDecl LoclVarDecl;
 nonterminal ClassDecl ClassDecl;
 nonterminal EnumDecl EnumDecl;
 nonterminal EnumList EnumList;
-nonterminal Enums Enums;
 nonterminal GlobVarList GlobVarList;
 nonterminal GlobVar GlobVar;
 nonterminal LoclVarList LoclVarList;
@@ -83,6 +82,8 @@ nonterminal Assignop Assignop;
 nonterminal ActPars ActPars;
 nonterminal ActParsList ActParsList;
 nonterminal Addop Addop;
+nonterminal ConditionEnd ConditionEnd;
+nonterminal StartElse StartElse;
 nonterminal Relop Relop;
 nonterminal Mulop Mulop;
 nonterminal Matched Matched;
@@ -91,7 +92,7 @@ nonterminal Unmatched_For Unmatched_For;
 nonterminal Matched_For Matched_For;
 nonterminal For For;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodDecl, MethodNameType, MethVarDecl, Designator;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodDecl, MethodNameType, MethVarDecl, Designator, EnumStart, Enums;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Expr, ExprOpt, ExprList, Factor, Term, ConstList, ConstPart, Consts, CondFact, CondTerm, Condition;
 
 /* ---------------------------------------- Program ------------------------------------------------------------- */
@@ -115,18 +116,20 @@ ConstList ::= (ConstantsListComma) ConstList:C1 COMMA ConstPart:C2 {: RESULT=new
 
 ConstPart ::= (ConstantsPart) IDENT:constName EQUAL Consts:c {: RESULT=new ConstantsPart(constName, c); RESULT.setLine(constNameleft); :};
 
-Consts ::= (ConstNumber) NUMBER:N1 {: RESULT=new ConstNumber(N1); RESULT.setLine(N1left); :} | (ConstChar) CHAR:C1 {: RESULT=new ConstChar(C1); RESULT.setLine(C1left); :} | (ConstBool) BOOL:B1 {: RESULT=new ConstBool(B1); RESULT.setLine(B1left); :}
+Consts ::= (ConstNumber) NUMBER:value {: RESULT=new ConstNumber(value); RESULT.setLine(valueleft); :} | (ConstChar) CHAR:value {: RESULT=new ConstChar(value); RESULT.setLine(valueleft); :} | (ConstBool) BOOL:value {: RESULT=new ConstBool(value); RESULT.setLine(valueleft); :}
 		|
 		(ConstError) error:l {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null); :} {: RESULT=new ConstError(); :};
 	
 
 /* ---------------------------------------- Enums ------------------------------------------------------------- */
 
-EnumDecl ::= (EnumDeclaration) ENUM IDENT:enumName LBRACE EnumList:E1 RBRACE {: RESULT=new EnumDeclaration(enumName, E1); RESULT.setLine(enumNameleft); :};
+EnumDecl ::= (EnumDeclaration) ENUM EnumStart:E1 LBRACE EnumList:E2 RBRACE {: RESULT=new EnumDeclaration(E1, E2); RESULT.setLine(E1left); :};
+
+EnumStart ::= (StartEnum) IDENT:enumName {: RESULT=new StartEnum(enumName); RESULT.setLine(enumNameleft); :};
 
 EnumList ::= (EnumListComma) EnumList:E1 COMMA Enums:E2 {: RESULT=new EnumListComma(E1, E2); RESULT.setLine(E1left); :} | (EnumNoComma) Enums:E1 {: RESULT=new EnumNoComma(E1); RESULT.setLine(E1left); :};
 
-Enums ::= (EnumNoNum) IDENT:name {: RESULT=new EnumNoNum(name); RESULT.setLine(nameleft); :} | (EnumNum)IDENT:name EQUAL NUMBER:N1 {: RESULT=new EnumNum(name, N1); RESULT.setLine(nameleft); :};
+Enums ::= (EnumNoNum) IDENT:name {: RESULT=new EnumNoNum(name); RESULT.setLine(nameleft); :} | (EnumNum)IDENT:name EQUAL NUMBER:value {: RESULT=new EnumNum(name, value); RESULT.setLine(nameleft); :};
 
 
 /* ----------------------------------------Global Variables ------------------------------------------------------------- */
@@ -198,9 +201,9 @@ StatementList ::= (StatementLists) StatementList:S1 Statement:S2 {: RESULT=new S
 
 Statement ::= (StatementMatched) Matched:M1 {: RESULT=new StatementMatched(M1); RESULT.setLine(M1left); :} | (StatementUnatched)Unmatched:U1 {: RESULT=new StatementUnatched(U1); RESULT.setLine(U1left); :} ;
 
-Unmatched ::= (UnmatchedIfNoElse) IF LPAREN Condition:C1 RPAREN Statement:S2 {: RESULT=new UnmatchedIfNoElse(C1, S2); RESULT.setLine(C1left); :}
+Unmatched ::= (UnmatchedIfNoElse) IF LPAREN Condition:C1 ConditionEnd:C2 Statement:S3 {: RESULT=new UnmatchedIfNoElse(C1, C2, S3); RESULT.setLine(C1left); :}
 			|
-			(UnmatchedIfElse) IF LPAREN Condition:C1 RPAREN Matched:M2 ELSE Unmatched:U3 {: RESULT=new UnmatchedIfElse(C1, M2, U3); RESULT.setLine(C1left); :}
+			(UnmatchedIfElse) IF LPAREN Condition:C1 ConditionEnd:C2 Matched:M3 StartElse:S4 Unmatched:U5 {: RESULT=new UnmatchedIfElse(C1, C2, M3, S4, U5); RESULT.setLine(C1left); :}
 			|
 			(UnmatchedFor) Unmatched_For:U1 {: RESULT=new UnmatchedFor(U1); RESULT.setLine(U1left); :};
 
@@ -208,7 +211,7 @@ Matched ::= (MatchedDesignator) DesignatorStatement:D1 SEMI {: RESULT=new Matche
 		|
 		(MatchedDesignatorError) error SEMI:l {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null); :} {: RESULT=new MatchedDesignatorError(); :}	
 		| 
-		(MatchedIfElse) IF LPAREN Condition:C1 RPAREN Matched:M2 ELSE Matched:M3 {: RESULT=new MatchedIfElse(C1, M2, M3); RESULT.setLine(C1left); :}
+		(MatchedIfElse) IF LPAREN Condition:value ConditionEnd:C1 Matched:M2 StartElse:S3 Matched:M4 {: RESULT=new MatchedIfElse(value, C1, M2, S3, M4); RESULT.setLine(valueleft); :}
 		| 
 		(MatchedFor) Matched_For:M1 {: RESULT=new MatchedFor(M1); RESULT.setLine(M1left); :}
 		| 
@@ -226,6 +229,8 @@ Matched ::= (MatchedDesignator) DesignatorStatement:D1 SEMI {: RESULT=new Matche
 		|
 		(MatchedStatement) LBRACE StatementList:S1 RBRACE {: RESULT=new MatchedStatement(S1); RESULT.setLine(S1left); :}
 		;
+ConditionEnd ::= (CondEnd) RPAREN {: RESULT=new CondEnd(); :};
+StartElse ::= (ElseStart) ELSE {: RESULT=new ElseStart(); :};
 		
 Unmatched_For ::= (UnmatchedForSeparation) For:F1 Unmatched:U2 {: RESULT=new UnmatchedForSeparation(F1, U2); RESULT.setLine(F1left); :} ;
 
@@ -262,7 +267,7 @@ ActParsList ::= (ActParsListComma) ActParsList:A1 COMMA Expr:E2 {: RESULT=new Ac
 
 Condition ::= (ConditionListOr) Condition:C1 OR CondTerm:C2 {: RESULT=new ConditionListOr(C1, C2); RESULT.setLine(C1left); :} 
 			| 
-			(ConditionListNoOr) CondTerm:C1 {: RESULT=new ConditionListNoOr(C1); RESULT.setLine(C1left); :}
+			(ConditionListNoOr) CondTerm:value {: RESULT=new ConditionListNoOr(value); RESULT.setLine(valueleft); :}
 			|
 			(ConditionError) error:l {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null); :} {: RESULT=new ConditionError(); :}	
 			|

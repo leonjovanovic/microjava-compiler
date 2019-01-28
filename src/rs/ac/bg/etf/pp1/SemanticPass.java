@@ -1,6 +1,8 @@
 package rs.ac.bg.etf.pp1;
 
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Stack;
 
 import org.apache.log4j.Logger;
@@ -15,6 +17,9 @@ public class SemanticPass extends VisitorAdaptor {
 	int varDeclCount = 0;
 	Struct currentType = null;
 	Obj currentMethod = null;
+	Obj currentEnum = null;
+	int numEnumConst = 0;
+	List<Integer> enumConst =  new ArrayList<Integer>();
 	boolean returnFound=false;
 	boolean errorDetected = false;
 	Stack<Obj> actParamStack = new Stack<Obj>();
@@ -72,7 +77,7 @@ public class SemanticPass extends VisitorAdaptor {
 		e.struct = TabExtended.noType;
 	}	
 	
-	public void visit(ConstantsPart con) {
+	public void visit(ConstantsPart con) {		
 		if(Tab.currentScope().findSymbol(con.getConstName()) != null) {
 			report_error("Greska na liniji "+ con.getLine() + " : konstanta "+ con.getConstName()+ " vec deklarisana u ovom scope-u! ", null);
 		}
@@ -81,26 +86,74 @@ public class SemanticPass extends VisitorAdaptor {
 			report_error("Greska na liniji "+ con.getLine() + " : tip vrednosti koja se dodeljuje konstanti "+ con.getConstName()+ " nije dobar! ", null);
 		}
 		report_info("Deklarisana konstanta " + con.getConstName(), con);
-		Tab.insert(Obj.Con, con.getConstName(), this.currentType);
-	}
-	
-	public void visit(ConstantsListComma listc) {
-		
-	}
-	
-	public void visit(ConstantsListNoComma list) {
-		
+		int address = 0;
+		if(con.getConsts() instanceof ConstNumber) address = ((ConstNumber) con.getConsts()).getValue();
+		else if(con.getConsts() instanceof ConstChar) address = ((ConstChar) con.getConsts()).getValue();
+		else if(con.getConsts() instanceof ConstBool) {
+			Boolean value =((ConstBool) con.getConsts()).getValue();
+			if(value.equals(true)) address = 1;
+			else address = 0;
+		}
+		Tab.insert(Obj.Con, con.getConstName(), this.currentType).setAdr(address);
 	}
 	
 	public void visit(ConstantsDecl con) {
 		currentType = null;
 	}
    
+    //==================================================================================
+    //=================================== Enum =========================================
+	//==================================================================================
+	//enum Num { ZERO, ONE, TEN = 2 }
+	public void visit(EnumNoNum en){
+		int address = numEnumConst++;
+		for(int i = 0; i < enumConst.size(); i++) {
+			if (address == enumConst.get(i)) {
+				address = numEnumConst++; //povecaj je +1
+				i = 0;//i resetuj iterator da bi proverili sve vrednosti za novu vrednost
+			}
+		}
+		enumConst.add(address);
+		Tab.insert(Obj.Con, en.getName(), Tab.intType).setAdr(address);
+	}	
+	
+	public void visit(EnumNum en){
+		int address = en.getValue();
+		for(int i = 0; i < enumConst.size(); i++) {
+			if (address == enumConst.get(i)) {
+				report_error("Greska na liniji " + en.getLine() + " : celobrojna vrednost "+en.getName()+" mora biti jednistvena u okviru nabrajanja "+ currentEnum.getName(), null);
+			}
+		}
+		enumConst.add(address);
+		Tab.insert(Obj.Con, en.getName(), Tab.intType).setAdr(address);
+	}
+	
+	public void visit(StartEnum en) {
+		if(Tab.currentScope().findSymbol(en.getEnumName()) != null) {
+			report_error("Greska na liniji " + en.getLine() + " : enum "+en.getEnumName()+ " je vec deklarisan! ", null);
+		}
+		currentEnum = Tab.insert(Obj.Fld, en.getEnumName(), new Struct(Struct.Array, Tab.intType));
+		en.obj = currentEnum;
+		Tab.openScope();
+		report_info("Obradjuje se enum " + en.getEnumName(), en);
+	}
+
+	public void visit(EnumDeclaration en){
+		if(currentEnum==null)return;
+		
+		Tab.chainLocalSymbols(currentEnum);
+		Tab.closeScope();
+		
+		currentEnum = null;
+		numEnumConst = 0;
+		enumConst = null;
+		
+	}
    
     //==================================================================================
     //=================================== Variables ====================================
 	//==================================================================================
-    //=============================== Global variables popraviti ostale klase =================================
+    //=============================== Global variables =================================
 	//==================================================================================
 	
     public void visit(GlobVarDeclaration varDecl){
@@ -162,12 +215,20 @@ public class SemanticPass extends VisitorAdaptor {
 	
 	public void visit(DesignatorExpr elem) {
 		Obj designator = Tab.find(elem.getDesignator().obj.getName());
+		if(elem.getExpr().struct != Tab.intType)
+			report_error("Greska na liniji " + elem.getLine() + " : vrednost unutar zagrada mora biti tipa int!", null);
+		if(elem.getDesignator().obj.getKind() != Struct.Array) 
+			report_error("Greska na liniji " + elem.getLine() + " : promenjiva "+elem.getDesignator().obj.getName()+" mora biti niz!", null);
 		if(designator==Tab.noObj) {
-			report_error("Greska na liniji " + elem.getLine() + " : niz "+elem.getDesignator().obj.getName()+" nije deklarisano!", null);
+			report_error("Greska na liniji " + elem.getLine() + " : niz "+elem.getDesignator().obj.getName()+" nije deklarisan!", null);
 		}else {
 			report_info("Pristup elementu niza " + elem.getDesignator().obj.getName(), elem);
 		}
 		elem.obj = new Obj(Obj.Elem, elem.getDesignator().obj.getName(), designator.getType().getElemType());
+	}
+	
+	public void visit(DesignatorDot desig) {
+		
 	}
 
 	//==================================================================================
@@ -507,7 +568,7 @@ public class SemanticPass extends VisitorAdaptor {
 	}
 	
 	public void visit(NoConditions noCond) {
-		noCond.struct = Tab.noType;
+		noCond.struct = TabExtended.boolType;
 	}		
 
 	//==============================================================
@@ -555,12 +616,32 @@ public class SemanticPass extends VisitorAdaptor {
 			report_error("Greska na liniji " + print.getLine() + " : vrednost koju ispisujemo mora biti tipa int, char ili bool!", null);
 	}
 	
-	public void visit(MatchedIfElse ifelse) {
+	public void visit(MatchedIfElse ifelse) {	
+		//if(((ConditionListNoOr)ifelse.getCondition()).getValue())
 		if(ifelse.getCondition().struct != TabExtended.boolType) {
 			report_error("Greska na liniji " + ifelse.getLine() + " : uslov mora biti tipa bool!", null);
-		}
-		
+		}		
 	}
+	
+	public void visit(UnmatchedIfNoElse ifnoelse) {		
+		if(ifnoelse.getCondition().struct != TabExtended.boolType) {
+			report_error("Greska na liniji " + ifnoelse.getLine() + " : uslov mora biti tipa bool!", null);
+		}		
+	}
+	
+	public void visit(UnmatchedIfElse ifelse) {		
+		if(ifelse.getCondition().struct != TabExtended.boolType) {
+			report_error("Greska na liniji " + ifelse.getLine() + " : uslov mora biti tipa bool!", null);
+		}		
+	}
+	
+	public void visit(For123 f) {
+		if(f.getCondition().struct != TabExtended.boolType) {
+			report_error("Greska na liniji " + f.getLine() + " : uslov mora biti tipa bool!", null);
+		}
+	}
+	
+	
 	public boolean passed() {
 		return !errorDetected;
 	}

@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 27/0/2019 5:2:17
+// 28/0/2019 6:42:8
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -36,6 +36,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(ActParsList ActParsList) { }
     public void visit(EnumList EnumList) { }
     public void visit(Form Form) { }
+    public void visit(ConditionEnd ConditionEnd) { }
     public void visit(ExprList ExprList) { }
     public void visit(Expr Expr) { }
     public void visit(ActPars ActPars) { }
@@ -44,6 +45,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(GlobVarList GlobVarList) { }
     public void visit(FormParamList FormParamList) { }
     public void visit(Decl Decl) { }
+    public void visit(EnumStart EnumStart) { }
     public void visit(Statement Statement) { }
     public void visit(Type Type) { }
     public void visit(ClassDecl ClassDecl) { }
@@ -51,10 +53,11 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(CondFact CondFact) { }
     public void visit(LoclVar LoclVar) { }
     public void visit(MethodDeclList MethodDeclList) { }
-    public void visit(GlobVar GlobVar) { }
     public void visit(Enums Enums) { }
+    public void visit(GlobVar GlobVar) { }
     public void visit(Consts Consts) { }
     public void visit(FormPars FormPars) { }
+    public void visit(StartElse StartElse) { }
     public void visit(MethVarDecl MethVarDecl) { }
     public void visit(MulopMod MulopMod) { visit(); }
     public void visit(MulopDiv MulopDiv) { visit(); }
@@ -109,6 +112,8 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(For123 For123) { visit(); }
     public void visit(MatchedForSeparation MatchedForSeparation) { visit(); }
     public void visit(UnmatchedForSeparation UnmatchedForSeparation) { visit(); }
+    public void visit(ElseStart ElseStart) { visit(); }
+    public void visit(CondEnd CondEnd) { visit(); }
     public void visit(MatchedStatement MatchedStatement) { visit(); }
     public void visit(MatchedPrintNumber MatchedPrintNumber) { visit(); }
     public void visit(MatchedPrint MatchedPrint) { visit(); }
@@ -161,6 +166,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(EnumNoNum EnumNoNum) { visit(); }
     public void visit(EnumNoComma EnumNoComma) { visit(); }
     public void visit(EnumListComma EnumListComma) { visit(); }
+    public void visit(StartEnum StartEnum) { visit(); }
     public void visit(EnumDeclaration EnumDeclaration) { visit(); }
     public void visit(ConstError ConstError) { visit(); }
     public void visit(ConstBool ConstBool) { visit(); }

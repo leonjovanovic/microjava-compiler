@@ -3,6 +3,7 @@ program MJProgram
 	char a, b[];
 	bool cc;
 	const bool gg = true;
+	enum Num { ON, OFF, TEN = 1, TWO = 5, ODD, KA }
 	
 {
 	int k () int c; {
