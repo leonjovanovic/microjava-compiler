@@ -1,25 +1,27 @@
 program MJProgram
 	int x,y;
-	char a, b[];
-	bool cc;
-	const bool gg = true;
-	enum Num { ON, OFF, TEN = 1, TWO = 5, ODD, KA }
 	
 {
 	int k () int c; {
 		c=2;
-		cc=false;
+		
+		print(0);
+		
 		return c+2;
 	}
 	int main ()
 	{
+		x = 3;
+		
 		print(1);
 		
-		x = y + 5 + 3;
+		y = 4 + 9 + k();
 		
-		print(2);
+		print(x);
 		
 		k();
+		
+		print(y);
 		
 		return 1;
 	}

@@ -76,7 +76,6 @@ nonterminal FormParamList FormParamList;
 nonterminal Form Form;
 nonterminal Statement Statement;
 nonterminal StatementList StatementList;
-nonterminal DesignatorStatement DesignatorStatement;
 nonterminal DesignatorStatementOpt DesignatorStatementOpt; 
 nonterminal Assignop Assignop;
 nonterminal ActPars ActPars;
@@ -88,11 +87,10 @@ nonterminal Relop Relop;
 nonterminal Mulop Mulop;
 nonterminal Matched Matched;
 nonterminal Unmatched Unmatched;
-nonterminal Unmatched_For Unmatched_For;
-nonterminal Matched_For Matched_For;
 nonterminal For For;
+nonterminal ForStart ForStart;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodDecl, MethodNameType, MethVarDecl, Designator, EnumStart, Enums;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodDecl, MethodNameType, MethVarDecl, Designator, DesignatorStatement, EnumStart, Enums;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Expr, ExprOpt, ExprList, Factor, Term, ConstList, ConstPart, Consts, CondFact, CondTerm, Condition;
 
 /* ---------------------------------------- Program ------------------------------------------------------------- */
@@ -205,15 +203,15 @@ Unmatched ::= (UnmatchedIfNoElse) IF LPAREN Condition:C1 ConditionEnd:C2 Stateme
 			|
 			(UnmatchedIfElse) IF LPAREN Condition:C1 ConditionEnd:C2 Matched:M3 StartElse:S4 Unmatched:U5 {: RESULT=new UnmatchedIfElse(C1, C2, M3, S4, U5); RESULT.setLine(C1left); :}
 			|
-			(UnmatchedFor) Unmatched_For:U1 {: RESULT=new UnmatchedFor(U1); RESULT.setLine(U1left); :};
+			(UnmatchedFor) For:F1 Unmatched:U2 {: RESULT=new UnmatchedFor(F1, U2); RESULT.setLine(F1left); :};
 
 Matched ::= (MatchedDesignator) DesignatorStatement:D1 SEMI {: RESULT=new MatchedDesignator(D1); RESULT.setLine(D1left); :}	
 		|
 		(MatchedDesignatorError) error SEMI:l {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null); :} {: RESULT=new MatchedDesignatorError(); :}	
 		| 
-		(MatchedIfElse) IF LPAREN Condition:value ConditionEnd:C1 Matched:M2 StartElse:S3 Matched:M4 {: RESULT=new MatchedIfElse(value, C1, M2, S3, M4); RESULT.setLine(valueleft); :}
+		(MatchedIfElse) IF LPAREN Condition:value ConditionEnd:C1 Matched:th StartElse:S2 Matched:el {: RESULT=new MatchedIfElse(value, C1, th, S2, el); RESULT.setLine(valueleft); :}
 		| 
-		(MatchedFor) Matched_For:M1 {: RESULT=new MatchedFor(M1); RESULT.setLine(M1left); :}
+		(MatchedFor) For:F1 Matched:M2 {: RESULT=new MatchedFor(F1, M2); RESULT.setLine(F1left); :}
 		| 
 		(MatchedBreak) BREAK SEMI {: RESULT=new MatchedBreak(); :}
 		| 
@@ -231,12 +229,9 @@ Matched ::= (MatchedDesignator) DesignatorStatement:D1 SEMI {: RESULT=new Matche
 		;
 ConditionEnd ::= (CondEnd) RPAREN {: RESULT=new CondEnd(); :};
 StartElse ::= (ElseStart) ELSE {: RESULT=new ElseStart(); :};
-		
-Unmatched_For ::= (UnmatchedForSeparation) For:F1 Unmatched:U2 {: RESULT=new UnmatchedForSeparation(F1, U2); RESULT.setLine(F1left); :} ;
 
-Matched_For   ::= (MatchedForSeparation) For:F1 Matched:M2 {: RESULT=new MatchedForSeparation(F1, M2); RESULT.setLine(F1left); :} ;
-
-For ::= (For123) FOR LPAREN DesignatorStatementOpt:D1 SEMI Condition:C2 SEMI DesignatorStatementOpt:D3 RPAREN {: RESULT=new For123(D1, C2, D3); RESULT.setLine(D1left); :};
+For ::= (For123) FOR ForStart:F1 DesignatorStatementOpt:D2 SEMI Condition:C3 SEMI DesignatorStatementOpt:D4 RPAREN Statement:S5 {: RESULT=new For123(F1, D2, C3, D4, S5); RESULT.setLine(F1left); :};
+ForStart ::= (StartFor) LPAREN {: RESULT=new StartFor(); :};
 
 /* ---------------------------------------- DesignatorStatement ------------------------------------------------------- */		
 
@@ -307,11 +302,11 @@ Factor ::= (FactorDesignator) Designator:d {: RESULT=new FactorDesignator(d); RE
 
 /* ---------------------------------------- Designator ------------------------------------------------------- */		
 
-Designator ::= (DesignatorDot) Designator:D1 DOT IDENT:I2 {: RESULT=new DesignatorDot(D1, I2); RESULT.setLine(D1left); :} 
-				| 
-				(DesignatorExpr) Designator:d LBRACKET Expr:pos RBRACKET {: RESULT=new DesignatorExpr(d, pos); RESULT.setLine(dleft); :} 
-				| 
-				(DesignatorID) IDENT:name {: RESULT=new DesignatorID(name); RESULT.setLine(nameleft); :};
+Designator ::= (DesignatorDot) Designator:d DOT IDENT:ident {: RESULT=new DesignatorDot(d, ident); RESULT.setLine(dleft); :} 
+			| 
+			(DesignatorExpr) Designator:d LBRACKET Expr:pos RBRACKET {: RESULT=new DesignatorExpr(d, pos); RESULT.setLine(dleft); :} 
+			| 
+			(DesignatorID) IDENT:name {: RESULT=new DesignatorID(name); RESULT.setLine(nameleft); :};
 		
 		
 /* ---------------------------------------- Assignop ------------------------------------------------------- */		

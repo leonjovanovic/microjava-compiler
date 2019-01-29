@@ -1,25 +1,36 @@
 // generated with ast extension for cup
 // version 0.8
-// 28/0/2019 6:42:7
+// 28/0/2019 23:34:4
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class MatchedFor extends Matched {
 
-    private Matched_For Matched_For;
+    private For For;
+    private Matched Matched;
 
-    public MatchedFor (Matched_For Matched_For) {
-        this.Matched_For=Matched_For;
-        if(Matched_For!=null) Matched_For.setParent(this);
+    public MatchedFor (For For, Matched Matched) {
+        this.For=For;
+        if(For!=null) For.setParent(this);
+        this.Matched=Matched;
+        if(Matched!=null) Matched.setParent(this);
     }
 
-    public Matched_For getMatched_For() {
-        return Matched_For;
+    public For getFor() {
+        return For;
     }
 
-    public void setMatched_For(Matched_For Matched_For) {
-        this.Matched_For=Matched_For;
+    public void setFor(For For) {
+        this.For=For;
+    }
+
+    public Matched getMatched() {
+        return Matched;
+    }
+
+    public void setMatched(Matched Matched) {
+        this.Matched=Matched;
     }
 
     public void accept(Visitor visitor) {
@@ -27,16 +38,19 @@ public class MatchedFor extends Matched {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(Matched_For!=null) Matched_For.accept(visitor);
+        if(For!=null) For.accept(visitor);
+        if(Matched!=null) Matched.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(Matched_For!=null) Matched_For.traverseTopDown(visitor);
+        if(For!=null) For.traverseTopDown(visitor);
+        if(Matched!=null) Matched.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(Matched_For!=null) Matched_For.traverseBottomUp(visitor);
+        if(For!=null) For.traverseBottomUp(visitor);
+        if(Matched!=null) Matched.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -45,8 +59,14 @@ public class MatchedFor extends Matched {
         buffer.append(tab);
         buffer.append("MatchedFor(\n");
 
-        if(Matched_For!=null)
-            buffer.append(Matched_For.toString("  "+tab));
+        if(For!=null)
+            buffer.append(For.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
+
+        if(Matched!=null)
+            buffer.append(Matched.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

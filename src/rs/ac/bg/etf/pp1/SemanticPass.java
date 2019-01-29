@@ -10,6 +10,7 @@ import org.apache.log4j.Logger;
 import rs.ac.bg.etf.pp1.ast.*;
 import rs.etf.pp1.symboltable.*;
 import rs.etf.pp1.symboltable.concepts.*;
+import rs.etf.pp1.symboltable.structure.SymbolDataStructure;
 
 public class SemanticPass extends VisitorAdaptor {
 	
@@ -25,6 +26,7 @@ public class SemanticPass extends VisitorAdaptor {
 	Stack<Obj> actParamStack = new Stack<Obj>();
 	Stack<Integer> numParamStack = new Stack<Integer>();
 	boolean doForFlag = false;
+	int nVars;
 	
 	Logger log = Logger.getLogger(getClass());
 	
@@ -53,6 +55,7 @@ public class SemanticPass extends VisitorAdaptor {
     }
     
 	public void visit(Program program) {
+		nVars = Tab.currentScope.getnVars();
     	Tab.chainLocalSymbols(program.getProgName().obj);
     	Tab.closeScope();
     }
@@ -113,8 +116,9 @@ public class SemanticPass extends VisitorAdaptor {
 				i = 0;//i resetuj iterator da bi proverili sve vrednosti za novu vrednost
 			}
 		}
+		en.obj = Tab.insert(Obj.Con, en.getName(), Tab.intType);
+		en.obj.setAdr(address);
 		enumConst.add(address);
-		Tab.insert(Obj.Con, en.getName(), Tab.intType).setAdr(address);
 	}	
 	
 	public void visit(EnumNum en){
@@ -124,15 +128,16 @@ public class SemanticPass extends VisitorAdaptor {
 				report_error("Greska na liniji " + en.getLine() + " : celobrojna vrednost "+en.getName()+" mora biti jednistvena u okviru nabrajanja "+ currentEnum.getName(), null);
 			}
 		}
+		en.obj = Tab.insert(Obj.Con, en.getName(), Tab.intType);
+		en.obj.setAdr(address);
 		enumConst.add(address);
-		Tab.insert(Obj.Con, en.getName(), Tab.intType).setAdr(address);
 	}
 	
 	public void visit(StartEnum en) {
 		if(Tab.currentScope().findSymbol(en.getEnumName()) != null) {
 			report_error("Greska na liniji " + en.getLine() + " : enum "+en.getEnumName()+ " je vec deklarisan! ", null);
 		}
-		currentEnum = Tab.insert(Obj.Fld, en.getEnumName(), new Struct(Struct.Array, Tab.intType));
+		currentEnum = Tab.insert(Obj.Type, en.getEnumName(), TabExtended.enumType);
 		en.obj = currentEnum;
 		Tab.openScope();
 		report_info("Obradjuje se enum " + en.getEnumName(), en);
@@ -228,7 +233,27 @@ public class SemanticPass extends VisitorAdaptor {
 	}
 	
 	public void visit(DesignatorDot desig) {
-		
+		Obj des = desig.getDesignator().obj;
+		Obj ident = Tab.find(desig.getIdent());
+		if(des.getType() != TabExtended.enumType) {
+			report_error("Greska na liniji " + desig.getLine() + " : promenjiva "+des.getName()+" mora biti nabrajanje (enum)!", null);
+			desig.obj = ident;
+		}
+		else{
+			Iterator<Obj> itPar = des.getLocalSymbols().iterator();//Iterator svih simbola naseg objekta
+			boolean found = false;
+			while(itPar.hasNext()) {
+				Obj obj = itPar.next();
+				if (desig.getIdent().equalsIgnoreCase(obj.getName())) { //da li je parametar koji smo skinuli sa steka moze da se dodeli sledecem simbolu metode
+					found = true;
+					desig.obj = obj;
+				}
+			}
+			if(!found) {
+				report_error("Greska na liniji " + desig.getLine() + " : identifikator "+ desig.getIdent() +" nije jedan od konstanti unutar nabrajanja "+ des.getName(), null);
+				desig.obj = ident;
+			}
+		}
 	}
 
 	//==================================================================================
@@ -354,10 +379,12 @@ public class SemanticPass extends VisitorAdaptor {
 	//==============================================================
 	
 	public void visit(DesignatorAssign assignment) {
-		if(!assignment.getExpr().struct.assignableTo(assignment.getDesignator().obj.getType())) {
+		Obj desig = assignment.getDesignator().obj;
+		Struct expr = assignment.getExpr().struct;
+		if(!expr.assignableTo(desig.getType())) {
 			report_error("Greska na liniji " + assignment.getLine() + " : nekompatibilni tipovi u dodeli vrednosti! ", null);
 		}
-		if(assignment.getDesignator().obj.getKind() != Obj.Var && assignment.getDesignator().obj.getKind() != Obj.Elem) {
+		if(desig.getKind() != Obj.Var && desig.getKind() != Obj.Elem) {
 			report_error("Greska na liniji " + assignment.getLine() + " : vrednost se ne moze dodeliti necemu sto nije promenjljiva ili element niza!", null);
 		}
 	}
@@ -440,6 +467,8 @@ public class SemanticPass extends VisitorAdaptor {
 		if (numParamStack.size() > 0) level=numParamStack.pop();
 		
 		if(Obj.Meth == func.getKind()) {
+			if(func.getType() == Tab.noType)
+				report_error("Greska na liniji " + funcCall.getLine() + " : metoda "+func.getName()+" se ne moze koristiti u izrazima jer nema povratnu vrednost!", null);
 			funcCall.struct = func.getType();
 			report_info("Pronadjen poziv funkcije " + func.getName() + " na liniji " + funcCall.getLine(), funcCall);
 			if(func.getLevel() != level) {
@@ -588,36 +617,41 @@ public class SemanticPass extends VisitorAdaptor {
 	public void visit(MatchedBreak br) {
 		if(doForFlag == false)
 			report_error("Greska na liniji " + br.getLine() + " : break se ne sme nalaziti izvan for petlje!", null);
+		else report_info("Detektovan prekid for petlje!", br);
 	}
 	
 	public void visit(MatchedContinue con) {
 		if(doForFlag == false)
 			report_error("Greska na liniji " + con.getLine() + " : continue se ne sme nalaziti izvan for petlje!", null);
+		else report_info("Detektovan continue for petlje!", con);
 	}
 	
 	public void visit(MatchedRead read) {
 		Obj oread = read.getDesignator().obj;
-		if(oread.getKind() != Obj.Var && oread.getKind() != Obj.Elem)
-			report_error("Greska na liniji " + read.getLine() + " : vrednost koju citamo mora biti tipa promenljiva ili element niza!", null);
 		Struct sread = read.getDesignator().obj.getType();
-		if(sread != Tab.intType && sread != Tab.charType && sread != TabExtended.boolType)
-			report_error("Greska na liniji " + read.getLine() + " : vrednost koju citamo mora biti tipa int, char ili bool!", null);
+		if(oread.getKind() != Obj.Var && oread.getKind() != Obj.Elem) 
+			report_error("Greska na liniji " + read.getLine() + " : vrednost koju citamo mora biti tipa promenljiva ili element niza!", null);
+		else if(sread != Tab.intType && sread != Tab.charType && sread != TabExtended.boolType)
+				report_error("Greska na liniji " + read.getLine() + " : vrednost koju citamo mora biti tipa int, char ili bool!", null);
+		else report_info("Detektovana operacija citanja!", read);
+		
 	}
 	
 	public void visit(MatchedPrint print) {
 		Struct sprint = print.getExpr().struct;
 		if(sprint != Tab.intType && sprint != Tab.charType && sprint != TabExtended.boolType)
 			report_error("Greska na liniji " + print.getLine() + " : vrednost koju ispisujemo mora biti tipa int, char ili bool!", null);
+		else report_info("Detektovana operacija ispisivanja!", print);
 	}
 	
 	public void visit(MatchedPrintNumber print) {
 		Struct sprint = print.getExpr().struct;
 		if(sprint != Tab.intType && sprint != Tab.charType && sprint != TabExtended.boolType)
 			report_error("Greska na liniji " + print.getLine() + " : vrednost koju ispisujemo mora biti tipa int, char ili bool!", null);
+		else report_info("Detektovana operacija ispisivanja!", print);
 	}
 	
-	public void visit(MatchedIfElse ifelse) {	
-		//if(((ConditionListNoOr)ifelse.getCondition()).getValue())
+	public void visit(MatchedIfElse ifelse) {
 		if(ifelse.getCondition().struct != TabExtended.boolType) {
 			report_error("Greska na liniji " + ifelse.getLine() + " : uslov mora biti tipa bool!", null);
 		}		
@@ -636,12 +670,18 @@ public class SemanticPass extends VisitorAdaptor {
 	}
 	
 	public void visit(For123 f) {
+		doForFlag = false;
+		System.out.println(doForFlag+" izasao");
 		if(f.getCondition().struct != TabExtended.boolType) {
 			report_error("Greska na liniji " + f.getLine() + " : uslov mora biti tipa bool!", null);
 		}
 	}
 	
-	
+	public void visit(StartFor f) {
+		doForFlag = true;
+		System.out.println(doForFlag+" usao");
+	}
+		
 	public boolean passed() {
 		return !errorDetected;
 	}

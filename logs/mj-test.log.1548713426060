@@ -1,0 +1,209 @@
+INFO  23:09:48,735 - Compiling source file: D:\Users\Leon\Desktop\Projekti\ProgramskiPrevodioci\MJCompiler\test\program.mj
+INFO  23:09:48,779 - #2 program
+INFO  23:09:48,779 - #42 MJProgram
+INFO  23:09:48,779 - #42 int
+INFO  23:09:48,785 - #42 x
+INFO  23:09:48,785 - #7 ,
+INFO  23:09:48,785 - #42 y
+INFO  23:09:48,785 - #6 ;
+INFO  23:09:48,785 - #3 {
+INFO  23:09:48,785 - #42 int
+INFO  23:09:48,785 - #42 k
+INFO  23:09:48,785 - #14 (
+INFO  23:09:48,785 - #15 )
+INFO  23:09:48,785 - #42 int
+INFO  23:09:48,785 - #42 c
+INFO  23:09:48,785 - #6 ;
+INFO  23:09:48,785 - #3 {
+INFO  23:09:48,785 - #42 c
+INFO  23:09:48,790 - #8 =
+INFO  23:09:48,790 - #41 2
+INFO  23:09:48,790 - #6 ;
+INFO  23:09:48,790 - #21 return
+INFO  23:09:48,790 - #42 c
+INFO  23:09:48,790 - #36 +
+INFO  23:09:48,790 - #41 2
+INFO  23:09:48,790 - #6 ;
+INFO  23:09:48,790 - #4 }
+INFO  23:09:48,790 - #42 int
+INFO  23:09:48,790 - #42 main
+INFO  23:09:48,790 - #14 (
+INFO  23:09:48,790 - #15 )
+INFO  23:09:48,790 - #3 {
+INFO  23:09:48,790 - #23 print
+INFO  23:09:48,790 - #14 (
+INFO  23:09:48,790 - #41 1
+INFO  23:09:48,790 - #15 )
+INFO  23:09:48,790 - #6 ;
+INFO  23:09:48,790 - #23 print
+INFO  23:09:48,790 - #14 (
+INFO  23:09:48,790 - #41 2
+INFO  23:09:48,790 - #15 )
+INFO  23:09:48,790 - #6 ;
+INFO  23:09:48,790 - #4 }
+INFO  23:09:48,790 - #4 }
+INFO  23:09:48,801 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  Declarations(
+    NoDeclList(
+    ) [NoDeclList]
+    Declarations2(
+      GlobVarDeclaration(
+        Types(
+         int
+        ) [Types]
+        GlobVarListComma(
+          GlobVarListNoComma(
+            GlobVarNoBrackets(
+             x
+            ) [GlobVarNoBrackets]
+          ) [GlobVarListNoComma]
+          GlobVarNoBrackets(
+           y
+          ) [GlobVarNoBrackets]
+        ) [GlobVarListComma]
+      ) [GlobVarDeclaration]
+    ) [Declarations2]
+  ) [Declarations]
+  MethodDeclarationList(
+    MethodDeclarationList(
+      NoMethod(
+      ) [NoMethod]
+      MethodDeclarationType(
+        MethNameType(
+          Types(
+           int
+          ) [Types]
+         k
+        ) [MethNameType]
+        NoFormParsList(
+        ) [NoFormParsList]
+        MethodVarDecl(
+          NoMethodVarDecl(
+          ) [NoMethodVarDecl]
+          LoclVarDeclaration(
+            Types(
+             int
+            ) [Types]
+            LoclVarListNoComma(
+              LoclVarNoBrackets(
+               c
+              ) [LoclVarNoBrackets]
+            ) [LoclVarListNoComma]
+          ) [LoclVarDeclaration]
+        ) [MethodVarDecl]
+        StatementLists(
+          StatementLists(
+            NoStatements(
+            ) [NoStatements]
+            StatementMatched(
+              MatchedDesignator(
+                DesignatorAssign(
+                  DesignatorID(
+                   c
+                  ) [DesignatorID]
+                  AssignopEq(
+                  ) [AssignopEq]
+                  ExprNoMinus(
+                    ExprTermNoAddop(
+                      TermNoMulop(
+                        FactorNum(
+                         2
+                        ) [FactorNum]
+                      ) [TermNoMulop]
+                    ) [ExprTermNoAddop]
+                  ) [ExprNoMinus]
+                ) [DesignatorAssign]
+              ) [MatchedDesignator]
+            ) [StatementMatched]
+          ) [StatementLists]
+          StatementMatched(
+            MatchedReturnExpr(
+              Exprs(
+                ExprNoMinus(
+                  ExprListAddop(
+                    ExprTermNoAddop(
+                      TermNoMulop(
+                        FactorDesignator(
+                          DesignatorID(
+                           c
+                          ) [DesignatorID]
+                        ) [FactorDesignator]
+                      ) [TermNoMulop]
+                    ) [ExprTermNoAddop]
+                    AddopPlus(
+                    ) [AddopPlus]
+                    TermNoMulop(
+                      FactorNum(
+                       2
+                      ) [FactorNum]
+                    ) [TermNoMulop]
+                  ) [ExprListAddop]
+                ) [ExprNoMinus]
+              ) [Exprs]
+            ) [MatchedReturnExpr]
+          ) [StatementMatched]
+        ) [StatementLists]
+      ) [MethodDeclarationType]
+    ) [MethodDeclarationList]
+    MethodDeclarationType(
+      MethNameType(
+        Types(
+         int
+        ) [Types]
+       main
+      ) [MethNameType]
+      NoFormParsList(
+      ) [NoFormParsList]
+      NoMethodVarDecl(
+      ) [NoMethodVarDecl]
+      StatementLists(
+        StatementLists(
+          NoStatements(
+          ) [NoStatements]
+          StatementMatched(
+            MatchedPrint(
+              ExprNoMinus(
+                ExprTermNoAddop(
+                  TermNoMulop(
+                    FactorNum(
+                     1
+                    ) [FactorNum]
+                  ) [TermNoMulop]
+                ) [ExprTermNoAddop]
+              ) [ExprNoMinus]
+            ) [MatchedPrint]
+          ) [StatementMatched]
+        ) [StatementLists]
+        StatementMatched(
+          MatchedPrint(
+            ExprNoMinus(
+              ExprTermNoAddop(
+                TermNoMulop(
+                  FactorNum(
+                   2
+                  ) [FactorNum]
+                ) [TermNoMulop]
+              ) [ExprTermNoAddop]
+            ) [ExprNoMinus]
+          ) [MatchedPrint]
+        ) [StatementMatched]
+      ) [StatementLists]
+    ) [MethodDeclarationType]
+  ) [MethodDeclarationList]
+) [Program]
+INFO  23:09:48,805 - ===================================
+INFO  23:09:48,805 - Deklarisana globalna promenjljiva bez zagrada x na liniji 2
+INFO  23:09:48,810 - Deklarisana globalna promenjljiva bez zagrada y na liniji 2
+INFO  23:09:48,810 - Obradjuje se return funkcija k na liniji 5
+INFO  23:09:48,810 - Deklarisana lokalna promenjljiva bez zagrada c na liniji 5
+INFO  23:09:48,810 - Pristup elementu c na liniji 6
+INFO  23:09:48,810 - Pristup elementu c na liniji 7
+INFO  23:09:48,810 - Obradjuje se return funkcija main na liniji 9
+INFO  23:09:48,810 - Detektovana operacija ispisivanja! na liniji 11
+INFO  23:09:48,810 - Detektovana operacija ispisivanja! na liniji 13
+ERROR 23:09:48,810 - Greska na liniji 9: funcija main nema return!
+INFO  23:09:48,810 - ===================================
+ERROR 23:09:48,810 - Parsiranje nije uspesno zavrseno

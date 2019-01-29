@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 28/0/2019 6:42:8
+// 28/0/2019 23:34:5
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -14,7 +14,6 @@ public interface Visitor {
     public void visit(Matched Matched);
     public void visit(Relop Relop);
     public void visit(Assignop Assignop);
-    public void visit(Unmatched_For Unmatched_For);
     public void visit(GlobVarDecl GlobVarDecl);
     public void visit(LoclVarList LoclVarList);
     public void visit(StatementList StatementList);
@@ -28,7 +27,6 @@ public interface Visitor {
     public void visit(ConstList ConstList);
     public void visit(DeclList DeclList);
     public void visit(Designator Designator);
-    public void visit(Matched_For Matched_For);
     public void visit(Term Term);
     public void visit(Condition Condition);
     public void visit(For For);
@@ -47,6 +45,7 @@ public interface Visitor {
     public void visit(Decl Decl);
     public void visit(EnumStart EnumStart);
     public void visit(Statement Statement);
+    public void visit(ForStart ForStart);
     public void visit(Type Type);
     public void visit(ClassDecl ClassDecl);
     public void visit(ConstDecl ConstDecl);
@@ -109,9 +108,8 @@ public interface Visitor {
     public void visit(DesignatorAssign DesignatorAssign);
     public void visit(NoDesigStatement NoDesigStatement);
     public void visit(DesigStatementY DesigStatementY);
+    public void visit(StartFor StartFor);
     public void visit(For123 For123);
-    public void visit(MatchedForSeparation MatchedForSeparation);
-    public void visit(UnmatchedForSeparation UnmatchedForSeparation);
     public void visit(ElseStart ElseStart);
     public void visit(CondEnd CondEnd);
     public void visit(MatchedStatement MatchedStatement);

@@ -1,25 +1,36 @@
 // generated with ast extension for cup
 // version 0.8
-// 28/0/2019 6:42:7
+// 28/0/2019 23:34:4
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class UnmatchedFor extends Unmatched {
 
-    private Unmatched_For Unmatched_For;
+    private For For;
+    private Unmatched Unmatched;
 
-    public UnmatchedFor (Unmatched_For Unmatched_For) {
-        this.Unmatched_For=Unmatched_For;
-        if(Unmatched_For!=null) Unmatched_For.setParent(this);
+    public UnmatchedFor (For For, Unmatched Unmatched) {
+        this.For=For;
+        if(For!=null) For.setParent(this);
+        this.Unmatched=Unmatched;
+        if(Unmatched!=null) Unmatched.setParent(this);
     }
 
-    public Unmatched_For getUnmatched_For() {
-        return Unmatched_For;
+    public For getFor() {
+        return For;
     }
 
-    public void setUnmatched_For(Unmatched_For Unmatched_For) {
-        this.Unmatched_For=Unmatched_For;
+    public void setFor(For For) {
+        this.For=For;
+    }
+
+    public Unmatched getUnmatched() {
+        return Unmatched;
+    }
+
+    public void setUnmatched(Unmatched Unmatched) {
+        this.Unmatched=Unmatched;
     }
 
     public void accept(Visitor visitor) {
@@ -27,16 +38,19 @@ public class UnmatchedFor extends Unmatched {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(Unmatched_For!=null) Unmatched_For.accept(visitor);
+        if(For!=null) For.accept(visitor);
+        if(Unmatched!=null) Unmatched.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(Unmatched_For!=null) Unmatched_For.traverseTopDown(visitor);
+        if(For!=null) For.traverseTopDown(visitor);
+        if(Unmatched!=null) Unmatched.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(Unmatched_For!=null) Unmatched_For.traverseBottomUp(visitor);
+        if(For!=null) For.traverseBottomUp(visitor);
+        if(Unmatched!=null) Unmatched.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -45,8 +59,14 @@ public class UnmatchedFor extends Unmatched {
         buffer.append(tab);
         buffer.append("UnmatchedFor(\n");
 
-        if(Unmatched_For!=null)
-            buffer.append(Unmatched_For.toString("  "+tab));
+        if(For!=null)
+            buffer.append(For.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
+
+        if(Unmatched!=null)
+            buffer.append(Unmatched.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

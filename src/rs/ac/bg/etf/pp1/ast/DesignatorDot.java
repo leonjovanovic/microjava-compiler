@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 28/0/2019 6:42:7
+// 28/0/2019 23:34:5
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,12 +8,12 @@ package rs.ac.bg.etf.pp1.ast;
 public class DesignatorDot extends Designator {
 
     private Designator Designator;
-    private String I2;
+    private String ident;
 
-    public DesignatorDot (Designator Designator, String I2) {
+    public DesignatorDot (Designator Designator, String ident) {
         this.Designator=Designator;
         if(Designator!=null) Designator.setParent(this);
-        this.I2=I2;
+        this.ident=ident;
     }
 
     public Designator getDesignator() {
@@ -24,12 +24,12 @@ public class DesignatorDot extends Designator {
         this.Designator=Designator;
     }
 
-    public String getI2() {
-        return I2;
+    public String getIdent() {
+        return ident;
     }
 
-    public void setI2(String I2) {
-        this.I2=I2;
+    public void setIdent(String ident) {
+        this.ident=ident;
     }
 
     public void accept(Visitor visitor) {
@@ -61,7 +61,7 @@ public class DesignatorDot extends Designator {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        buffer.append(" "+tab+I2);
+        buffer.append(" "+tab+ident);
         buffer.append("\n");
 
         buffer.append(tab);

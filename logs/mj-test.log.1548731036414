@@ -1,0 +1,262 @@
+INFO  04:02:14,804 - Compiling source file: D:\Users\Leon\Desktop\Projekti\ProgramskiPrevodioci\MJCompiler\test\program.mj
+INFO  04:02:14,853 - #2 program
+INFO  04:02:14,853 - #42 MJProgram
+INFO  04:02:14,853 - #42 int
+INFO  04:02:14,854 - #42 x
+INFO  04:02:14,854 - #7 ,
+INFO  04:02:14,855 - #42 y
+INFO  04:02:14,855 - #6 ;
+INFO  04:02:14,855 - #3 {
+INFO  04:02:14,855 - #42 int
+INFO  04:02:14,856 - #42 k
+INFO  04:02:14,856 - #14 (
+INFO  04:02:14,856 - #15 )
+INFO  04:02:14,857 - #42 int
+INFO  04:02:14,857 - #42 c
+INFO  04:02:14,858 - #6 ;
+INFO  04:02:14,858 - #3 {
+INFO  04:02:14,858 - #42 c
+INFO  04:02:14,859 - #8 =
+INFO  04:02:14,859 - #41 2
+INFO  04:02:14,860 - #6 ;
+INFO  04:02:14,861 - #23 print
+INFO  04:02:14,861 - #14 (
+INFO  04:02:14,861 - #41 0
+INFO  04:02:14,861 - #15 )
+INFO  04:02:14,862 - #21 return
+ERROR 04:02:14,862 - 
+Sintaksna greska na liniji 10
+INFO  04:02:14,862 - #42 c
+INFO  04:02:14,862 - #36 +
+INFO  04:02:14,862 - #41 2
+INFO  04:02:14,862 - #6 ;
+INFO  04:02:14,862 - #4 }
+INFO  04:02:14,862 - #42 int
+INFO  04:02:14,863 - #42 main
+ERROR 04:02:14,863 - Izvrsen oporavak do ; u liniji 8
+INFO  04:02:14,863 - #14 (
+INFO  04:02:14,863 - #15 )
+INFO  04:02:14,864 - #3 {
+INFO  04:02:14,864 - #42 x
+INFO  04:02:14,864 - #8 =
+INFO  04:02:14,864 - #41 3
+INFO  04:02:14,864 - #6 ;
+INFO  04:02:14,864 - #23 print
+INFO  04:02:14,864 - #14 (
+INFO  04:02:14,864 - #41 1
+INFO  04:02:14,864 - #15 )
+INFO  04:02:14,864 - #6 ;
+INFO  04:02:14,864 - #23 print
+INFO  04:02:14,864 - #14 (
+INFO  04:02:14,865 - #42 x
+INFO  04:02:14,865 - #15 )
+INFO  04:02:14,865 - #6 ;
+INFO  04:02:14,865 - #42 k
+INFO  04:02:14,865 - #14 (
+INFO  04:02:14,865 - #15 )
+INFO  04:02:14,865 - #6 ;
+INFO  04:02:14,866 - #21 return
+INFO  04:02:14,866 - #41 1
+INFO  04:02:14,866 - #6 ;
+INFO  04:02:14,866 - #4 }
+INFO  04:02:14,867 - #4 }
+INFO  04:02:14,874 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  Declarations(
+    NoDeclList(
+    ) [NoDeclList]
+    Declarations2(
+      GlobVarDeclaration(
+        Types(
+         int
+        ) [Types]
+        GlobVarListComma(
+          GlobVarListNoComma(
+            GlobVarNoBrackets(
+             x
+            ) [GlobVarNoBrackets]
+          ) [GlobVarListNoComma]
+          GlobVarNoBrackets(
+           y
+          ) [GlobVarNoBrackets]
+        ) [GlobVarListComma]
+      ) [GlobVarDeclaration]
+    ) [Declarations2]
+  ) [Declarations]
+  MethodDeclarationList(
+    MethodDeclarationList(
+      NoMethod(
+      ) [NoMethod]
+      MethodDeclarationType(
+        MethNameType(
+          Types(
+           int
+          ) [Types]
+         k
+        ) [MethNameType]
+        NoFormParsList(
+        ) [NoFormParsList]
+        MethodVarDecl(
+          NoMethodVarDecl(
+          ) [NoMethodVarDecl]
+          LoclVarDeclaration(
+            Types(
+             int
+            ) [Types]
+            LoclVarListNoComma(
+              LoclVarNoBrackets(
+               c
+              ) [LoclVarNoBrackets]
+            ) [LoclVarListNoComma]
+          ) [LoclVarDeclaration]
+        ) [MethodVarDecl]
+        StatementLists(
+          StatementLists(
+            NoStatements(
+            ) [NoStatements]
+            StatementMatched(
+              MatchedDesignator(
+                DesignatorAssign(
+                  DesignatorID(
+                   c
+                  ) [DesignatorID]
+                  AssignopEq(
+                  ) [AssignopEq]
+                  ExprNoMinus(
+                    ExprTermNoAddop(
+                      TermNoMulop(
+                        FactorNum(
+                         2
+                        ) [FactorNum]
+                      ) [TermNoMulop]
+                    ) [ExprTermNoAddop]
+                  ) [ExprNoMinus]
+                ) [DesignatorAssign]
+              ) [MatchedDesignator]
+            ) [StatementMatched]
+          ) [StatementLists]
+          StatementMatched(
+            MatchedDesignatorError(
+            ) [MatchedDesignatorError]
+          ) [StatementMatched]
+        ) [StatementLists]
+      ) [MethodDeclarationType]
+    ) [MethodDeclarationList]
+    MethodDeclarationType(
+      MethNameType(
+        Types(
+         int
+        ) [Types]
+       main
+      ) [MethNameType]
+      NoFormParsList(
+      ) [NoFormParsList]
+      NoMethodVarDecl(
+      ) [NoMethodVarDecl]
+      StatementLists(
+        StatementLists(
+          StatementLists(
+            StatementLists(
+              StatementLists(
+                NoStatements(
+                ) [NoStatements]
+                StatementMatched(
+                  MatchedDesignator(
+                    DesignatorAssign(
+                      DesignatorID(
+                       x
+                      ) [DesignatorID]
+                      AssignopEq(
+                      ) [AssignopEq]
+                      ExprNoMinus(
+                        ExprTermNoAddop(
+                          TermNoMulop(
+                            FactorNum(
+                             3
+                            ) [FactorNum]
+                          ) [TermNoMulop]
+                        ) [ExprTermNoAddop]
+                      ) [ExprNoMinus]
+                    ) [DesignatorAssign]
+                  ) [MatchedDesignator]
+                ) [StatementMatched]
+              ) [StatementLists]
+              StatementMatched(
+                MatchedPrint(
+                  ExprNoMinus(
+                    ExprTermNoAddop(
+                      TermNoMulop(
+                        FactorNum(
+                         1
+                        ) [FactorNum]
+                      ) [TermNoMulop]
+                    ) [ExprTermNoAddop]
+                  ) [ExprNoMinus]
+                ) [MatchedPrint]
+              ) [StatementMatched]
+            ) [StatementLists]
+            StatementMatched(
+              MatchedPrint(
+                ExprNoMinus(
+                  ExprTermNoAddop(
+                    TermNoMulop(
+                      FactorDesignator(
+                        DesignatorID(
+                         x
+                        ) [DesignatorID]
+                      ) [FactorDesignator]
+                    ) [TermNoMulop]
+                  ) [ExprTermNoAddop]
+                ) [ExprNoMinus]
+              ) [MatchedPrint]
+            ) [StatementMatched]
+          ) [StatementLists]
+          StatementMatched(
+            MatchedDesignator(
+              DesignatorParams(
+                DesignatorID(
+                 k
+                ) [DesignatorID]
+                NoActPars(
+                ) [NoActPars]
+              ) [DesignatorParams]
+            ) [MatchedDesignator]
+          ) [StatementMatched]
+        ) [StatementLists]
+        StatementMatched(
+          MatchedReturnExpr(
+            Exprs(
+              ExprNoMinus(
+                ExprTermNoAddop(
+                  TermNoMulop(
+                    FactorNum(
+                     1
+                    ) [FactorNum]
+                  ) [TermNoMulop]
+                ) [ExprTermNoAddop]
+              ) [ExprNoMinus]
+            ) [Exprs]
+          ) [MatchedReturnExpr]
+        ) [StatementMatched]
+      ) [StatementLists]
+    ) [MethodDeclarationType]
+  ) [MethodDeclarationList]
+) [Program]
+INFO  04:02:14,875 - ===================================
+INFO  04:02:14,879 - Deklarisana globalna promenjljiva bez zagrada x na liniji 2
+INFO  04:02:14,879 - Deklarisana globalna promenjljiva bez zagrada y na liniji 2
+INFO  04:02:14,879 - Obradjuje se return funkcija k na liniji 5
+INFO  04:02:14,879 - Deklarisana lokalna promenjljiva bez zagrada c na liniji 5
+INFO  04:02:14,879 - Pristup elementu c na liniji 6
+ERROR 04:02:14,879 - Greska na liniji 5: funcija k nema return!
+INFO  04:02:14,879 - Obradjuje se return funkcija main na liniji 12
+INFO  04:02:14,879 - Pristup elementu x na liniji 14
+INFO  04:02:14,879 - Detektovana operacija ispisivanja! na liniji 16
+INFO  04:02:14,879 - Pristup elementu x na liniji 18
+INFO  04:02:14,880 - Detektovana operacija ispisivanja! na liniji 18
+INFO  04:02:14,880 - Pristup elementu k na liniji 20
+INFO  04:02:14,880 - Pozvana je funkcija k na liniji 20
+INFO  04:02:14,880 - ===================================
+ERROR 04:02:14,881 - Parsiranje nije uspesno zavrseno

@@ -61,12 +61,12 @@ nonterminal DeclList, MethodDeclList, Decl;
 nonterminal ConstDecl, GlobVarDecl, LoclVarDecl, ClassDecl, EnumDecl;
 nonterminal EnumList;
 nonterminal GlobVarList, GlobVar, LoclVarList, LoclVar, ClassPart, FormPars, FormParamList;
-nonterminal Form, Statement, StatementList, DesignatorStatement, DesignatorStatementOpt; 
+nonterminal Form, Statement, StatementList, DesignatorStatementOpt; 
 nonterminal Assignop, ActPars;
 nonterminal ActParsList, Addop, ConditionEnd, StartElse;
-nonterminal Relop, Mulop, Matched, Unmatched, Unmatched_For, Matched_For, For;
+nonterminal Relop, Mulop, Matched, Unmatched, For, ForStart;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodDecl, MethodNameType, MethVarDecl, Designator, EnumStart, Enums;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodDecl, MethodNameType, MethVarDecl, Designator, DesignatorStatement, EnumStart, Enums;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Expr, ExprOpt, ExprList, Factor, Term, ConstList, ConstPart, Consts, CondFact, CondTerm, Condition;
 
 /* ---------------------------------------- Program ------------------------------------------------------------- */
@@ -179,15 +179,15 @@ Unmatched ::= (UnmatchedIfNoElse) IF LPAREN Condition ConditionEnd Statement
 			|
 			(UnmatchedIfElse) IF LPAREN Condition ConditionEnd Matched StartElse Unmatched
 			|
-			(UnmatchedFor) Unmatched_For;
+			(UnmatchedFor) For Unmatched;
 
 Matched ::= (MatchedDesignator) DesignatorStatement SEMI	
 		|
 		(MatchedDesignatorError) error SEMI:l {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null); :}	
 		| 
-		(MatchedIfElse) IF LPAREN Condition:value ConditionEnd Matched StartElse Matched
+		(MatchedIfElse) IF LPAREN Condition:value ConditionEnd Matched:th StartElse Matched:el
 		| 
-		(MatchedFor) Matched_For
+		(MatchedFor) For Matched
 		| 
 		(MatchedBreak) BREAK SEMI
 		| 
@@ -205,12 +205,9 @@ Matched ::= (MatchedDesignator) DesignatorStatement SEMI
 		;
 ConditionEnd ::= (CondEnd) RPAREN;
 StartElse ::= (ElseStart) ELSE;
-		
-Unmatched_For ::= (UnmatchedForSeparation) For Unmatched ;
 
-Matched_For   ::= (MatchedForSeparation) For Matched ;
-
-For ::= (For123) FOR LPAREN DesignatorStatementOpt SEMI Condition SEMI DesignatorStatementOpt RPAREN;
+For ::= (For123) FOR ForStart DesignatorStatementOpt SEMI Condition SEMI DesignatorStatementOpt RPAREN Statement;
+ForStart ::= (StartFor) LPAREN;
 
 /* ---------------------------------------- DesignatorStatement ------------------------------------------------------- */		
 
@@ -281,11 +278,11 @@ Factor ::= (FactorDesignator) Designator:d
 
 /* ---------------------------------------- Designator ------------------------------------------------------- */		
 
-Designator ::= (DesignatorDot) Designator DOT IDENT 
-				| 
-				(DesignatorExpr) Designator:d LBRACKET Expr:pos RBRACKET 
-				| 
-				(DesignatorID) IDENT:name;
+Designator ::= (DesignatorDot) Designator:d DOT IDENT:ident 
+			| 
+			(DesignatorExpr) Designator:d LBRACKET Expr:pos RBRACKET 
+			| 
+			(DesignatorID) IDENT:name;
 		
 		
 /* ---------------------------------------- Assignop ------------------------------------------------------- */		
