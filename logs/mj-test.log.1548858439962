@@ -1,0 +1,85 @@
+INFO  15:27:06,166 - Compiling source file: D:\Users\Leon\Desktop\Projekti\ProgramskiPrevodioci\MJCompiler\test\program.mj
+INFO  15:27:06,221 - #2 program
+INFO  15:27:06,221 - #42 test301
+INFO  15:27:06,221 - #5 const
+INFO  15:27:06,221 - #42 int
+INFO  15:27:06,221 - #42 jedan
+INFO  15:27:06,221 - #8 =
+INFO  15:27:06,221 - #41 1
+INFO  15:27:06,221 - #6 ;
+INFO  15:27:06,221 - #5 const
+INFO  15:27:06,221 - #42 int
+INFO  15:27:06,221 - #42 pet
+INFO  15:27:06,221 - #8 =
+INFO  15:27:06,221 - #41 5
+INFO  15:27:06,221 - #6 ;
+INFO  15:27:06,221 - #3 {
+INFO  15:27:06,221 - #13 void
+INFO  15:27:06,221 - #42 main
+INFO  15:27:06,221 - #14 (
+INFO  15:27:06,221 - #15 )
+INFO  15:27:06,221 - #3 {
+INFO  15:27:06,221 - #4 }
+INFO  15:27:06,221 - #4 }
+INFO  15:27:06,227 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  Declarations(
+    Declarations(
+      NoDeclList(
+      ) [NoDeclList]
+      Declarations1(
+        ConstantsDecl(
+          Types(
+           int
+          ) [Types]
+          ConstantsListNoComma(
+            ConstantsPart(
+             jedan
+              ConstNumber(
+               1
+              ) [ConstNumber]
+            ) [ConstantsPart]
+          ) [ConstantsListNoComma]
+        ) [ConstantsDecl]
+      ) [Declarations1]
+    ) [Declarations]
+    Declarations1(
+      ConstantsDecl(
+        Types(
+         int
+        ) [Types]
+        ConstantsListNoComma(
+          ConstantsPart(
+           pet
+            ConstNumber(
+             5
+            ) [ConstNumber]
+          ) [ConstantsPart]
+        ) [ConstantsListNoComma]
+      ) [ConstantsDecl]
+    ) [Declarations1]
+  ) [Declarations]
+  MethodDeclarationList(
+    NoMethod(
+    ) [NoMethod]
+    MethodDeclarationType(
+      MethNameVoid(
+       main
+      ) [MethNameVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      NoMethodVarDecl(
+      ) [NoMethodVarDecl]
+      NoStatements(
+      ) [NoStatements]
+    ) [MethodDeclarationType]
+  ) [MethodDeclarationList]
+) [Program]
+INFO  15:27:06,227 - ===================================
+INFO  15:27:06,237 - Deklarisana konstanta jedan na liniji 7
+INFO  15:27:06,237 - Deklarisana konstanta pet na liniji 8
+INFO  15:27:06,237 - Obradjuje se void funkcija main na liniji 12
+INFO  15:27:06,237 - ===================================
+INFO  15:27:06,237 - Parsiranje uspesno zavrseno!

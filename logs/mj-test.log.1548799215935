@@ -1,0 +1,1998 @@
+INFO  23:00:03,643 - Compiling source file: D:\Users\Leon\Desktop\Projekti\ProgramskiPrevodioci\MJCompiler\test\program.mj
+INFO  23:00:03,693 - #2 program
+INFO  23:00:03,693 - #42 test302
+INFO  23:00:03,693 - #10 enum
+INFO  23:00:03,695 - #42 IncrementType
+INFO  23:00:03,695 - #3 {
+INFO  23:00:03,695 - #42 BY_ONE
+INFO  23:00:03,695 - #7 ,
+INFO  23:00:03,696 - #42 DOUBLE_VALUE
+INFO  23:00:03,696 - #4 }
+INFO  23:00:03,696 - #42 int
+INFO  23:00:03,697 - #42 i
+INFO  23:00:03,697 - #6 ;
+INFO  23:00:03,697 - #42 bool
+INFO  23:00:03,697 - #42 ibool
+INFO  23:00:03,697 - #6 ;
+INFO  23:00:03,697 - #42 int
+INFO  23:00:03,698 - #42 niz
+INFO  23:00:03,698 - #11 [
+INFO  23:00:03,698 - #12 ]
+INFO  23:00:03,698 - #6 ;
+INFO  23:00:03,698 - #3 {
+INFO  23:00:03,699 - #42 int
+INFO  23:00:03,699 - #42 sum
+INFO  23:00:03,699 - #14 (
+INFO  23:00:03,699 - #42 int
+INFO  23:00:03,699 - #42 z
+INFO  23:00:03,699 - #7 ,
+INFO  23:00:03,700 - #42 int
+INFO  23:00:03,700 - #42 d
+INFO  23:00:03,700 - #15 )
+INFO  23:00:03,700 - #3 {
+INFO  23:00:03,701 - #21 return
+INFO  23:00:03,701 - #42 z
+INFO  23:00:03,701 - #36 +
+INFO  23:00:03,702 - #42 d
+INFO  23:00:03,703 - #6 ;
+INFO  23:00:03,703 - #4 }
+INFO  23:00:03,703 - #42 int
+INFO  23:00:03,704 - #42 inkrement
+INFO  23:00:03,704 - #14 (
+INFO  23:00:03,704 - #42 int
+INFO  23:00:03,704 - #42 a
+INFO  23:00:03,704 - #7 ,
+INFO  23:00:03,704 - #42 IncrementType
+INFO  23:00:03,704 - #42 type
+INFO  23:00:03,704 - #15 )
+INFO  23:00:03,704 - #42 int
+INFO  23:00:03,705 - #42 pom
+INFO  23:00:03,705 - #6 ;
+INFO  23:00:03,705 - #3 {
+INFO  23:00:03,705 - #16 if
+INFO  23:00:03,705 - #14 (
+INFO  23:00:03,705 - #42 type
+INFO  23:00:03,705 - #30 ==
+INFO  23:00:03,705 - #42 IncrementType
+INFO  23:00:03,706 - #40 .
+INFO  23:00:03,706 - #42 BY_ONE
+INFO  23:00:03,706 - #15 )
+INFO  23:00:03,707 - #42 pom
+INFO  23:00:03,709 - #8 =
+INFO  23:00:03,709 - #41 1
+INFO  23:00:03,710 - #6 ;
+INFO  23:00:03,710 - #17 else
+INFO  23:00:03,710 - #16 if
+INFO  23:00:03,711 - #14 (
+INFO  23:00:03,711 - #42 type
+INFO  23:00:03,711 - #30 ==
+INFO  23:00:03,711 - #42 IncrementType
+INFO  23:00:03,711 - #40 .
+INFO  23:00:03,711 - #42 DOUBLE_VALUE
+INFO  23:00:03,711 - #15 )
+INFO  23:00:03,711 - #42 pom
+INFO  23:00:03,711 - #8 =
+INFO  23:00:03,711 - #42 a
+INFO  23:00:03,711 - #6 ;
+INFO  23:00:03,712 - #21 return
+INFO  23:00:03,712 - #42 sum
+INFO  23:00:03,712 - #14 (
+INFO  23:00:03,712 - #42 a
+INFO  23:00:03,712 - #7 ,
+INFO  23:00:03,713 - #42 pom
+INFO  23:00:03,713 - #15 )
+INFO  23:00:03,713 - #6 ;
+INFO  23:00:03,713 - #4 }
+INFO  23:00:03,713 - #13 void
+INFO  23:00:03,713 - #42 main
+INFO  23:00:03,713 - #14 (
+INFO  23:00:03,713 - #15 )
+INFO  23:00:03,714 - #3 {
+INFO  23:00:03,714 - #16 if
+INFO  23:00:03,714 - #14 (
+INFO  23:00:03,714 - #41 1
+INFO  23:00:03,714 - #31 !=
+INFO  23:00:03,714 - #41 1
+INFO  23:00:03,715 - #15 )
+INFO  23:00:03,715 - #23 print
+INFO  23:00:03,715 - #14 (
+INFO  23:00:03,715 - #28 -
+INFO  23:00:03,715 - #41 6
+INFO  23:00:03,715 - #15 )
+INFO  23:00:03,715 - #6 ;
+INFO  23:00:03,715 - #17 else
+INFO  23:00:03,715 - #23 print
+INFO  23:00:03,715 - #14 (
+INFO  23:00:03,715 - #41 0
+INFO  23:00:03,716 - #15 )
+INFO  23:00:03,716 - #6 ;
+INFO  23:00:03,716 - #42 ibool
+INFO  23:00:03,716 - #8 =
+INFO  23:00:03,716 - #43 false
+INFO  23:00:03,716 - #6 ;
+INFO  23:00:03,716 - #42 i
+INFO  23:00:03,716 - #8 =
+INFO  23:00:03,716 - #41 0
+INFO  23:00:03,716 - #6 ;
+INFO  23:00:03,717 - #18 for
+INFO  23:00:03,717 - #14 (
+INFO  23:00:03,717 - #42 i
+INFO  23:00:03,717 - #8 =
+INFO  23:00:03,717 - #41 0
+INFO  23:00:03,718 - #6 ;
+INFO  23:00:03,718 - #42 i
+INFO  23:00:03,718 - #34 <
+INFO  23:00:03,718 - #41 5
+INFO  23:00:03,718 - #6 ;
+INFO  23:00:03,718 - #42 i
+INFO  23:00:03,718 - #24 ++
+INFO  23:00:03,718 - #15 )
+INFO  23:00:03,719 - #3 {
+INFO  23:00:03,719 - #16 if
+INFO  23:00:03,719 - #14 (
+INFO  23:00:03,719 - #42 i
+INFO  23:00:03,719 - #30 ==
+INFO  23:00:03,719 - #41 2
+INFO  23:00:03,719 - #15 )
+INFO  23:00:03,719 - #42 ibool
+INFO  23:00:03,719 - #8 =
+INFO  23:00:03,719 - #43 true
+INFO  23:00:03,719 - #6 ;
+INFO  23:00:03,719 - #4 }
+INFO  23:00:03,719 - #16 if
+INFO  23:00:03,720 - #14 (
+INFO  23:00:03,720 - #42 ibool
+INFO  23:00:03,720 - #15 )
+INFO  23:00:03,720 - #16 if
+INFO  23:00:03,720 - #14 (
+INFO  23:00:03,720 - #42 i
+INFO  23:00:03,720 - #30 ==
+INFO  23:00:03,720 - #41 5
+INFO  23:00:03,720 - #15 )
+INFO  23:00:03,720 - #23 print
+INFO  23:00:03,720 - #14 (
+INFO  23:00:03,720 - #41 1
+INFO  23:00:03,720 - #15 )
+INFO  23:00:03,720 - #6 ;
+INFO  23:00:03,721 - #17 else
+INFO  23:00:03,721 - #23 print
+INFO  23:00:03,721 - #14 (
+INFO  23:00:03,721 - #28 -
+INFO  23:00:03,721 - #41 1
+INFO  23:00:03,721 - #15 )
+INFO  23:00:03,721 - #6 ;
+INFO  23:00:03,721 - #42 niz
+INFO  23:00:03,721 - #8 =
+INFO  23:00:03,721 - #29 new
+INFO  23:00:03,721 - #42 int
+INFO  23:00:03,721 - #11 [
+INFO  23:00:03,721 - #41 3
+INFO  23:00:03,721 - #12 ]
+INFO  23:00:03,721 - #6 ;
+INFO  23:00:03,722 - #42 niz
+INFO  23:00:03,722 - #11 [
+INFO  23:00:03,722 - #41 0
+INFO  23:00:03,722 - #12 ]
+INFO  23:00:03,722 - #8 =
+INFO  23:00:03,722 - #41 1
+INFO  23:00:03,722 - #6 ;
+INFO  23:00:03,722 - #42 niz
+INFO  23:00:03,722 - #11 [
+INFO  23:00:03,722 - #41 1
+INFO  23:00:03,722 - #12 ]
+INFO  23:00:03,722 - #8 =
+INFO  23:00:03,722 - #41 2
+INFO  23:00:03,722 - #6 ;
+INFO  23:00:03,722 - #42 niz
+INFO  23:00:03,722 - #11 [
+INFO  23:00:03,722 - #41 2
+INFO  23:00:03,723 - #12 ]
+INFO  23:00:03,723 - #8 =
+INFO  23:00:03,723 - #42 sum
+INFO  23:00:03,723 - #14 (
+INFO  23:00:03,723 - #42 niz
+INFO  23:00:03,723 - #11 [
+INFO  23:00:03,723 - #41 1
+INFO  23:00:03,723 - #12 ]
+INFO  23:00:03,723 - #7 ,
+INFO  23:00:03,723 - #42 niz
+INFO  23:00:03,723 - #11 [
+INFO  23:00:03,723 - #41 0
+INFO  23:00:03,723 - #12 ]
+INFO  23:00:03,723 - #15 )
+INFO  23:00:03,723 - #36 +
+INFO  23:00:03,723 - #41 1
+INFO  23:00:03,723 - #6 ;
+INFO  23:00:03,723 - #16 if
+INFO  23:00:03,723 - #14 (
+INFO  23:00:03,723 - #42 niz
+INFO  23:00:03,724 - #11 [
+INFO  23:00:03,724 - #41 2
+INFO  23:00:03,724 - #12 ]
+INFO  23:00:03,724 - #30 ==
+INFO  23:00:03,724 - #41 4
+INFO  23:00:03,724 - #15 )
+INFO  23:00:03,724 - #23 print
+INFO  23:00:03,724 - #14 (
+INFO  23:00:03,724 - #42 ord
+INFO  23:00:03,724 - #14 (
+INFO  23:00:03,724 - #44 A
+INFO  23:00:03,724 - #15 )
+INFO  23:00:03,724 - #15 )
+INFO  23:00:03,724 - #6 ;
+INFO  23:00:03,724 - #17 else
+INFO  23:00:03,724 - #23 print
+INFO  23:00:03,725 - #14 (
+INFO  23:00:03,725 - #42 ord
+INFO  23:00:03,725 - #14 (
+INFO  23:00:03,725 - #44 a
+INFO  23:00:03,725 - #15 )
+INFO  23:00:03,725 - #15 )
+INFO  23:00:03,725 - #6 ;
+INFO  23:00:03,725 - #23 print
+INFO  23:00:03,725 - #14 (
+INFO  23:00:03,725 - #42 eol
+INFO  23:00:03,725 - #15 )
+INFO  23:00:03,725 - #6 ;
+INFO  23:00:03,725 - #42 i
+INFO  23:00:03,725 - #8 =
+INFO  23:00:03,725 - #41 0
+INFO  23:00:03,725 - #6 ;
+INFO  23:00:03,725 - #18 for
+INFO  23:00:03,725 - #14 (
+INFO  23:00:03,725 - #6 ;
+INFO  23:00:03,726 - #42 i
+INFO  23:00:03,726 - #34 <
+INFO  23:00:03,726 - #41 10
+INFO  23:00:03,726 - #6 ;
+INFO  23:00:03,726 - #15 )
+INFO  23:00:03,726 - #3 {
+INFO  23:00:03,726 - #16 if
+INFO  23:00:03,726 - #14 (
+INFO  23:00:03,726 - #42 i
+INFO  23:00:03,726 - #30 ==
+INFO  23:00:03,726 - #41 3
+INFO  23:00:03,726 - #15 )
+INFO  23:00:03,726 - #3 {
+INFO  23:00:03,727 - #42 i
+INFO  23:00:03,727 - #24 ++
+INFO  23:00:03,727 - #6 ;
+INFO  23:00:03,727 - #20 continue
+INFO  23:00:03,727 - #6 ;
+INFO  23:00:03,727 - #4 }
+INFO  23:00:03,727 - #16 if
+INFO  23:00:03,727 - #14 (
+INFO  23:00:03,728 - #42 i
+INFO  23:00:03,728 - #30 ==
+INFO  23:00:03,728 - #41 4
+INFO  23:00:03,728 - #15 )
+INFO  23:00:03,728 - #19 break
+INFO  23:00:03,728 - #6 ;
+INFO  23:00:03,728 - #42 i
+INFO  23:00:03,731 - #8 =
+INFO  23:00:03,731 - #42 inkrement
+INFO  23:00:03,731 - #14 (
+INFO  23:00:03,731 - #42 i
+INFO  23:00:03,731 - #7 ,
+INFO  23:00:03,731 - #42 IncrementType
+INFO  23:00:03,731 - #40 .
+INFO  23:00:03,731 - #42 BY_ONE
+INFO  23:00:03,731 - #15 )
+INFO  23:00:03,731 - #6 ;
+INFO  23:00:03,731 - #4 }
+INFO  23:00:03,731 - #16 if
+INFO  23:00:03,731 - #14 (
+INFO  23:00:03,731 - #42 i
+INFO  23:00:03,731 - #30 ==
+INFO  23:00:03,731 - #41 3
+INFO  23:00:03,731 - #15 )
+INFO  23:00:03,732 - #23 print
+INFO  23:00:03,732 - #14 (
+INFO  23:00:03,732 - #41 4
+INFO  23:00:03,732 - #15 )
+INFO  23:00:03,732 - #6 ;
+INFO  23:00:03,732 - #17 else
+INFO  23:00:03,732 - #23 print
+INFO  23:00:03,732 - #14 (
+INFO  23:00:03,732 - #28 -
+INFO  23:00:03,732 - #41 4
+INFO  23:00:03,732 - #15 )
+INFO  23:00:03,732 - #6 ;
+INFO  23:00:03,732 - #22 read
+INFO  23:00:03,732 - #14 (
+INFO  23:00:03,732 - #42 niz
+INFO  23:00:03,732 - #11 [
+INFO  23:00:03,732 - #41 0
+INFO  23:00:03,732 - #12 ]
+INFO  23:00:03,732 - #15 )
+INFO  23:00:03,732 - #6 ;
+INFO  23:00:03,732 - #22 read
+INFO  23:00:03,733 - #14 (
+INFO  23:00:03,733 - #42 niz
+INFO  23:00:03,733 - #11 [
+INFO  23:00:03,733 - #41 1
+INFO  23:00:03,733 - #12 ]
+INFO  23:00:03,733 - #15 )
+INFO  23:00:03,733 - #6 ;
+INFO  23:00:03,733 - #22 read
+INFO  23:00:03,733 - #14 (
+INFO  23:00:03,733 - #42 niz
+INFO  23:00:03,733 - #11 [
+INFO  23:00:03,733 - #41 2
+INFO  23:00:03,733 - #12 ]
+INFO  23:00:03,733 - #15 )
+INFO  23:00:03,733 - #6 ;
+INFO  23:00:03,733 - #23 print
+INFO  23:00:03,733 - #14 (
+INFO  23:00:03,733 - #42 eol
+INFO  23:00:03,733 - #15 )
+INFO  23:00:03,733 - #6 ;
+INFO  23:00:03,733 - #23 print
+INFO  23:00:03,733 - #14 (
+INFO  23:00:03,733 - #42 sum
+INFO  23:00:03,733 - #14 (
+INFO  23:00:03,733 - #42 sum
+INFO  23:00:03,733 - #14 (
+INFO  23:00:03,733 - #42 niz
+INFO  23:00:03,733 - #11 [
+INFO  23:00:03,734 - #41 0
+INFO  23:00:03,734 - #12 ]
+INFO  23:00:03,734 - #7 ,
+INFO  23:00:03,734 - #42 niz
+INFO  23:00:03,734 - #11 [
+INFO  23:00:03,734 - #41 1
+INFO  23:00:03,734 - #12 ]
+INFO  23:00:03,734 - #15 )
+INFO  23:00:03,734 - #7 ,
+INFO  23:00:03,734 - #42 niz
+INFO  23:00:03,734 - #11 [
+INFO  23:00:03,734 - #41 2
+INFO  23:00:03,734 - #12 ]
+INFO  23:00:03,734 - #15 )
+INFO  23:00:03,734 - #15 )
+INFO  23:00:03,734 - #6 ;
+INFO  23:00:03,734 - #23 print
+INFO  23:00:03,734 - #14 (
+INFO  23:00:03,734 - #42 eol
+INFO  23:00:03,734 - #15 )
+INFO  23:00:03,734 - #6 ;
+INFO  23:00:03,734 - #23 print
+INFO  23:00:03,734 - #14 (
+INFO  23:00:03,734 - #42 inkrement
+INFO  23:00:03,735 - #14 (
+INFO  23:00:03,735 - #42 niz
+INFO  23:00:03,735 - #11 [
+INFO  23:00:03,735 - #41 2
+INFO  23:00:03,735 - #12 ]
+INFO  23:00:03,735 - #7 ,
+INFO  23:00:03,735 - #42 IncrementType
+INFO  23:00:03,735 - #40 .
+INFO  23:00:03,735 - #42 DOUBLE_VALUE
+INFO  23:00:03,735 - #15 )
+INFO  23:00:03,735 - #15 )
+INFO  23:00:03,735 - #6 ;
+INFO  23:00:03,735 - #4 }
+INFO  23:00:03,735 - #4 }
+INFO  23:00:03,749 - Program(
+  ProgName(
+   test302
+  ) [ProgName]
+  Declarations(
+    Declarations(
+      Declarations(
+        Declarations(
+          NoDeclList(
+          ) [NoDeclList]
+          Declarations4(
+            EnumDeclaration(
+              StartEnum(
+               IncrementType
+              ) [StartEnum]
+              EnumListComma(
+                EnumNoComma(
+                  EnumNoNum(
+                   BY_ONE
+                  ) [EnumNoNum]
+                ) [EnumNoComma]
+                EnumNoNum(
+                 DOUBLE_VALUE
+                ) [EnumNoNum]
+              ) [EnumListComma]
+            ) [EnumDeclaration]
+          ) [Declarations4]
+        ) [Declarations]
+        Declarations2(
+          GlobVarDeclaration(
+            Types(
+             int
+            ) [Types]
+            GlobVarListNoComma(
+              GlobVarNoBrackets(
+               i
+              ) [GlobVarNoBrackets]
+            ) [GlobVarListNoComma]
+          ) [GlobVarDeclaration]
+        ) [Declarations2]
+      ) [Declarations]
+      Declarations2(
+        GlobVarDeclaration(
+          Types(
+           bool
+          ) [Types]
+          GlobVarListNoComma(
+            GlobVarNoBrackets(
+             ibool
+            ) [GlobVarNoBrackets]
+          ) [GlobVarListNoComma]
+        ) [GlobVarDeclaration]
+      ) [Declarations2]
+    ) [Declarations]
+    Declarations2(
+      GlobVarDeclaration(
+        Types(
+         int
+        ) [Types]
+        GlobVarListNoComma(
+          GlobVarBrackets(
+           niz
+          ) [GlobVarBrackets]
+        ) [GlobVarListNoComma]
+      ) [GlobVarDeclaration]
+    ) [Declarations2]
+  ) [Declarations]
+  MethodDeclarationList(
+    MethodDeclarationList(
+      MethodDeclarationList(
+        NoMethod(
+        ) [NoMethod]
+        MethodDeclarationType(
+          MethNameType(
+            Types(
+             int
+            ) [Types]
+           sum
+          ) [MethNameType]
+          FormParameters(
+            FormParametersList(
+              FormParametersListSingle(
+                FormNoBrackets(
+                  Types(
+                   int
+                  ) [Types]
+                 z
+                ) [FormNoBrackets]
+              ) [FormParametersListSingle]
+              FormNoBrackets(
+                Types(
+                 int
+                ) [Types]
+               d
+              ) [FormNoBrackets]
+            ) [FormParametersList]
+          ) [FormParameters]
+          NoMethodVarDecl(
+          ) [NoMethodVarDecl]
+          StatementLists(
+            NoStatements(
+            ) [NoStatements]
+            StatementMatched(
+              MatchedReturnExpr(
+                Exprs(
+                  ExprNoMinus(
+                    ExprListAddop(
+                      ExprTermNoAddop(
+                        TermNoMulop(
+                          FactorDesignator(
+                            DesignatorID(
+                             z
+                            ) [DesignatorID]
+                          ) [FactorDesignator]
+                        ) [TermNoMulop]
+                      ) [ExprTermNoAddop]
+                      AddopPlus(
+                      ) [AddopPlus]
+                      TermNoMulop(
+                        FactorDesignator(
+                          DesignatorID(
+                           d
+                          ) [DesignatorID]
+                        ) [FactorDesignator]
+                      ) [TermNoMulop]
+                    ) [ExprListAddop]
+                  ) [ExprNoMinus]
+                ) [Exprs]
+              ) [MatchedReturnExpr]
+            ) [StatementMatched]
+          ) [StatementLists]
+        ) [MethodDeclarationType]
+      ) [MethodDeclarationList]
+      MethodDeclarationType(
+        MethNameType(
+          Types(
+           int
+          ) [Types]
+         inkrement
+        ) [MethNameType]
+        FormParameters(
+          FormParametersList(
+            FormParametersListSingle(
+              FormNoBrackets(
+                Types(
+                 int
+                ) [Types]
+               a
+              ) [FormNoBrackets]
+            ) [FormParametersListSingle]
+            FormNoBrackets(
+              Types(
+               IncrementType
+              ) [Types]
+             type
+            ) [FormNoBrackets]
+          ) [FormParametersList]
+        ) [FormParameters]
+        MethodVarDecl(
+          NoMethodVarDecl(
+          ) [NoMethodVarDecl]
+          LoclVarDeclaration(
+            Types(
+             int
+            ) [Types]
+            LoclVarListNoComma(
+              LoclVarNoBrackets(
+               pom
+              ) [LoclVarNoBrackets]
+            ) [LoclVarListNoComma]
+          ) [LoclVarDeclaration]
+        ) [MethodVarDecl]
+        StatementLists(
+          StatementLists(
+            NoStatements(
+            ) [NoStatements]
+            StatementUnatched(
+              UnmatchedIfElse(
+                ConditionListNoOr(
+                  CondTermListNoAnd(
+                    CondFactRelop(
+                      ExprNoMinus(
+                        ExprTermNoAddop(
+                          TermNoMulop(
+                            FactorDesignator(
+                              DesignatorID(
+                               type
+                              ) [DesignatorID]
+                            ) [FactorDesignator]
+                          ) [TermNoMulop]
+                        ) [ExprTermNoAddop]
+                      ) [ExprNoMinus]
+                      RelopEq(
+                      ) [RelopEq]
+                      ExprNoMinus(
+                        ExprTermNoAddop(
+                          TermNoMulop(
+                            FactorDesignator(
+                              DesignatorDot(
+                                DesignatorID(
+                                 IncrementType
+                                ) [DesignatorID]
+                               BY_ONE
+                              ) [DesignatorDot]
+                            ) [FactorDesignator]
+                          ) [TermNoMulop]
+                        ) [ExprTermNoAddop]
+                      ) [ExprNoMinus]
+                    ) [CondFactRelop]
+                  ) [CondTermListNoAnd]
+                ) [ConditionListNoOr]
+                CondEnd(
+                ) [CondEnd]
+                MatchedDesignator(
+                  DesignatorAssign(
+                    DesignatorID(
+                     pom
+                    ) [DesignatorID]
+                    AssignopEq(
+                    ) [AssignopEq]
+                    ExprNoMinus(
+                      ExprTermNoAddop(
+                        TermNoMulop(
+                          FactorNum(
+                           1
+                          ) [FactorNum]
+                        ) [TermNoMulop]
+                      ) [ExprTermNoAddop]
+                    ) [ExprNoMinus]
+                  ) [DesignatorAssign]
+                ) [MatchedDesignator]
+                ElseStart(
+                ) [ElseStart]
+                UnmatchedIfNoElse(
+                  ConditionListNoOr(
+                    CondTermListNoAnd(
+                      CondFactRelop(
+                        ExprNoMinus(
+                          ExprTermNoAddop(
+                            TermNoMulop(
+                              FactorDesignator(
+                                DesignatorID(
+                                 type
+                                ) [DesignatorID]
+                              ) [FactorDesignator]
+                            ) [TermNoMulop]
+                          ) [ExprTermNoAddop]
+                        ) [ExprNoMinus]
+                        RelopEq(
+                        ) [RelopEq]
+                        ExprNoMinus(
+                          ExprTermNoAddop(
+                            TermNoMulop(
+                              FactorDesignator(
+                                DesignatorDot(
+                                  DesignatorID(
+                                   IncrementType
+                                  ) [DesignatorID]
+                                 DOUBLE_VALUE
+                                ) [DesignatorDot]
+                              ) [FactorDesignator]
+                            ) [TermNoMulop]
+                          ) [ExprTermNoAddop]
+                        ) [ExprNoMinus]
+                      ) [CondFactRelop]
+                    ) [CondTermListNoAnd]
+                  ) [ConditionListNoOr]
+                  CondEnd(
+                  ) [CondEnd]
+                  StatementMatched(
+                    MatchedDesignator(
+                      DesignatorAssign(
+                        DesignatorID(
+                         pom
+                        ) [DesignatorID]
+                        AssignopEq(
+                        ) [AssignopEq]
+                        ExprNoMinus(
+                          ExprTermNoAddop(
+                            TermNoMulop(
+                              FactorDesignator(
+                                DesignatorID(
+                                 a
+                                ) [DesignatorID]
+                              ) [FactorDesignator]
+                            ) [TermNoMulop]
+                          ) [ExprTermNoAddop]
+                        ) [ExprNoMinus]
+                      ) [DesignatorAssign]
+                    ) [MatchedDesignator]
+                  ) [StatementMatched]
+                ) [UnmatchedIfNoElse]
+              ) [UnmatchedIfElse]
+            ) [StatementUnatched]
+          ) [StatementLists]
+          StatementMatched(
+            MatchedReturnExpr(
+              Exprs(
+                ExprNoMinus(
+                  ExprTermNoAddop(
+                    TermNoMulop(
+                      FactorDesignatorActPars(
+                        DesignatorID(
+                         sum
+                        ) [DesignatorID]
+                        ActualParameters(
+                          ActParsListComma(
+                            ActParsListNoComma(
+                              ExprNoMinus(
+                                ExprTermNoAddop(
+                                  TermNoMulop(
+                                    FactorDesignator(
+                                      DesignatorID(
+                                       a
+                                      ) [DesignatorID]
+                                    ) [FactorDesignator]
+                                  ) [TermNoMulop]
+                                ) [ExprTermNoAddop]
+                              ) [ExprNoMinus]
+                            ) [ActParsListNoComma]
+                            ExprNoMinus(
+                              ExprTermNoAddop(
+                                TermNoMulop(
+                                  FactorDesignator(
+                                    DesignatorID(
+                                     pom
+                                    ) [DesignatorID]
+                                  ) [FactorDesignator]
+                                ) [TermNoMulop]
+                              ) [ExprTermNoAddop]
+                            ) [ExprNoMinus]
+                          ) [ActParsListComma]
+                        ) [ActualParameters]
+                      ) [FactorDesignatorActPars]
+                    ) [TermNoMulop]
+                  ) [ExprTermNoAddop]
+                ) [ExprNoMinus]
+              ) [Exprs]
+            ) [MatchedReturnExpr]
+          ) [StatementMatched]
+        ) [StatementLists]
+      ) [MethodDeclarationType]
+    ) [MethodDeclarationList]
+    MethodDeclarationType(
+      MethNameVoid(
+       main
+      ) [MethNameVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      NoMethodVarDecl(
+      ) [NoMethodVarDecl]
+      StatementLists(
+        StatementLists(
+          StatementLists(
+            StatementLists(
+              StatementLists(
+                StatementLists(
+                  StatementLists(
+                    StatementLists(
+                      StatementLists(
+                        StatementLists(
+                          StatementLists(
+                            StatementLists(
+                              StatementLists(
+                                StatementLists(
+                                  StatementLists(
+                                    StatementLists(
+                                      StatementLists(
+                                        StatementLists(
+                                          StatementLists(
+                                            NoStatements(
+                                            ) [NoStatements]
+                                            StatementMatched(
+                                              MatchedIfElse(
+                                                ConditionListNoOr(
+                                                  CondTermListNoAnd(
+                                                    CondFactRelop(
+                                                      ExprNoMinus(
+                                                        ExprTermNoAddop(
+                                                          TermNoMulop(
+                                                            FactorNum(
+                                                             1
+                                                            ) [FactorNum]
+                                                          ) [TermNoMulop]
+                                                        ) [ExprTermNoAddop]
+                                                      ) [ExprNoMinus]
+                                                      RelopDif(
+                                                      ) [RelopDif]
+                                                      ExprNoMinus(
+                                                        ExprTermNoAddop(
+                                                          TermNoMulop(
+                                                            FactorNum(
+                                                             1
+                                                            ) [FactorNum]
+                                                          ) [TermNoMulop]
+                                                        ) [ExprTermNoAddop]
+                                                      ) [ExprNoMinus]
+                                                    ) [CondFactRelop]
+                                                  ) [CondTermListNoAnd]
+                                                ) [ConditionListNoOr]
+                                                CondEnd(
+                                                ) [CondEnd]
+                                                MatchedPrint(
+                                                  ExprMinus(
+                                                    ExprTermNoAddop(
+                                                      TermNoMulop(
+                                                        FactorNum(
+                                                         6
+                                                        ) [FactorNum]
+                                                      ) [TermNoMulop]
+                                                    ) [ExprTermNoAddop]
+                                                  ) [ExprMinus]
+                                                ) [MatchedPrint]
+                                                ElseStart(
+                                                ) [ElseStart]
+                                                MatchedPrint(
+                                                  ExprNoMinus(
+                                                    ExprTermNoAddop(
+                                                      TermNoMulop(
+                                                        FactorNum(
+                                                         0
+                                                        ) [FactorNum]
+                                                      ) [TermNoMulop]
+                                                    ) [ExprTermNoAddop]
+                                                  ) [ExprNoMinus]
+                                                ) [MatchedPrint]
+                                              ) [MatchedIfElse]
+                                            ) [StatementMatched]
+                                          ) [StatementLists]
+                                          StatementMatched(
+                                            MatchedDesignator(
+                                              DesignatorAssign(
+                                                DesignatorID(
+                                                 ibool
+                                                ) [DesignatorID]
+                                                AssignopEq(
+                                                ) [AssignopEq]
+                                                ExprNoMinus(
+                                                  ExprTermNoAddop(
+                                                    TermNoMulop(
+                                                      FactorBool(
+                                                       false
+                                                      ) [FactorBool]
+                                                    ) [TermNoMulop]
+                                                  ) [ExprTermNoAddop]
+                                                ) [ExprNoMinus]
+                                              ) [DesignatorAssign]
+                                            ) [MatchedDesignator]
+                                          ) [StatementMatched]
+                                        ) [StatementLists]
+                                        StatementMatched(
+                                          MatchedDesignator(
+                                            DesignatorAssign(
+                                              DesignatorID(
+                                               i
+                                              ) [DesignatorID]
+                                              AssignopEq(
+                                              ) [AssignopEq]
+                                              ExprNoMinus(
+                                                ExprTermNoAddop(
+                                                  TermNoMulop(
+                                                    FactorNum(
+                                                     0
+                                                    ) [FactorNum]
+                                                  ) [TermNoMulop]
+                                                ) [ExprTermNoAddop]
+                                              ) [ExprNoMinus]
+                                            ) [DesignatorAssign]
+                                          ) [MatchedDesignator]
+                                        ) [StatementMatched]
+                                      ) [StatementLists]
+                                      StatementUnatched(
+                                        UnmatchedFor(
+                                          For123(
+                                            StartFor(
+                                            ) [StartFor]
+                                            DesigStatementY(
+                                              DesignatorAssign(
+                                                DesignatorID(
+                                                 i
+                                                ) [DesignatorID]
+                                                AssignopEq(
+                                                ) [AssignopEq]
+                                                ExprNoMinus(
+                                                  ExprTermNoAddop(
+                                                    TermNoMulop(
+                                                      FactorNum(
+                                                       0
+                                                      ) [FactorNum]
+                                                    ) [TermNoMulop]
+                                                  ) [ExprTermNoAddop]
+                                                ) [ExprNoMinus]
+                                              ) [DesignatorAssign]
+                                            ) [DesigStatementY]
+                                            ConditionListNoOr(
+                                              CondTermListNoAnd(
+                                                CondFactRelop(
+                                                  ExprNoMinus(
+                                                    ExprTermNoAddop(
+                                                      TermNoMulop(
+                                                        FactorDesignator(
+                                                          DesignatorID(
+                                                           i
+                                                          ) [DesignatorID]
+                                                        ) [FactorDesignator]
+                                                      ) [TermNoMulop]
+                                                    ) [ExprTermNoAddop]
+                                                  ) [ExprNoMinus]
+                                                  RelopLess(
+                                                  ) [RelopLess]
+                                                  ExprNoMinus(
+                                                    ExprTermNoAddop(
+                                                      TermNoMulop(
+                                                        FactorNum(
+                                                         5
+                                                        ) [FactorNum]
+                                                      ) [TermNoMulop]
+                                                    ) [ExprTermNoAddop]
+                                                  ) [ExprNoMinus]
+                                                ) [CondFactRelop]
+                                              ) [CondTermListNoAnd]
+                                            ) [ConditionListNoOr]
+                                            DesigStatementY(
+                                              DesignatorInc(
+                                                DesignatorID(
+                                                 i
+                                                ) [DesignatorID]
+                                              ) [DesignatorInc]
+                                            ) [DesigStatementY]
+                                            StatementMatched(
+                                              MatchedStatement(
+                                                StatementLists(
+                                                  NoStatements(
+                                                  ) [NoStatements]
+                                                  StatementUnatched(
+                                                    UnmatchedIfNoElse(
+                                                      ConditionListNoOr(
+                                                        CondTermListNoAnd(
+                                                          CondFactRelop(
+                                                            ExprNoMinus(
+                                                              ExprTermNoAddop(
+                                                                TermNoMulop(
+                                                                  FactorDesignator(
+                                                                    DesignatorID(
+                                                                     i
+                                                                    ) [DesignatorID]
+                                                                  ) [FactorDesignator]
+                                                                ) [TermNoMulop]
+                                                              ) [ExprTermNoAddop]
+                                                            ) [ExprNoMinus]
+                                                            RelopEq(
+                                                            ) [RelopEq]
+                                                            ExprNoMinus(
+                                                              ExprTermNoAddop(
+                                                                TermNoMulop(
+                                                                  FactorNum(
+                                                                   2
+                                                                  ) [FactorNum]
+                                                                ) [TermNoMulop]
+                                                              ) [ExprTermNoAddop]
+                                                            ) [ExprNoMinus]
+                                                          ) [CondFactRelop]
+                                                        ) [CondTermListNoAnd]
+                                                      ) [ConditionListNoOr]
+                                                      CondEnd(
+                                                      ) [CondEnd]
+                                                      StatementMatched(
+                                                        MatchedDesignator(
+                                                          DesignatorAssign(
+                                                            DesignatorID(
+                                                             ibool
+                                                            ) [DesignatorID]
+                                                            AssignopEq(
+                                                            ) [AssignopEq]
+                                                            ExprNoMinus(
+                                                              ExprTermNoAddop(
+                                                                TermNoMulop(
+                                                                  FactorBool(
+                                                                   true
+                                                                  ) [FactorBool]
+                                                                ) [TermNoMulop]
+                                                              ) [ExprTermNoAddop]
+                                                            ) [ExprNoMinus]
+                                                          ) [DesignatorAssign]
+                                                        ) [MatchedDesignator]
+                                                      ) [StatementMatched]
+                                                    ) [UnmatchedIfNoElse]
+                                                  ) [StatementUnatched]
+                                                ) [StatementLists]
+                                              ) [MatchedStatement]
+                                            ) [StatementMatched]
+                                          ) [For123]
+                                          UnmatchedIfNoElse(
+                                            ConditionListNoOr(
+                                              CondTermListNoAnd(
+                                                CondFactNoRelop(
+                                                  ExprNoMinus(
+                                                    ExprTermNoAddop(
+                                                      TermNoMulop(
+                                                        FactorDesignator(
+                                                          DesignatorID(
+                                                           ibool
+                                                          ) [DesignatorID]
+                                                        ) [FactorDesignator]
+                                                      ) [TermNoMulop]
+                                                    ) [ExprTermNoAddop]
+                                                  ) [ExprNoMinus]
+                                                ) [CondFactNoRelop]
+                                              ) [CondTermListNoAnd]
+                                            ) [ConditionListNoOr]
+                                            CondEnd(
+                                            ) [CondEnd]
+                                            StatementMatched(
+                                              MatchedIfElse(
+                                                ConditionListNoOr(
+                                                  CondTermListNoAnd(
+                                                    CondFactRelop(
+                                                      ExprNoMinus(
+                                                        ExprTermNoAddop(
+                                                          TermNoMulop(
+                                                            FactorDesignator(
+                                                              DesignatorID(
+                                                               i
+                                                              ) [DesignatorID]
+                                                            ) [FactorDesignator]
+                                                          ) [TermNoMulop]
+                                                        ) [ExprTermNoAddop]
+                                                      ) [ExprNoMinus]
+                                                      RelopEq(
+                                                      ) [RelopEq]
+                                                      ExprNoMinus(
+                                                        ExprTermNoAddop(
+                                                          TermNoMulop(
+                                                            FactorNum(
+                                                             5
+                                                            ) [FactorNum]
+                                                          ) [TermNoMulop]
+                                                        ) [ExprTermNoAddop]
+                                                      ) [ExprNoMinus]
+                                                    ) [CondFactRelop]
+                                                  ) [CondTermListNoAnd]
+                                                ) [ConditionListNoOr]
+                                                CondEnd(
+                                                ) [CondEnd]
+                                                MatchedPrint(
+                                                  ExprNoMinus(
+                                                    ExprTermNoAddop(
+                                                      TermNoMulop(
+                                                        FactorNum(
+                                                         1
+                                                        ) [FactorNum]
+                                                      ) [TermNoMulop]
+                                                    ) [ExprTermNoAddop]
+                                                  ) [ExprNoMinus]
+                                                ) [MatchedPrint]
+                                                ElseStart(
+                                                ) [ElseStart]
+                                                MatchedPrint(
+                                                  ExprMinus(
+                                                    ExprTermNoAddop(
+                                                      TermNoMulop(
+                                                        FactorNum(
+                                                         1
+                                                        ) [FactorNum]
+                                                      ) [TermNoMulop]
+                                                    ) [ExprTermNoAddop]
+                                                  ) [ExprMinus]
+                                                ) [MatchedPrint]
+                                              ) [MatchedIfElse]
+                                            ) [StatementMatched]
+                                          ) [UnmatchedIfNoElse]
+                                        ) [UnmatchedFor]
+                                      ) [StatementUnatched]
+                                    ) [StatementLists]
+                                    StatementMatched(
+                                      MatchedDesignator(
+                                        DesignatorAssign(
+                                          DesignatorID(
+                                           niz
+                                          ) [DesignatorID]
+                                          AssignopEq(
+                                          ) [AssignopEq]
+                                          ExprNoMinus(
+                                            ExprTermNoAddop(
+                                              TermNoMulop(
+                                                FactorNewExpr(
+                                                  Types(
+                                                   int
+                                                  ) [Types]
+                                                  ExprNoMinus(
+                                                    ExprTermNoAddop(
+                                                      TermNoMulop(
+                                                        FactorNum(
+                                                         3
+                                                        ) [FactorNum]
+                                                      ) [TermNoMulop]
+                                                    ) [ExprTermNoAddop]
+                                                  ) [ExprNoMinus]
+                                                ) [FactorNewExpr]
+                                              ) [TermNoMulop]
+                                            ) [ExprTermNoAddop]
+                                          ) [ExprNoMinus]
+                                        ) [DesignatorAssign]
+                                      ) [MatchedDesignator]
+                                    ) [StatementMatched]
+                                  ) [StatementLists]
+                                  StatementMatched(
+                                    MatchedDesignator(
+                                      DesignatorAssign(
+                                        DesignatorExpr(
+                                          DesignatorID(
+                                           niz
+                                          ) [DesignatorID]
+                                          ExprNoMinus(
+                                            ExprTermNoAddop(
+                                              TermNoMulop(
+                                                FactorNum(
+                                                 0
+                                                ) [FactorNum]
+                                              ) [TermNoMulop]
+                                            ) [ExprTermNoAddop]
+                                          ) [ExprNoMinus]
+                                        ) [DesignatorExpr]
+                                        AssignopEq(
+                                        ) [AssignopEq]
+                                        ExprNoMinus(
+                                          ExprTermNoAddop(
+                                            TermNoMulop(
+                                              FactorNum(
+                                               1
+                                              ) [FactorNum]
+                                            ) [TermNoMulop]
+                                          ) [ExprTermNoAddop]
+                                        ) [ExprNoMinus]
+                                      ) [DesignatorAssign]
+                                    ) [MatchedDesignator]
+                                  ) [StatementMatched]
+                                ) [StatementLists]
+                                StatementMatched(
+                                  MatchedDesignator(
+                                    DesignatorAssign(
+                                      DesignatorExpr(
+                                        DesignatorID(
+                                         niz
+                                        ) [DesignatorID]
+                                        ExprNoMinus(
+                                          ExprTermNoAddop(
+                                            TermNoMulop(
+                                              FactorNum(
+                                               1
+                                              ) [FactorNum]
+                                            ) [TermNoMulop]
+                                          ) [ExprTermNoAddop]
+                                        ) [ExprNoMinus]
+                                      ) [DesignatorExpr]
+                                      AssignopEq(
+                                      ) [AssignopEq]
+                                      ExprNoMinus(
+                                        ExprTermNoAddop(
+                                          TermNoMulop(
+                                            FactorNum(
+                                             2
+                                            ) [FactorNum]
+                                          ) [TermNoMulop]
+                                        ) [ExprTermNoAddop]
+                                      ) [ExprNoMinus]
+                                    ) [DesignatorAssign]
+                                  ) [MatchedDesignator]
+                                ) [StatementMatched]
+                              ) [StatementLists]
+                              StatementMatched(
+                                MatchedDesignator(
+                                  DesignatorAssign(
+                                    DesignatorExpr(
+                                      DesignatorID(
+                                       niz
+                                      ) [DesignatorID]
+                                      ExprNoMinus(
+                                        ExprTermNoAddop(
+                                          TermNoMulop(
+                                            FactorNum(
+                                             2
+                                            ) [FactorNum]
+                                          ) [TermNoMulop]
+                                        ) [ExprTermNoAddop]
+                                      ) [ExprNoMinus]
+                                    ) [DesignatorExpr]
+                                    AssignopEq(
+                                    ) [AssignopEq]
+                                    ExprNoMinus(
+                                      ExprListAddop(
+                                        ExprTermNoAddop(
+                                          TermNoMulop(
+                                            FactorDesignatorActPars(
+                                              DesignatorID(
+                                               sum
+                                              ) [DesignatorID]
+                                              ActualParameters(
+                                                ActParsListComma(
+                                                  ActParsListNoComma(
+                                                    ExprNoMinus(
+                                                      ExprTermNoAddop(
+                                                        TermNoMulop(
+                                                          FactorDesignator(
+                                                            DesignatorExpr(
+                                                              DesignatorID(
+                                                               niz
+                                                              ) [DesignatorID]
+                                                              ExprNoMinus(
+                                                                ExprTermNoAddop(
+                                                                  TermNoMulop(
+                                                                    FactorNum(
+                                                                     1
+                                                                    ) [FactorNum]
+                                                                  ) [TermNoMulop]
+                                                                ) [ExprTermNoAddop]
+                                                              ) [ExprNoMinus]
+                                                            ) [DesignatorExpr]
+                                                          ) [FactorDesignator]
+                                                        ) [TermNoMulop]
+                                                      ) [ExprTermNoAddop]
+                                                    ) [ExprNoMinus]
+                                                  ) [ActParsListNoComma]
+                                                  ExprNoMinus(
+                                                    ExprTermNoAddop(
+                                                      TermNoMulop(
+                                                        FactorDesignator(
+                                                          DesignatorExpr(
+                                                            DesignatorID(
+                                                             niz
+                                                            ) [DesignatorID]
+                                                            ExprNoMinus(
+                                                              ExprTermNoAddop(
+                                                                TermNoMulop(
+                                                                  FactorNum(
+                                                                   0
+                                                                  ) [FactorNum]
+                                                                ) [TermNoMulop]
+                                                              ) [ExprTermNoAddop]
+                                                            ) [ExprNoMinus]
+                                                          ) [DesignatorExpr]
+                                                        ) [FactorDesignator]
+                                                      ) [TermNoMulop]
+                                                    ) [ExprTermNoAddop]
+                                                  ) [ExprNoMinus]
+                                                ) [ActParsListComma]
+                                              ) [ActualParameters]
+                                            ) [FactorDesignatorActPars]
+                                          ) [TermNoMulop]
+                                        ) [ExprTermNoAddop]
+                                        AddopPlus(
+                                        ) [AddopPlus]
+                                        TermNoMulop(
+                                          FactorNum(
+                                           1
+                                          ) [FactorNum]
+                                        ) [TermNoMulop]
+                                      ) [ExprListAddop]
+                                    ) [ExprNoMinus]
+                                  ) [DesignatorAssign]
+                                ) [MatchedDesignator]
+                              ) [StatementMatched]
+                            ) [StatementLists]
+                            StatementMatched(
+                              MatchedIfElse(
+                                ConditionListNoOr(
+                                  CondTermListNoAnd(
+                                    CondFactRelop(
+                                      ExprNoMinus(
+                                        ExprTermNoAddop(
+                                          TermNoMulop(
+                                            FactorDesignator(
+                                              DesignatorExpr(
+                                                DesignatorID(
+                                                 niz
+                                                ) [DesignatorID]
+                                                ExprNoMinus(
+                                                  ExprTermNoAddop(
+                                                    TermNoMulop(
+                                                      FactorNum(
+                                                       2
+                                                      ) [FactorNum]
+                                                    ) [TermNoMulop]
+                                                  ) [ExprTermNoAddop]
+                                                ) [ExprNoMinus]
+                                              ) [DesignatorExpr]
+                                            ) [FactorDesignator]
+                                          ) [TermNoMulop]
+                                        ) [ExprTermNoAddop]
+                                      ) [ExprNoMinus]
+                                      RelopEq(
+                                      ) [RelopEq]
+                                      ExprNoMinus(
+                                        ExprTermNoAddop(
+                                          TermNoMulop(
+                                            FactorNum(
+                                             4
+                                            ) [FactorNum]
+                                          ) [TermNoMulop]
+                                        ) [ExprTermNoAddop]
+                                      ) [ExprNoMinus]
+                                    ) [CondFactRelop]
+                                  ) [CondTermListNoAnd]
+                                ) [ConditionListNoOr]
+                                CondEnd(
+                                ) [CondEnd]
+                                MatchedPrint(
+                                  ExprNoMinus(
+                                    ExprTermNoAddop(
+                                      TermNoMulop(
+                                        FactorDesignatorActPars(
+                                          DesignatorID(
+                                           ord
+                                          ) [DesignatorID]
+                                          ActualParameters(
+                                            ActParsListNoComma(
+                                              ExprNoMinus(
+                                                ExprTermNoAddop(
+                                                  TermNoMulop(
+                                                    FactorChar(
+                                                     A
+                                                    ) [FactorChar]
+                                                  ) [TermNoMulop]
+                                                ) [ExprTermNoAddop]
+                                              ) [ExprNoMinus]
+                                            ) [ActParsListNoComma]
+                                          ) [ActualParameters]
+                                        ) [FactorDesignatorActPars]
+                                      ) [TermNoMulop]
+                                    ) [ExprTermNoAddop]
+                                  ) [ExprNoMinus]
+                                ) [MatchedPrint]
+                                ElseStart(
+                                ) [ElseStart]
+                                MatchedPrint(
+                                  ExprNoMinus(
+                                    ExprTermNoAddop(
+                                      TermNoMulop(
+                                        FactorDesignatorActPars(
+                                          DesignatorID(
+                                           ord
+                                          ) [DesignatorID]
+                                          ActualParameters(
+                                            ActParsListNoComma(
+                                              ExprNoMinus(
+                                                ExprTermNoAddop(
+                                                  TermNoMulop(
+                                                    FactorChar(
+                                                     a
+                                                    ) [FactorChar]
+                                                  ) [TermNoMulop]
+                                                ) [ExprTermNoAddop]
+                                              ) [ExprNoMinus]
+                                            ) [ActParsListNoComma]
+                                          ) [ActualParameters]
+                                        ) [FactorDesignatorActPars]
+                                      ) [TermNoMulop]
+                                    ) [ExprTermNoAddop]
+                                  ) [ExprNoMinus]
+                                ) [MatchedPrint]
+                              ) [MatchedIfElse]
+                            ) [StatementMatched]
+                          ) [StatementLists]
+                          StatementMatched(
+                            MatchedPrint(
+                              ExprNoMinus(
+                                ExprTermNoAddop(
+                                  TermNoMulop(
+                                    FactorDesignator(
+                                      DesignatorID(
+                                       eol
+                                      ) [DesignatorID]
+                                    ) [FactorDesignator]
+                                  ) [TermNoMulop]
+                                ) [ExprTermNoAddop]
+                              ) [ExprNoMinus]
+                            ) [MatchedPrint]
+                          ) [StatementMatched]
+                        ) [StatementLists]
+                        StatementMatched(
+                          MatchedDesignator(
+                            DesignatorAssign(
+                              DesignatorID(
+                               i
+                              ) [DesignatorID]
+                              AssignopEq(
+                              ) [AssignopEq]
+                              ExprNoMinus(
+                                ExprTermNoAddop(
+                                  TermNoMulop(
+                                    FactorNum(
+                                     0
+                                    ) [FactorNum]
+                                  ) [TermNoMulop]
+                                ) [ExprTermNoAddop]
+                              ) [ExprNoMinus]
+                            ) [DesignatorAssign]
+                          ) [MatchedDesignator]
+                        ) [StatementMatched]
+                      ) [StatementLists]
+                      StatementMatched(
+                        MatchedFor(
+                          For123(
+                            StartFor(
+                            ) [StartFor]
+                            NoDesigStatement(
+                            ) [NoDesigStatement]
+                            ConditionListNoOr(
+                              CondTermListNoAnd(
+                                CondFactRelop(
+                                  ExprNoMinus(
+                                    ExprTermNoAddop(
+                                      TermNoMulop(
+                                        FactorDesignator(
+                                          DesignatorID(
+                                           i
+                                          ) [DesignatorID]
+                                        ) [FactorDesignator]
+                                      ) [TermNoMulop]
+                                    ) [ExprTermNoAddop]
+                                  ) [ExprNoMinus]
+                                  RelopLess(
+                                  ) [RelopLess]
+                                  ExprNoMinus(
+                                    ExprTermNoAddop(
+                                      TermNoMulop(
+                                        FactorNum(
+                                         10
+                                        ) [FactorNum]
+                                      ) [TermNoMulop]
+                                    ) [ExprTermNoAddop]
+                                  ) [ExprNoMinus]
+                                ) [CondFactRelop]
+                              ) [CondTermListNoAnd]
+                            ) [ConditionListNoOr]
+                            NoDesigStatement(
+                            ) [NoDesigStatement]
+                            StatementMatched(
+                              MatchedStatement(
+                                StatementLists(
+                                  StatementLists(
+                                    StatementLists(
+                                      NoStatements(
+                                      ) [NoStatements]
+                                      StatementUnatched(
+                                        UnmatchedIfNoElse(
+                                          ConditionListNoOr(
+                                            CondTermListNoAnd(
+                                              CondFactRelop(
+                                                ExprNoMinus(
+                                                  ExprTermNoAddop(
+                                                    TermNoMulop(
+                                                      FactorDesignator(
+                                                        DesignatorID(
+                                                         i
+                                                        ) [DesignatorID]
+                                                      ) [FactorDesignator]
+                                                    ) [TermNoMulop]
+                                                  ) [ExprTermNoAddop]
+                                                ) [ExprNoMinus]
+                                                RelopEq(
+                                                ) [RelopEq]
+                                                ExprNoMinus(
+                                                  ExprTermNoAddop(
+                                                    TermNoMulop(
+                                                      FactorNum(
+                                                       3
+                                                      ) [FactorNum]
+                                                    ) [TermNoMulop]
+                                                  ) [ExprTermNoAddop]
+                                                ) [ExprNoMinus]
+                                              ) [CondFactRelop]
+                                            ) [CondTermListNoAnd]
+                                          ) [ConditionListNoOr]
+                                          CondEnd(
+                                          ) [CondEnd]
+                                          StatementMatched(
+                                            MatchedStatement(
+                                              StatementLists(
+                                                StatementLists(
+                                                  NoStatements(
+                                                  ) [NoStatements]
+                                                  StatementMatched(
+                                                    MatchedDesignator(
+                                                      DesignatorInc(
+                                                        DesignatorID(
+                                                         i
+                                                        ) [DesignatorID]
+                                                      ) [DesignatorInc]
+                                                    ) [MatchedDesignator]
+                                                  ) [StatementMatched]
+                                                ) [StatementLists]
+                                                StatementMatched(
+                                                  MatchedContinue(
+                                                  ) [MatchedContinue]
+                                                ) [StatementMatched]
+                                              ) [StatementLists]
+                                            ) [MatchedStatement]
+                                          ) [StatementMatched]
+                                        ) [UnmatchedIfNoElse]
+                                      ) [StatementUnatched]
+                                    ) [StatementLists]
+                                    StatementUnatched(
+                                      UnmatchedIfNoElse(
+                                        ConditionListNoOr(
+                                          CondTermListNoAnd(
+                                            CondFactRelop(
+                                              ExprNoMinus(
+                                                ExprTermNoAddop(
+                                                  TermNoMulop(
+                                                    FactorDesignator(
+                                                      DesignatorID(
+                                                       i
+                                                      ) [DesignatorID]
+                                                    ) [FactorDesignator]
+                                                  ) [TermNoMulop]
+                                                ) [ExprTermNoAddop]
+                                              ) [ExprNoMinus]
+                                              RelopEq(
+                                              ) [RelopEq]
+                                              ExprNoMinus(
+                                                ExprTermNoAddop(
+                                                  TermNoMulop(
+                                                    FactorNum(
+                                                     4
+                                                    ) [FactorNum]
+                                                  ) [TermNoMulop]
+                                                ) [ExprTermNoAddop]
+                                              ) [ExprNoMinus]
+                                            ) [CondFactRelop]
+                                          ) [CondTermListNoAnd]
+                                        ) [ConditionListNoOr]
+                                        CondEnd(
+                                        ) [CondEnd]
+                                        StatementMatched(
+                                          MatchedBreak(
+                                          ) [MatchedBreak]
+                                        ) [StatementMatched]
+                                      ) [UnmatchedIfNoElse]
+                                    ) [StatementUnatched]
+                                  ) [StatementLists]
+                                  StatementMatched(
+                                    MatchedDesignator(
+                                      DesignatorAssign(
+                                        DesignatorID(
+                                         i
+                                        ) [DesignatorID]
+                                        AssignopEq(
+                                        ) [AssignopEq]
+                                        ExprNoMinus(
+                                          ExprTermNoAddop(
+                                            TermNoMulop(
+                                              FactorDesignatorActPars(
+                                                DesignatorID(
+                                                 inkrement
+                                                ) [DesignatorID]
+                                                ActualParameters(
+                                                  ActParsListComma(
+                                                    ActParsListNoComma(
+                                                      ExprNoMinus(
+                                                        ExprTermNoAddop(
+                                                          TermNoMulop(
+                                                            FactorDesignator(
+                                                              DesignatorID(
+                                                               i
+                                                              ) [DesignatorID]
+                                                            ) [FactorDesignator]
+                                                          ) [TermNoMulop]
+                                                        ) [ExprTermNoAddop]
+                                                      ) [ExprNoMinus]
+                                                    ) [ActParsListNoComma]
+                                                    ExprNoMinus(
+                                                      ExprTermNoAddop(
+                                                        TermNoMulop(
+                                                          FactorDesignator(
+                                                            DesignatorDot(
+                                                              DesignatorID(
+                                                               IncrementType
+                                                              ) [DesignatorID]
+                                                             BY_ONE
+                                                            ) [DesignatorDot]
+                                                          ) [FactorDesignator]
+                                                        ) [TermNoMulop]
+                                                      ) [ExprTermNoAddop]
+                                                    ) [ExprNoMinus]
+                                                  ) [ActParsListComma]
+                                                ) [ActualParameters]
+                                              ) [FactorDesignatorActPars]
+                                            ) [TermNoMulop]
+                                          ) [ExprTermNoAddop]
+                                        ) [ExprNoMinus]
+                                      ) [DesignatorAssign]
+                                    ) [MatchedDesignator]
+                                  ) [StatementMatched]
+                                ) [StatementLists]
+                              ) [MatchedStatement]
+                            ) [StatementMatched]
+                          ) [For123]
+                          MatchedIfElse(
+                            ConditionListNoOr(
+                              CondTermListNoAnd(
+                                CondFactRelop(
+                                  ExprNoMinus(
+                                    ExprTermNoAddop(
+                                      TermNoMulop(
+                                        FactorDesignator(
+                                          DesignatorID(
+                                           i
+                                          ) [DesignatorID]
+                                        ) [FactorDesignator]
+                                      ) [TermNoMulop]
+                                    ) [ExprTermNoAddop]
+                                  ) [ExprNoMinus]
+                                  RelopEq(
+                                  ) [RelopEq]
+                                  ExprNoMinus(
+                                    ExprTermNoAddop(
+                                      TermNoMulop(
+                                        FactorNum(
+                                         3
+                                        ) [FactorNum]
+                                      ) [TermNoMulop]
+                                    ) [ExprTermNoAddop]
+                                  ) [ExprNoMinus]
+                                ) [CondFactRelop]
+                              ) [CondTermListNoAnd]
+                            ) [ConditionListNoOr]
+                            CondEnd(
+                            ) [CondEnd]
+                            MatchedPrint(
+                              ExprNoMinus(
+                                ExprTermNoAddop(
+                                  TermNoMulop(
+                                    FactorNum(
+                                     4
+                                    ) [FactorNum]
+                                  ) [TermNoMulop]
+                                ) [ExprTermNoAddop]
+                              ) [ExprNoMinus]
+                            ) [MatchedPrint]
+                            ElseStart(
+                            ) [ElseStart]
+                            MatchedPrint(
+                              ExprMinus(
+                                ExprTermNoAddop(
+                                  TermNoMulop(
+                                    FactorNum(
+                                     4
+                                    ) [FactorNum]
+                                  ) [TermNoMulop]
+                                ) [ExprTermNoAddop]
+                              ) [ExprMinus]
+                            ) [MatchedPrint]
+                          ) [MatchedIfElse]
+                        ) [MatchedFor]
+                      ) [StatementMatched]
+                    ) [StatementLists]
+                    StatementMatched(
+                      MatchedRead(
+                        DesignatorExpr(
+                          DesignatorID(
+                           niz
+                          ) [DesignatorID]
+                          ExprNoMinus(
+                            ExprTermNoAddop(
+                              TermNoMulop(
+                                FactorNum(
+                                 0
+                                ) [FactorNum]
+                              ) [TermNoMulop]
+                            ) [ExprTermNoAddop]
+                          ) [ExprNoMinus]
+                        ) [DesignatorExpr]
+                      ) [MatchedRead]
+                    ) [StatementMatched]
+                  ) [StatementLists]
+                  StatementMatched(
+                    MatchedRead(
+                      DesignatorExpr(
+                        DesignatorID(
+                         niz
+                        ) [DesignatorID]
+                        ExprNoMinus(
+                          ExprTermNoAddop(
+                            TermNoMulop(
+                              FactorNum(
+                               1
+                              ) [FactorNum]
+                            ) [TermNoMulop]
+                          ) [ExprTermNoAddop]
+                        ) [ExprNoMinus]
+                      ) [DesignatorExpr]
+                    ) [MatchedRead]
+                  ) [StatementMatched]
+                ) [StatementLists]
+                StatementMatched(
+                  MatchedRead(
+                    DesignatorExpr(
+                      DesignatorID(
+                       niz
+                      ) [DesignatorID]
+                      ExprNoMinus(
+                        ExprTermNoAddop(
+                          TermNoMulop(
+                            FactorNum(
+                             2
+                            ) [FactorNum]
+                          ) [TermNoMulop]
+                        ) [ExprTermNoAddop]
+                      ) [ExprNoMinus]
+                    ) [DesignatorExpr]
+                  ) [MatchedRead]
+                ) [StatementMatched]
+              ) [StatementLists]
+              StatementMatched(
+                MatchedPrint(
+                  ExprNoMinus(
+                    ExprTermNoAddop(
+                      TermNoMulop(
+                        FactorDesignator(
+                          DesignatorID(
+                           eol
+                          ) [DesignatorID]
+                        ) [FactorDesignator]
+                      ) [TermNoMulop]
+                    ) [ExprTermNoAddop]
+                  ) [ExprNoMinus]
+                ) [MatchedPrint]
+              ) [StatementMatched]
+            ) [StatementLists]
+            StatementMatched(
+              MatchedPrint(
+                ExprNoMinus(
+                  ExprTermNoAddop(
+                    TermNoMulop(
+                      FactorDesignatorActPars(
+                        DesignatorID(
+                         sum
+                        ) [DesignatorID]
+                        ActualParameters(
+                          ActParsListComma(
+                            ActParsListNoComma(
+                              ExprNoMinus(
+                                ExprTermNoAddop(
+                                  TermNoMulop(
+                                    FactorDesignatorActPars(
+                                      DesignatorID(
+                                       sum
+                                      ) [DesignatorID]
+                                      ActualParameters(
+                                        ActParsListComma(
+                                          ActParsListNoComma(
+                                            ExprNoMinus(
+                                              ExprTermNoAddop(
+                                                TermNoMulop(
+                                                  FactorDesignator(
+                                                    DesignatorExpr(
+                                                      DesignatorID(
+                                                       niz
+                                                      ) [DesignatorID]
+                                                      ExprNoMinus(
+                                                        ExprTermNoAddop(
+                                                          TermNoMulop(
+                                                            FactorNum(
+                                                             0
+                                                            ) [FactorNum]
+                                                          ) [TermNoMulop]
+                                                        ) [ExprTermNoAddop]
+                                                      ) [ExprNoMinus]
+                                                    ) [DesignatorExpr]
+                                                  ) [FactorDesignator]
+                                                ) [TermNoMulop]
+                                              ) [ExprTermNoAddop]
+                                            ) [ExprNoMinus]
+                                          ) [ActParsListNoComma]
+                                          ExprNoMinus(
+                                            ExprTermNoAddop(
+                                              TermNoMulop(
+                                                FactorDesignator(
+                                                  DesignatorExpr(
+                                                    DesignatorID(
+                                                     niz
+                                                    ) [DesignatorID]
+                                                    ExprNoMinus(
+                                                      ExprTermNoAddop(
+                                                        TermNoMulop(
+                                                          FactorNum(
+                                                           1
+                                                          ) [FactorNum]
+                                                        ) [TermNoMulop]
+                                                      ) [ExprTermNoAddop]
+                                                    ) [ExprNoMinus]
+                                                  ) [DesignatorExpr]
+                                                ) [FactorDesignator]
+                                              ) [TermNoMulop]
+                                            ) [ExprTermNoAddop]
+                                          ) [ExprNoMinus]
+                                        ) [ActParsListComma]
+                                      ) [ActualParameters]
+                                    ) [FactorDesignatorActPars]
+                                  ) [TermNoMulop]
+                                ) [ExprTermNoAddop]
+                              ) [ExprNoMinus]
+                            ) [ActParsListNoComma]
+                            ExprNoMinus(
+                              ExprTermNoAddop(
+                                TermNoMulop(
+                                  FactorDesignator(
+                                    DesignatorExpr(
+                                      DesignatorID(
+                                       niz
+                                      ) [DesignatorID]
+                                      ExprNoMinus(
+                                        ExprTermNoAddop(
+                                          TermNoMulop(
+                                            FactorNum(
+                                             2
+                                            ) [FactorNum]
+                                          ) [TermNoMulop]
+                                        ) [ExprTermNoAddop]
+                                      ) [ExprNoMinus]
+                                    ) [DesignatorExpr]
+                                  ) [FactorDesignator]
+                                ) [TermNoMulop]
+                              ) [ExprTermNoAddop]
+                            ) [ExprNoMinus]
+                          ) [ActParsListComma]
+                        ) [ActualParameters]
+                      ) [FactorDesignatorActPars]
+                    ) [TermNoMulop]
+                  ) [ExprTermNoAddop]
+                ) [ExprNoMinus]
+              ) [MatchedPrint]
+            ) [StatementMatched]
+          ) [StatementLists]
+          StatementMatched(
+            MatchedPrint(
+              ExprNoMinus(
+                ExprTermNoAddop(
+                  TermNoMulop(
+                    FactorDesignator(
+                      DesignatorID(
+                       eol
+                      ) [DesignatorID]
+                    ) [FactorDesignator]
+                  ) [TermNoMulop]
+                ) [ExprTermNoAddop]
+              ) [ExprNoMinus]
+            ) [MatchedPrint]
+          ) [StatementMatched]
+        ) [StatementLists]
+        StatementMatched(
+          MatchedPrint(
+            ExprNoMinus(
+              ExprTermNoAddop(
+                TermNoMulop(
+                  FactorDesignatorActPars(
+                    DesignatorID(
+                     inkrement
+                    ) [DesignatorID]
+                    ActualParameters(
+                      ActParsListComma(
+                        ActParsListNoComma(
+                          ExprNoMinus(
+                            ExprTermNoAddop(
+                              TermNoMulop(
+                                FactorDesignator(
+                                  DesignatorExpr(
+                                    DesignatorID(
+                                     niz
+                                    ) [DesignatorID]
+                                    ExprNoMinus(
+                                      ExprTermNoAddop(
+                                        TermNoMulop(
+                                          FactorNum(
+                                           2
+                                          ) [FactorNum]
+                                        ) [TermNoMulop]
+                                      ) [ExprTermNoAddop]
+                                    ) [ExprNoMinus]
+                                  ) [DesignatorExpr]
+                                ) [FactorDesignator]
+                              ) [TermNoMulop]
+                            ) [ExprTermNoAddop]
+                          ) [ExprNoMinus]
+                        ) [ActParsListNoComma]
+                        ExprNoMinus(
+                          ExprTermNoAddop(
+                            TermNoMulop(
+                              FactorDesignator(
+                                DesignatorDot(
+                                  DesignatorID(
+                                   IncrementType
+                                  ) [DesignatorID]
+                                 DOUBLE_VALUE
+                                ) [DesignatorDot]
+                              ) [FactorDesignator]
+                            ) [TermNoMulop]
+                          ) [ExprTermNoAddop]
+                        ) [ExprNoMinus]
+                      ) [ActParsListComma]
+                    ) [ActualParameters]
+                  ) [FactorDesignatorActPars]
+                ) [TermNoMulop]
+              ) [ExprTermNoAddop]
+            ) [ExprNoMinus]
+          ) [MatchedPrint]
+        ) [StatementMatched]
+      ) [StatementLists]
+    ) [MethodDeclarationType]
+  ) [MethodDeclarationList]
+) [Program]
+INFO  23:00:03,752 - ===================================
+INFO  23:00:03,757 - Obradjuje se enum IncrementType na liniji 5
+INFO  23:00:03,757 - Deklarisana globalna promenjljiva bez zagrada i na liniji 7
+INFO  23:00:03,757 - Deklarisana globalna promenjljiva bez zagrada ibool na liniji 8
+INFO  23:00:03,757 - Deklarisana globalna promenjljiva sa zagradama niz na liniji 10
+INFO  23:00:03,757 - Obradjuje se return funkcija sum na liniji 13
+INFO  23:00:03,758 - Deklaracija parametra z na liniji 13
+INFO  23:00:03,758 - Deklaracija parametra d na liniji 13
+INFO  23:00:03,758 - Pristup elementu z na liniji 15
+INFO  23:00:03,758 - Pristup elementu d na liniji 15
+INFO  23:00:03,758 - Obradjuje se return funkcija inkrement na liniji 18
+INFO  23:00:03,758 - Deklaracija parametra a na liniji 18
+INFO  23:00:03,758 - Deklaracija parametra type na liniji 18
+INFO  23:00:03,758 - Deklarisana lokalna promenjljiva bez zagrada pom na liniji 18
+INFO  23:00:03,758 - Pristup elementu type na liniji 20
+INFO  23:00:03,758 - Pristup elementu IncrementType na liniji 20
+INFO  23:00:03,759 - Pristup elementu pom na liniji 20
+INFO  23:00:03,759 - Pristup elementu type na liniji 21
+INFO  23:00:03,759 - Pristup elementu IncrementType na liniji 21
+INFO  23:00:03,759 - Pristup elementu pom na liniji 21
+INFO  23:00:03,759 - Pristup elementu a na liniji 21
+INFO  23:00:03,759 - Pristup elementu sum na liniji 23
+INFO  23:00:03,759 - Pristup elementu a na liniji 23
+INFO  23:00:03,759 - Pristup elementu pom na liniji 23
+INFO  23:00:03,759 - Pronadjen poziv funkcije sum na liniji 23 na liniji 23
+INFO  23:00:03,759 - Obradjuje se void funkcija main na liniji 26
+INFO  23:00:03,759 - Detektovana operacija ispisivanja! na liniji 28
+INFO  23:00:03,759 - Detektovana operacija ispisivanja! na liniji 29
+INFO  23:00:03,759 - Pristup elementu ibool na liniji 31
+INFO  23:00:03,759 - Pristup elementu i na liniji 32
+INFO  23:00:03,759 - Pristup elementu i na liniji 33
+INFO  23:00:03,759 - Pristup elementu i na liniji 33
+INFO  23:00:03,759 - Pristup elementu i na liniji 33
+INFO  23:00:03,760 - Pristup elementu i na liniji 35
+INFO  23:00:03,760 - Pristup elementu ibool na liniji 35
+INFO  23:00:03,760 - Pristup elementu ibool na liniji 38
+INFO  23:00:03,760 - Pristup elementu i na liniji 39
+INFO  23:00:03,760 - Detektovana operacija ispisivanja! na liniji 39
+INFO  23:00:03,760 - Detektovana operacija ispisivanja! na liniji 40
+INFO  23:00:03,760 - Pristup elementu niz na liniji 42
+INFO  23:00:03,760 - Pristup elementu niz na liniji 43
+INFO  23:00:03,760 - Pristup elementu niza niz na liniji 43
+INFO  23:00:03,760 - Pristup elementu niz na liniji 44
+INFO  23:00:03,760 - Pristup elementu niza niz na liniji 44
+INFO  23:00:03,760 - Pristup elementu niz na liniji 45
+INFO  23:00:03,760 - Pristup elementu niza niz na liniji 45
+INFO  23:00:03,760 - Pristup elementu sum na liniji 45
+INFO  23:00:03,760 - Pristup elementu niz na liniji 45
+INFO  23:00:03,760 - Pristup elementu niza niz na liniji 45
+INFO  23:00:03,760 - Pristup elementu niz na liniji 45
+INFO  23:00:03,760 - Pristup elementu niza niz na liniji 45
+INFO  23:00:03,760 - Pronadjen poziv funkcije sum na liniji 45 na liniji 45
+INFO  23:00:03,760 - Pristup elementu niz na liniji 46
+INFO  23:00:03,760 - Pristup elementu niza niz na liniji 46
+INFO  23:00:03,760 - Pristup elementu ord na liniji 46
+INFO  23:00:03,760 - Pronadjen poziv funkcije ord na liniji 46 na liniji 46
+INFO  23:00:03,760 - Detektovana operacija ispisivanja! na liniji 46
+INFO  23:00:03,760 - Pristup elementu ord na liniji 47
+INFO  23:00:03,760 - Pronadjen poziv funkcije ord na liniji 47 na liniji 47
+INFO  23:00:03,760 - Detektovana operacija ispisivanja! na liniji 47
+INFO  23:00:03,760 - Pristup elementu eol na liniji 49
+INFO  23:00:03,760 - Detektovana operacija ispisivanja! na liniji 49
+INFO  23:00:03,760 - Pristup elementu i na liniji 50
+INFO  23:00:03,760 - Pristup elementu i na liniji 51
+INFO  23:00:03,760 - Pristup elementu i na liniji 53
+INFO  23:00:03,760 - Pristup elementu i na liniji 55
+INFO  23:00:03,761 - Detektovan continue for petlje!
+INFO  23:00:03,761 - Pristup elementu i na liniji 58
+INFO  23:00:03,761 - Detektovan prekid for petlje!
+INFO  23:00:03,761 - Pristup elementu i na liniji 59
+INFO  23:00:03,761 - Pristup elementu inkrement na liniji 59
+INFO  23:00:03,761 - Pristup elementu i na liniji 59
+INFO  23:00:03,761 - Pristup elementu IncrementType na liniji 59
+INFO  23:00:03,761 - Pronadjen poziv funkcije inkrement na liniji 59 na liniji 59
+ERROR 23:00:03,761 - Greska na liniji 59 : pogresan tip parametara u funkciji inkrement
+INFO  23:00:03,761 - Pristup elementu i na liniji 62
+INFO  23:00:03,761 - Detektovana operacija ispisivanja! na liniji 62
+INFO  23:00:03,761 - Detektovana operacija ispisivanja! na liniji 63
+INFO  23:00:03,761 - Pristup elementu niz na liniji 65
+INFO  23:00:03,761 - Pristup elementu niza niz na liniji 65
+INFO  23:00:03,761 - Detektovana operacija citanja! na liniji 65
+INFO  23:00:03,761 - Pristup elementu niz na liniji 66
+INFO  23:00:03,761 - Pristup elementu niza niz na liniji 66
+INFO  23:00:03,761 - Detektovana operacija citanja! na liniji 66
+INFO  23:00:03,761 - Pristup elementu niz na liniji 67
+INFO  23:00:03,761 - Pristup elementu niza niz na liniji 67
+INFO  23:00:03,761 - Detektovana operacija citanja! na liniji 67
+INFO  23:00:03,761 - Pristup elementu eol na liniji 68
+INFO  23:00:03,761 - Detektovana operacija ispisivanja! na liniji 68
+INFO  23:00:03,761 - Pristup elementu sum na liniji 70
+INFO  23:00:03,761 - Pristup elementu sum na liniji 70
+INFO  23:00:03,761 - Pristup elementu niz na liniji 70
+INFO  23:00:03,761 - Pristup elementu niza niz na liniji 70
+INFO  23:00:03,761 - Pristup elementu niz na liniji 70
+INFO  23:00:03,761 - Pristup elementu niza niz na liniji 70
+INFO  23:00:03,761 - Pronadjen poziv funkcije sum na liniji 70 na liniji 70
+INFO  23:00:03,761 - Pristup elementu niz na liniji 70
+INFO  23:00:03,761 - Pristup elementu niza niz na liniji 70
+INFO  23:00:03,761 - Pronadjen poziv funkcije sum na liniji 70 na liniji 70
+INFO  23:00:03,761 - Detektovana operacija ispisivanja! na liniji 70
+INFO  23:00:03,761 - Pristup elementu eol na liniji 72
+INFO  23:00:03,761 - Detektovana operacija ispisivanja! na liniji 72
+INFO  23:00:03,761 - Pristup elementu inkrement na liniji 73
+INFO  23:00:03,762 - Pristup elementu niz na liniji 73
+INFO  23:00:03,762 - Pristup elementu niza niz na liniji 73
+INFO  23:00:03,762 - Pristup elementu IncrementType na liniji 73
+INFO  23:00:03,762 - Pronadjen poziv funkcije inkrement na liniji 73 na liniji 73
+ERROR 23:00:03,762 - Greska na liniji 73 : pogresan tip parametara u funkciji inkrement
+INFO  23:00:03,762 - Detektovana operacija ispisivanja! na liniji 73
+INFO  23:00:03,762 - ===================================
+ERROR 23:00:03,762 - Parsiranje nije uspesno zavrseno

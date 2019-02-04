@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 28/0/2019 23:34:5
+// 4/1/2019 1:14:24
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -148,17 +148,19 @@ public interface Visitor {
     public void visit(NoClassPartMethod NoClassPartMethod);
     public void visit(ClassPartMethod ClassPartMethod);
     public void visit(ClassDeclaration ClassDeclaration);
-    public void visit(LoclVarDeclarationError LoclVarDeclarationError);
+    public void visit(LoclVarError LoclVarError);
     public void visit(LoclVarBrackets LoclVarBrackets);
     public void visit(LoclVarNoBrackets LoclVarNoBrackets);
     public void visit(LoclVarListNoComma LoclVarListNoComma);
     public void visit(LoclVarListComma LoclVarListComma);
+    public void visit(LoclVarDeclarationError LoclVarDeclarationError);
     public void visit(LoclVarDeclaration LoclVarDeclaration);
-    public void visit(GlobVarDeclarationError GlobVarDeclarationError);
+    public void visit(GlobVarError GlobVarError);
     public void visit(GlobVarBrackets GlobVarBrackets);
     public void visit(GlobVarNoBrackets GlobVarNoBrackets);
     public void visit(GlobVarListNoComma GlobVarListNoComma);
     public void visit(GlobVarListComma GlobVarListComma);
+    public void visit(GlobVarDeclarationError GlobVarDeclarationError);
     public void visit(GlobVarDeclaration GlobVarDeclaration);
     public void visit(EnumNum EnumNum);
     public void visit(EnumNoNum EnumNoNum);

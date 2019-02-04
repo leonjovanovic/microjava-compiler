@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 28/0/2019 23:34:5
+// 4/1/2019 1:14:24
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -148,17 +148,19 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(NoClassPartMethod NoClassPartMethod) { visit(); }
     public void visit(ClassPartMethod ClassPartMethod) { visit(); }
     public void visit(ClassDeclaration ClassDeclaration) { visit(); }
-    public void visit(LoclVarDeclarationError LoclVarDeclarationError) { visit(); }
+    public void visit(LoclVarError LoclVarError) { visit(); }
     public void visit(LoclVarBrackets LoclVarBrackets) { visit(); }
     public void visit(LoclVarNoBrackets LoclVarNoBrackets) { visit(); }
     public void visit(LoclVarListNoComma LoclVarListNoComma) { visit(); }
     public void visit(LoclVarListComma LoclVarListComma) { visit(); }
+    public void visit(LoclVarDeclarationError LoclVarDeclarationError) { visit(); }
     public void visit(LoclVarDeclaration LoclVarDeclaration) { visit(); }
-    public void visit(GlobVarDeclarationError GlobVarDeclarationError) { visit(); }
+    public void visit(GlobVarError GlobVarError) { visit(); }
     public void visit(GlobVarBrackets GlobVarBrackets) { visit(); }
     public void visit(GlobVarNoBrackets GlobVarNoBrackets) { visit(); }
     public void visit(GlobVarListNoComma GlobVarListNoComma) { visit(); }
     public void visit(GlobVarListComma GlobVarListComma) { visit(); }
+    public void visit(GlobVarDeclarationError GlobVarDeclarationError) { visit(); }
     public void visit(GlobVarDeclaration GlobVarDeclaration) { visit(); }
     public void visit(EnumNum EnumNum) { visit(); }
     public void visit(EnumNoNum EnumNoNum) { visit(); }

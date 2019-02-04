@@ -1,0 +1,55 @@
+INFO  17:34:20,521 - Compiling source file: D:\Users\Leon\Desktop\Projekti\ProgramskiPrevodioci\MJCompiler\test\program.mj
+INFO  17:34:20,578 - #2 program
+INFO  17:34:20,578 - #42 test301
+INFO  17:34:20,579 - #42 int
+INFO  17:34:20,579 - #42 nula
+INFO  17:34:20,580 - #6 ;
+INFO  17:34:20,580 - #3 {
+INFO  17:34:20,580 - #13 void
+INFO  17:34:20,581 - #42 main
+INFO  17:34:20,581 - #14 (
+INFO  17:34:20,581 - #15 )
+INFO  17:34:20,581 - #3 {
+INFO  17:34:20,582 - #4 }
+INFO  17:34:20,582 - #4 }
+INFO  17:34:20,588 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  Declarations(
+    NoDeclList(
+    ) [NoDeclList]
+    Declarations2(
+      GlobVarDeclaration(
+        Types(
+         int
+        ) [Types]
+        GlobVarListNoComma(
+          GlobVarNoBrackets(
+           nula
+          ) [GlobVarNoBrackets]
+        ) [GlobVarListNoComma]
+      ) [GlobVarDeclaration]
+    ) [Declarations2]
+  ) [Declarations]
+  MethodDeclarationList(
+    NoMethod(
+    ) [NoMethod]
+    MethodDeclarationType(
+      MethNameVoid(
+       main
+      ) [MethNameVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      NoMethodVarDecl(
+      ) [NoMethodVarDecl]
+      NoStatements(
+      ) [NoStatements]
+    ) [MethodDeclarationType]
+  ) [MethodDeclarationList]
+) [Program]
+INFO  17:34:20,588 - ===================================
+INFO  17:34:20,593 - Deklarisana globalna promenjljiva bez zagrada nula na liniji 6
+INFO  17:34:20,593 - Obradjuje se void funkcija main na liniji 10
+INFO  17:34:20,593 - ===================================
+INFO  17:34:20,598 - Parsiranje uspesno zavrseno!

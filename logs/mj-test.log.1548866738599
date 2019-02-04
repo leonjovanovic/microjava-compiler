@@ -1,0 +1,37 @@
+INFO  17:43:50,081 - Compiling source file: D:\Users\Leon\Desktop\Projekti\ProgramskiPrevodioci\MJCompiler\test\program.mj
+INFO  17:43:50,131 - #2 program
+INFO  17:43:50,131 - #42 test301
+INFO  17:43:50,131 - #3 {
+INFO  17:43:50,132 - #13 void
+INFO  17:43:50,133 - #42 main
+INFO  17:43:50,133 - #14 (
+INFO  17:43:50,133 - #15 )
+INFO  17:43:50,134 - #3 {
+INFO  17:43:50,134 - #4 }
+INFO  17:43:50,135 - #4 }
+INFO  17:43:50,140 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoDeclList(
+  ) [NoDeclList]
+  MethodDeclarationList(
+    NoMethod(
+    ) [NoMethod]
+    MethodDeclarationType(
+      MethNameVoid(
+       main
+      ) [MethNameVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      NoMethodVarDecl(
+      ) [NoMethodVarDecl]
+      NoStatements(
+      ) [NoStatements]
+    ) [MethodDeclarationType]
+  ) [MethodDeclarationList]
+) [Program]
+INFO  17:43:50,140 - ===================================
+INFO  17:43:50,144 - Obradjuje se void funkcija main na liniji 9
+INFO  17:43:50,144 - ===================================
+INFO  17:43:50,151 - Parsiranje uspesno zavrseno!

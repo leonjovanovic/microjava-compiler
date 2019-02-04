@@ -1,0 +1,147 @@
+INFO  15:26:45,971 - Compiling source file: D:\Users\Leon\Desktop\Projekti\ProgramskiPrevodioci\MJCompiler\test\program.mj
+INFO  15:26:46,014 - #2 program
+INFO  15:26:46,021 - #42 test301
+INFO  15:26:46,021 - #5 const
+INFO  15:26:46,021 - #42 int
+INFO  15:26:46,021 - #42 jedan
+INFO  15:26:46,021 - #8 =
+INFO  15:26:46,021 - #41 1
+INFO  15:26:46,021 - #6 ;
+INFO  15:26:46,021 - #5 const
+INFO  15:26:46,021 - #42 int
+INFO  15:26:46,021 - #42 pet
+INFO  15:26:46,021 - #8 =
+INFO  15:26:46,021 - #41 5
+INFO  15:26:46,021 - #6 ;
+INFO  15:26:46,021 - #42 int
+INFO  15:26:46,021 - #42 niz
+INFO  15:26:46,021 - #11 [
+INFO  15:26:46,021 - #12 ]
+INFO  15:26:46,021 - #6 ;
+INFO  15:26:46,021 - #3 {
+INFO  15:26:46,021 - #13 void
+INFO  15:26:46,021 - #42 main
+INFO  15:26:46,021 - #14 (
+INFO  15:26:46,021 - #15 )
+INFO  15:26:46,026 - #3 {
+INFO  15:26:46,026 - #42 niz
+INFO  15:26:46,026 - #8 =
+INFO  15:26:46,026 - #29 new
+INFO  15:26:46,026 - #42 int
+INFO  15:26:46,026 - #11 [
+INFO  15:26:46,026 - #41 2
+INFO  15:26:46,026 - #12 ]
+INFO  15:26:46,026 - #6 ;
+INFO  15:26:46,026 - #4 }
+INFO  15:26:46,026 - #4 }
+INFO  15:26:46,035 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  Declarations(
+    Declarations(
+      Declarations(
+        NoDeclList(
+        ) [NoDeclList]
+        Declarations1(
+          ConstantsDecl(
+            Types(
+             int
+            ) [Types]
+            ConstantsListNoComma(
+              ConstantsPart(
+               jedan
+                ConstNumber(
+                 1
+                ) [ConstNumber]
+              ) [ConstantsPart]
+            ) [ConstantsListNoComma]
+          ) [ConstantsDecl]
+        ) [Declarations1]
+      ) [Declarations]
+      Declarations1(
+        ConstantsDecl(
+          Types(
+           int
+          ) [Types]
+          ConstantsListNoComma(
+            ConstantsPart(
+             pet
+              ConstNumber(
+               5
+              ) [ConstNumber]
+            ) [ConstantsPart]
+          ) [ConstantsListNoComma]
+        ) [ConstantsDecl]
+      ) [Declarations1]
+    ) [Declarations]
+    Declarations2(
+      GlobVarDeclaration(
+        Types(
+         int
+        ) [Types]
+        GlobVarListNoComma(
+          GlobVarBrackets(
+           niz
+          ) [GlobVarBrackets]
+        ) [GlobVarListNoComma]
+      ) [GlobVarDeclaration]
+    ) [Declarations2]
+  ) [Declarations]
+  MethodDeclarationList(
+    NoMethod(
+    ) [NoMethod]
+    MethodDeclarationType(
+      MethNameVoid(
+       main
+      ) [MethNameVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      NoMethodVarDecl(
+      ) [NoMethodVarDecl]
+      StatementLists(
+        NoStatements(
+        ) [NoStatements]
+        StatementMatched(
+          MatchedDesignator(
+            DesignatorAssign(
+              DesignatorID(
+               niz
+              ) [DesignatorID]
+              AssignopEq(
+              ) [AssignopEq]
+              ExprNoMinus(
+                ExprTermNoAddop(
+                  TermNoMulop(
+                    FactorNewExpr(
+                      Types(
+                       int
+                      ) [Types]
+                      ExprNoMinus(
+                        ExprTermNoAddop(
+                          TermNoMulop(
+                            FactorNum(
+                             2
+                            ) [FactorNum]
+                          ) [TermNoMulop]
+                        ) [ExprTermNoAddop]
+                      ) [ExprNoMinus]
+                    ) [FactorNewExpr]
+                  ) [TermNoMulop]
+                ) [ExprTermNoAddop]
+              ) [ExprNoMinus]
+            ) [DesignatorAssign]
+          ) [MatchedDesignator]
+        ) [StatementMatched]
+      ) [StatementLists]
+    ) [MethodDeclarationType]
+  ) [MethodDeclarationList]
+) [Program]
+INFO  15:26:46,035 - ===================================
+INFO  15:26:46,041 - Deklarisana konstanta jedan na liniji 7
+INFO  15:26:46,041 - Deklarisana konstanta pet na liniji 8
+INFO  15:26:46,041 - Deklarisana globalna promenjljiva sa zagradama niz na liniji 10
+INFO  15:26:46,041 - Obradjuje se void funkcija main na liniji 13
+INFO  15:26:46,041 - Pristup elementu niz na liniji 16
+INFO  15:26:46,041 - ===================================
+INFO  15:26:46,046 - Parsiranje uspesno zavrseno!

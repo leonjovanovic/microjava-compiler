@@ -108,25 +108,30 @@ Enums ::= (EnumNoNum) IDENT:name | (EnumNum)IDENT:name EQUAL NUMBER:value;
 
 /* ----------------------------------------Global Variables ------------------------------------------------------------- */
 
-GlobVarDecl ::= (GlobVarDeclaration) Type:varType GlobVarList SEMI;
+GlobVarDecl ::= (GlobVarDeclaration) Type:varType GlobVarList SEMI
+			|
+			(GlobVarDeclarationError) error SEMI:l{: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null); :};
 
 GlobVarList ::= (GlobVarListComma) GlobVarList COMMA GlobVar | (GlobVarListNoComma) GlobVar;
 		
 GlobVar::= (GlobVarNoBrackets) IDENT:varName | (GlobVarBrackets) IDENT:varName LBRACKET RBRACKET
 		|
-		(GlobVarDeclarationError) error:l {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null); :};
+		(GlobVarError) error:l {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null); :};
 	
 
 
 /* ----------------------------------------Local Variables ------------------------------------------------------------- */
 
-LoclVarDecl ::= (LoclVarDeclaration) Type:varType LoclVarList:varName SEMI;
+LoclVarDecl ::= (LoclVarDeclaration) Type:varType LoclVarList:varName SEMI
+			|
+			(LoclVarDeclarationError) error:l {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null); :};
+	
 
 LoclVarList ::= (LoclVarListComma) LoclVarList COMMA LoclVar | (LoclVarListNoComma) LoclVar;
 		
 LoclVar::= (LoclVarNoBrackets) IDENT:varName | (LoclVarBrackets) IDENT:varName LBRACKET RBRACKET 
 		|
-		(LoclVarDeclarationError) error:l {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null); :};
+		(LoclVarError) error:l {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null); :};
 	
 
 
@@ -145,7 +150,7 @@ ClassPart ::= (ClassPartMethod) LBRACE MethodDeclList RBRACE
 MethodDeclList ::=(MethodDeclarationList) MethodDeclList MethodDecl | (NoMethod) /* epsilon */;
 
 MethodDecl ::= (MethodDeclarationType) MethodNameType LPAREN FormPars RPAREN MethVarDecl LBRACE StatementList RBRACE ;
-			
+			 
 MethodNameType ::= (MethNameType) Type:retType IDENT:methodName
 				|
 				(MethNameVoid) VOID IDENT:methodName;

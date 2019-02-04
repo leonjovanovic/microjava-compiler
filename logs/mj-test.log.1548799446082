@@ -1,0 +1,13 @@
+INFO  23:03:46,691 - Compiling source file: D:\Users\Leon\Desktop\Projekti\ProgramskiPrevodioci\MJCompiler\test\program.mj
+INFO  23:03:46,739 - #2 program
+INFO  23:03:46,739 - #42 test301
+INFO  23:03:46,739 - #42 int
+INFO  23:03:46,740 - #42 nula
+INFO  23:03:46,740 - #7 ,
+INFO  23:03:46,740 - #42 jedan
+INFO  23:03:46,741 - #6 ;
+INFO  23:03:46,741 - #42 nula
+INFO  23:03:46,741 - #8 =
+ERROR 23:03:46,741 - 
+Sintaksna greska na liniji 7
+ERROR 23:03:46,741 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 7

@@ -1,11 +1,11 @@
 // generated with ast extension for cup
 // version 0.8
-// 28/0/2019 23:34:4
+// 4/1/2019 1:14:23
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class GlobVarDeclarationError extends GlobVar {
+public class GlobVarDeclarationError extends GlobVarDecl {
 
     public GlobVarDeclarationError () {
     }

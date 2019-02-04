@@ -132,25 +132,30 @@ Enums ::= (EnumNoNum) IDENT:name {: RESULT=new EnumNoNum(name); RESULT.setLine(n
 
 /* ----------------------------------------Global Variables ------------------------------------------------------------- */
 
-GlobVarDecl ::= (GlobVarDeclaration) Type:varType GlobVarList:G1 SEMI {: RESULT=new GlobVarDeclaration(varType, G1); RESULT.setLine(varTypeleft); :};
+GlobVarDecl ::= (GlobVarDeclaration) Type:varType GlobVarList:G1 SEMI {: RESULT=new GlobVarDeclaration(varType, G1); RESULT.setLine(varTypeleft); :}
+			|
+			(GlobVarDeclarationError) error SEMI:l{: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null); :} {: RESULT=new GlobVarDeclarationError(); :};
 
 GlobVarList ::= (GlobVarListComma) GlobVarList:G1 COMMA GlobVar:G2 {: RESULT=new GlobVarListComma(G1, G2); RESULT.setLine(G1left); :} | (GlobVarListNoComma) GlobVar:G1 {: RESULT=new GlobVarListNoComma(G1); RESULT.setLine(G1left); :};
 		
 GlobVar::= (GlobVarNoBrackets) IDENT:varName {: RESULT=new GlobVarNoBrackets(varName); RESULT.setLine(varNameleft); :} | (GlobVarBrackets) IDENT:varName LBRACKET RBRACKET {: RESULT=new GlobVarBrackets(varName); RESULT.setLine(varNameleft); :}
 		|
-		(GlobVarDeclarationError) error:l {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null); :} {: RESULT=new GlobVarDeclarationError(); :};
+		(GlobVarError) error:l {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null); :} {: RESULT=new GlobVarError(); :};
 	
 
 
 /* ----------------------------------------Local Variables ------------------------------------------------------------- */
 
-LoclVarDecl ::= (LoclVarDeclaration) Type:varType LoclVarList:varName SEMI {: RESULT=new LoclVarDeclaration(varType, varName); RESULT.setLine(varTypeleft); :};
+LoclVarDecl ::= (LoclVarDeclaration) Type:varType LoclVarList:varName SEMI {: RESULT=new LoclVarDeclaration(varType, varName); RESULT.setLine(varTypeleft); :}
+			|
+			(LoclVarDeclarationError) error:l {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null); :} {: RESULT=new LoclVarDeclarationError(); :};
+	
 
 LoclVarList ::= (LoclVarListComma) LoclVarList:L1 COMMA LoclVar:L2 {: RESULT=new LoclVarListComma(L1, L2); RESULT.setLine(L1left); :} | (LoclVarListNoComma) LoclVar:L1 {: RESULT=new LoclVarListNoComma(L1); RESULT.setLine(L1left); :};
 		
 LoclVar::= (LoclVarNoBrackets) IDENT:varName {: RESULT=new LoclVarNoBrackets(varName); RESULT.setLine(varNameleft); :} | (LoclVarBrackets) IDENT:varName LBRACKET RBRACKET {: RESULT=new LoclVarBrackets(varName); RESULT.setLine(varNameleft); :} 
 		|
-		(LoclVarDeclarationError) error:l {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null); :} {: RESULT=new LoclVarDeclarationError(); :};
+		(LoclVarError) error:l {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null); :} {: RESULT=new LoclVarError(); :};
 	
 
 
@@ -169,7 +174,7 @@ ClassPart ::= (ClassPartMethod) LBRACE MethodDeclList:M1 RBRACE {: RESULT=new Cl
 MethodDeclList ::=(MethodDeclarationList) MethodDeclList:M1 MethodDecl:M2 {: RESULT=new MethodDeclarationList(M1, M2); RESULT.setLine(M1left); :} | (NoMethod) {: RESULT=new NoMethod(); :} /* epsilon */;
 
 MethodDecl ::= (MethodDeclarationType) MethodNameType:M1 LPAREN FormPars:F2 RPAREN MethVarDecl:M3 LBRACE StatementList:S4 RBRACE {: RESULT=new MethodDeclarationType(M1, F2, M3, S4); RESULT.setLine(M1left); :} ;
-			
+			 
 MethodNameType ::= (MethNameType) Type:retType IDENT:methodName {: RESULT=new MethNameType(retType, methodName); RESULT.setLine(retTypeleft); :}
 				|
 				(MethNameVoid) VOID IDENT:methodName {: RESULT=new MethNameVoid(methodName); RESULT.setLine(methodNameleft); :};

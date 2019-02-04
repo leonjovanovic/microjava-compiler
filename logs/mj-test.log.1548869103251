@@ -1,0 +1,28 @@
+INFO  18:22:37,398 - Compiling source file: D:\Users\Leon\Desktop\Projekti\ProgramskiPrevodioci\MJCompiler\test\program.mj
+INFO  18:22:37,462 - #2 program
+INFO  18:22:37,462 - #42 test301
+INFO  18:22:37,462 - #10 enum
+INFO  18:22:37,462 - #42 Broj
+INFO  18:22:37,462 - #3 {
+INFO  18:22:37,462 - #42 NULA
+INFO  18:22:37,462 - #7 ,
+INFO  18:22:37,462 - #42 JEDAN
+INFO  18:22:37,462 - #7 ,
+INFO  18:22:37,462 - #42 PET
+INFO  18:22:37,462 - #8 =
+INFO  18:22:37,462 - #41 5
+INFO  18:22:37,462 - #7 ,
+INFO  18:22:37,468 - #42 DESET
+INFO  18:22:37,468 - #8 =
+INFO  18:22:37,468 - #41 10
+INFO  18:22:37,468 - #4 }
+INFO  18:22:37,468 - #42 Broj
+INFO  18:22:37,468 - #42 nula
+INFO  18:22:37,468 - #7 ,
+INFO  18:22:37,468 - #42 jedan
+INFO  18:22:37,468 - #6 ;
+INFO  18:22:37,468 - #42 nula
+INFO  18:22:37,468 - #8 =
+ERROR 18:22:37,468 - 
+Sintaksna greska na liniji 7
+ERROR 18:22:37,468 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 7

@@ -208,7 +208,7 @@ public class SemanticPass extends VisitorAdaptor {
 	//====================== Designator - dopuniti==================
 	//==============================================================
 	
-	public void visit(DesignatorID designator) {
+	public void visit(DesignatorID designator) {//provereno za enum
 		Obj obj = Tab.find(designator.getName());
 		if(obj == Tab.noObj) {
 			report_error("Greska na liniji " + designator.getLine() + " : ime "+designator.getName()+" nije deklarisano!", null);
@@ -220,10 +220,8 @@ public class SemanticPass extends VisitorAdaptor {
 	
 	public void visit(DesignatorExpr elem) {
 		Obj designator = Tab.find(elem.getDesignator().obj.getName());
-		if(elem.getExpr().struct != Tab.intType)
+		if(elem.getExpr().struct != Tab.intType && elem.getExpr().struct != TabExtended.enumType)
 			report_error("Greska na liniji " + elem.getLine() + " : vrednost unutar zagrada mora biti tipa int!", null);
-		if(elem.getDesignator().obj.getKind() != Struct.Array) 
-			report_error("Greska na liniji " + elem.getLine() + " : promenjiva "+elem.getDesignator().obj.getName()+" mora biti niz!", null);
 		if(designator==Tab.noObj) {
 			report_error("Greska na liniji " + elem.getLine() + " : niz "+elem.getDesignator().obj.getName()+" nije deklarisan!", null);
 		}else {
@@ -382,7 +380,8 @@ public class SemanticPass extends VisitorAdaptor {
 		Obj desig = assignment.getDesignator().obj;
 		Struct expr = assignment.getExpr().struct;
 		if(!expr.assignableTo(desig.getType())) {
-			report_error("Greska na liniji " + assignment.getLine() + " : nekompatibilni tipovi u dodeli vrednosti! ", null);
+			if(!(expr == TabExtended.intType && desig.getType() == TabExtended.enumType))
+				report_error("Greska na liniji " + assignment.getLine() + " : nekompatibilni tipovi u dodeli vrednosti! "+ expr+"///"+desig.getType(), null);
 		}
 		if(desig.getKind() != Obj.Var && desig.getKind() != Obj.Elem) {
 			report_error("Greska na liniji " + assignment.getLine() + " : vrednost se ne moze dodeliti necemu sto nije promenjljiva ili element niza!", null);
@@ -407,8 +406,12 @@ public class SemanticPass extends VisitorAdaptor {
 			if(obj.getLevel() > 0) {
 				Iterator<Obj> itPar = obj.getLocalSymbols().iterator();//Iterator svih simbola naseg objekta
 				for (int i = 0; i < level; i++) {
-					if (!actParamStack.pop().getType().assignableTo(itPar.next().getType())) {//da li je parametar koji smo skinuli sa steka moze da se dodeli sledecem simbolu metode
-						report_error("Greska na liniji " + func.getLine() + " : pogresan tip parametara u funkciji "+ obj.getName(), null);
+					Obj obj1=itPar.next();
+					Obj obj2 = actParamStack.pop();
+					boolean flag1 = obj1.getType()==TabExtended.enumType;
+					boolean flag2 = obj2.getType()==Tab.intType;
+					if (!(obj1.getType().assignableTo(obj1.getType()) || (flag1 && flag2 ))) {//da li je parametar koji smo skinuli sa steka moze da se dodeli sledecem simbolu metode
+							report_error("Greska na liniji " + func.getLine() + " : pogresan tip parametara u funkciji "+ obj.getName(), null);
 					}
 				}
 			}
@@ -476,8 +479,13 @@ public class SemanticPass extends VisitorAdaptor {
 			}else if(func.getLevel()>0) {
 				Iterator<Obj> itPar = func.getLocalSymbols().iterator();
 				for(int i = 0; i < level; i++) {
-					if(!actParamStack.pop().getType().assignableTo(itPar.next().getType()))
-						report_error("Greska na liniji " + funcCall.getLine() + " : pogresan tip parametara u funkciji "+ func.getName(), null);
+					Obj obj1=itPar.next();
+					Obj obj2 = actParamStack.pop();
+					boolean flag1 = obj1.getType()==TabExtended.enumType;
+					boolean flag2 = obj2.getType()==Tab.intType;
+					if (!(obj1.getType().assignableTo(obj1.getType()) || (flag1 && flag2 ))) {//da li je parametar koji smo skinuli sa steka moze da se dodeli sledecem simbolu metode
+							report_error("Greska na liniji " + funcCall.getLine() + " : pogresan tip parametara u funkciji "+ func.getName(), null);
+					}
 				}
 			}
 		}else {
@@ -502,12 +510,10 @@ public class SemanticPass extends VisitorAdaptor {
 	//==============================================================
 		
 	public void visit(Terms term) {//++++++++++++++++++++++++++ DODATI +++++++++++++++++++++++++++++ Ako je Mulop kombinovani aritmetički operator (*=, /=, %=), Term mora označavati promenljivu, element niza ili polje unutar objekta.
-		if(term.getFactor().struct != Tab.intType)
+		if(term.getFactor().struct != Tab.intType && term.getFactor().struct != TabExtended.enumType)
 			report_error("Greska na liniji " + term.getLine() + " : tipovi kod mnozenja moraju biti int!", null);
-		if(term.getTerm().struct != Tab.intType)
+		if(term.getTerm().struct != Tab.intType && term.getTerm().struct != TabExtended.enumType)
 			report_error("Greska na liniji " + term.getLine() + " : tipovi kod mnozenja moraju biti int!", null);
-		if(!term.getTerm().struct.compatibleWith(term.getFactor().struct))
-			report_error("Greska na liniji " + term.getLine() + " : tipovi nisu kompatibilni!", null);
 		term.struct = term.getFactor().struct;
 	}
 	
@@ -526,7 +532,7 @@ public class SemanticPass extends VisitorAdaptor {
 	public void visit(ExprListAddop addExpr) {//++++++++++++++++++++++++++ DODATI ++++++++++++++++++++++++++++++ Ako je Addop kombinovani aritmetički operator (+=, -=), Expr mora označavati promenljivu, element niza ili polje unutar objekta.
 		Struct expr = addExpr.getExprList().struct;//ExprList ::= (ExprListAddop) ExprList:te Addop:ad Term:t
 		Struct term = addExpr.getTerm().struct; //da li su oba elementa iste strukture
-		if(expr.compatibleWith(term) && expr == Tab.intType && term == Tab.intType) {
+		if(expr.compatibleWith(term) || ((expr == Tab.intType || expr == TabExtended.enumType) && (term == Tab.intType || term == TabExtended.enumType))) {
 			addExpr.struct = expr;
 		}else {
 			report_error("Greska na liniji " + addExpr.getLine() + " : nekompatibilni tipovi u izrazu za sabiranje!", null);
@@ -563,8 +569,11 @@ public class SemanticPass extends VisitorAdaptor {
 	}
 	
 	public void visit(CondFactRelop cond) {
-		if(!cond.getExpr().struct.compatibleWith(cond.getExpr1().struct))
-			report_error("Greska na liniji " + cond.getLine() + " : tpovi oba izraza nisu kompatibilni!", null);
+		Struct e1 = cond.getExpr().struct;
+		Struct e2 = cond.getExpr1().struct;
+		if(!e1.compatibleWith(e2))
+			if(!(e1==TabExtended.enumType && e2==Tab.intType || e2==TabExtended.enumType && e1==Tab.intType))
+				report_error("Greska na liniji " + cond.getLine() + " : tpovi oba izraza nisu kompatibilni!", null);
 		if((cond.getExpr().struct.getKind() == Struct.Array || cond.getExpr1().struct.getKind() == Struct.Array) 
 				&& !(cond.getRelop() instanceof RelopEq || cond.getRelop() instanceof RelopDif)) {
 			report_error("Greska na liniji " + cond.getLine() + " : za poredjenje nizova moraju da se koriste operatori '==' ili '!=' !", null);
@@ -671,7 +680,6 @@ public class SemanticPass extends VisitorAdaptor {
 	
 	public void visit(For123 f) {
 		doForFlag = false;
-		System.out.println(doForFlag+" izasao");
 		if(f.getCondition().struct != TabExtended.boolType) {
 			report_error("Greska na liniji " + f.getLine() + " : uslov mora biti tipa bool!", null);
 		}
@@ -679,7 +687,6 @@ public class SemanticPass extends VisitorAdaptor {
 	
 	public void visit(StartFor f) {
 		doForFlag = true;
-		System.out.println(doForFlag+" usao");
 	}
 		
 	public boolean passed() {

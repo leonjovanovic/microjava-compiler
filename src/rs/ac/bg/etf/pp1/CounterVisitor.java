@@ -32,5 +32,6 @@ public class CounterVisitor extends VisitorAdaptor {
 			public void visit(LoclVarBrackets var) {
 				count++;
 			}
+			
 		}
 }

@@ -1,0 +1,119 @@
+INFO  17:29:03,400 - Compiling source file: D:\Users\Leon\Desktop\Projekti\ProgramskiPrevodioci\MJCompiler\test\program.mj
+INFO  17:29:03,452 - #2 program
+INFO  17:29:03,452 - #42 test301
+INFO  17:29:03,452 - #42 int
+INFO  17:29:03,453 - #42 nula
+INFO  17:29:03,453 - #6 ;
+INFO  17:29:03,454 - #5 const
+INFO  17:29:03,454 - #42 int
+INFO  17:29:03,454 - #42 jedan
+INFO  17:29:03,454 - #8 =
+INFO  17:29:03,455 - #41 1
+INFO  17:29:03,455 - #6 ;
+INFO  17:29:03,455 - #5 const
+INFO  17:29:03,455 - #42 int
+INFO  17:29:03,455 - #42 pet
+INFO  17:29:03,456 - #8 =
+INFO  17:29:03,456 - #41 5
+INFO  17:29:03,456 - #6 ;
+INFO  17:29:03,456 - #3 {
+INFO  17:29:03,456 - #13 void
+INFO  17:29:03,456 - #42 main
+INFO  17:29:03,456 - #14 (
+INFO  17:29:03,457 - #15 )
+INFO  17:29:03,457 - #42 int
+INFO  17:29:03,458 - #42 bodovi
+INFO  17:29:03,458 - #6 ;
+INFO  17:29:03,458 - #3 {
+INFO  17:29:03,458 - #4 }
+INFO  17:29:03,459 - #4 }
+INFO  17:29:03,464 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  Declarations(
+    Declarations(
+      Declarations(
+        NoDeclList(
+        ) [NoDeclList]
+        Declarations2(
+          GlobVarDeclaration(
+            Types(
+             int
+            ) [Types]
+            GlobVarListNoComma(
+              GlobVarNoBrackets(
+               nula
+              ) [GlobVarNoBrackets]
+            ) [GlobVarListNoComma]
+          ) [GlobVarDeclaration]
+        ) [Declarations2]
+      ) [Declarations]
+      Declarations1(
+        ConstantsDecl(
+          Types(
+           int
+          ) [Types]
+          ConstantsListNoComma(
+            ConstantsPart(
+             jedan
+              ConstNumber(
+               1
+              ) [ConstNumber]
+            ) [ConstantsPart]
+          ) [ConstantsListNoComma]
+        ) [ConstantsDecl]
+      ) [Declarations1]
+    ) [Declarations]
+    Declarations1(
+      ConstantsDecl(
+        Types(
+         int
+        ) [Types]
+        ConstantsListNoComma(
+          ConstantsPart(
+           pet
+            ConstNumber(
+             5
+            ) [ConstNumber]
+          ) [ConstantsPart]
+        ) [ConstantsListNoComma]
+      ) [ConstantsDecl]
+    ) [Declarations1]
+  ) [Declarations]
+  MethodDeclarationList(
+    NoMethod(
+    ) [NoMethod]
+    MethodDeclarationType(
+      MethNameVoid(
+       main
+      ) [MethNameVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      MethodVarDecl(
+        NoMethodVarDecl(
+        ) [NoMethodVarDecl]
+        LoclVarDeclaration(
+          Types(
+           int
+          ) [Types]
+          LoclVarListNoComma(
+            LoclVarNoBrackets(
+             bodovi
+            ) [LoclVarNoBrackets]
+          ) [LoclVarListNoComma]
+        ) [LoclVarDeclaration]
+      ) [MethodVarDecl]
+      NoStatements(
+      ) [NoStatements]
+    ) [MethodDeclarationType]
+  ) [MethodDeclarationList]
+) [Program]
+INFO  17:29:03,464 - ===================================
+INFO  17:29:03,469 - Deklarisana globalna promenjljiva bez zagrada nula na liniji 6
+INFO  17:29:03,469 - Deklarisana konstanta jedan na liniji 8
+INFO  17:29:03,469 - Deklarisana konstanta pet na liniji 9
+INFO  17:29:03,469 - Obradjuje se void funkcija main na liniji 13
+INFO  17:29:03,469 - Deklarisana lokalna promenjljiva bez zagrada bodovi na liniji 14
+INFO  17:29:03,469 - ===================================
+INFO  17:29:03,473 - Parsiranje uspesno zavrseno!

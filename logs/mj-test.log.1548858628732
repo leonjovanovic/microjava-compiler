@@ -1,0 +1,229 @@
+INFO  15:30:17,445 - Compiling source file: D:\Users\Leon\Desktop\Projekti\ProgramskiPrevodioci\MJCompiler\test\program.mj
+INFO  15:30:17,490 - #2 program
+INFO  15:30:17,490 - #42 test301
+INFO  15:30:17,490 - #42 int
+INFO  15:30:17,490 - #42 nula
+INFO  15:30:17,490 - #6 ;
+INFO  15:30:17,490 - #5 const
+INFO  15:30:17,490 - #42 int
+INFO  15:30:17,490 - #42 jedan
+INFO  15:30:17,490 - #8 =
+INFO  15:30:17,490 - #41 1
+INFO  15:30:17,490 - #6 ;
+INFO  15:30:17,490 - #5 const
+INFO  15:30:17,490 - #42 int
+INFO  15:30:17,490 - #42 pet
+INFO  15:30:17,490 - #8 =
+INFO  15:30:17,490 - #41 5
+INFO  15:30:17,490 - #6 ;
+INFO  15:30:17,490 - #42 int
+INFO  15:30:17,490 - #42 niz
+INFO  15:30:17,490 - #11 [
+INFO  15:30:17,490 - #12 ]
+INFO  15:30:17,490 - #6 ;
+INFO  15:30:17,490 - #42 char
+INFO  15:30:17,490 - #42 nizch
+INFO  15:30:17,490 - #11 [
+INFO  15:30:17,490 - #12 ]
+INFO  15:30:17,490 - #6 ;
+INFO  15:30:17,490 - #3 {
+INFO  15:30:17,490 - #42 int
+INFO  15:30:17,490 - #42 main
+INFO  15:30:17,490 - #14 (
+INFO  15:30:17,496 - #15 )
+INFO  15:30:17,496 - #42 int
+INFO  15:30:17,496 - #42 bodovi
+INFO  15:30:17,496 - #6 ;
+INFO  15:30:17,496 - #42 int
+INFO  15:30:17,496 - #42 nula
+INFO  15:30:17,496 - #7 ,
+INFO  15:30:17,496 - #42 jedan
+INFO  15:30:17,496 - #6 ;
+INFO  15:30:17,496 - #3 {
+INFO  15:30:17,496 - #42 niz
+INFO  15:30:17,496 - #8 =
+INFO  15:30:17,496 - #29 new
+INFO  15:30:17,496 - #42 int
+INFO  15:30:17,496 - #11 [
+INFO  15:30:17,496 - #41 2
+INFO  15:30:17,496 - #12 ]
+INFO  15:30:17,496 - #6 ;
+INFO  15:30:17,496 - #4 }
+INFO  15:30:17,496 - #4 }
+INFO  15:30:17,506 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  Declarations(
+    Declarations(
+      Declarations(
+        Declarations(
+          Declarations(
+            NoDeclList(
+            ) [NoDeclList]
+            Declarations2(
+              GlobVarDeclaration(
+                Types(
+                 int
+                ) [Types]
+                GlobVarListNoComma(
+                  GlobVarNoBrackets(
+                   nula
+                  ) [GlobVarNoBrackets]
+                ) [GlobVarListNoComma]
+              ) [GlobVarDeclaration]
+            ) [Declarations2]
+          ) [Declarations]
+          Declarations1(
+            ConstantsDecl(
+              Types(
+               int
+              ) [Types]
+              ConstantsListNoComma(
+                ConstantsPart(
+                 jedan
+                  ConstNumber(
+                   1
+                  ) [ConstNumber]
+                ) [ConstantsPart]
+              ) [ConstantsListNoComma]
+            ) [ConstantsDecl]
+          ) [Declarations1]
+        ) [Declarations]
+        Declarations1(
+          ConstantsDecl(
+            Types(
+             int
+            ) [Types]
+            ConstantsListNoComma(
+              ConstantsPart(
+               pet
+                ConstNumber(
+                 5
+                ) [ConstNumber]
+              ) [ConstantsPart]
+            ) [ConstantsListNoComma]
+          ) [ConstantsDecl]
+        ) [Declarations1]
+      ) [Declarations]
+      Declarations2(
+        GlobVarDeclaration(
+          Types(
+           int
+          ) [Types]
+          GlobVarListNoComma(
+            GlobVarBrackets(
+             niz
+            ) [GlobVarBrackets]
+          ) [GlobVarListNoComma]
+        ) [GlobVarDeclaration]
+      ) [Declarations2]
+    ) [Declarations]
+    Declarations2(
+      GlobVarDeclaration(
+        Types(
+         char
+        ) [Types]
+        GlobVarListNoComma(
+          GlobVarBrackets(
+           nizch
+          ) [GlobVarBrackets]
+        ) [GlobVarListNoComma]
+      ) [GlobVarDeclaration]
+    ) [Declarations2]
+  ) [Declarations]
+  MethodDeclarationList(
+    NoMethod(
+    ) [NoMethod]
+    MethodDeclarationType(
+      MethNameType(
+        Types(
+         int
+        ) [Types]
+       main
+      ) [MethNameType]
+      NoFormParsList(
+      ) [NoFormParsList]
+      MethodVarDecl(
+        MethodVarDecl(
+          NoMethodVarDecl(
+          ) [NoMethodVarDecl]
+          LoclVarDeclaration(
+            Types(
+             int
+            ) [Types]
+            LoclVarListNoComma(
+              LoclVarNoBrackets(
+               bodovi
+              ) [LoclVarNoBrackets]
+            ) [LoclVarListNoComma]
+          ) [LoclVarDeclaration]
+        ) [MethodVarDecl]
+        LoclVarDeclaration(
+          Types(
+           int
+          ) [Types]
+          LoclVarListComma(
+            LoclVarListNoComma(
+              LoclVarNoBrackets(
+               nula
+              ) [LoclVarNoBrackets]
+            ) [LoclVarListNoComma]
+            LoclVarNoBrackets(
+             jedan
+            ) [LoclVarNoBrackets]
+          ) [LoclVarListComma]
+        ) [LoclVarDeclaration]
+      ) [MethodVarDecl]
+      StatementLists(
+        NoStatements(
+        ) [NoStatements]
+        StatementMatched(
+          MatchedDesignator(
+            DesignatorAssign(
+              DesignatorID(
+               niz
+              ) [DesignatorID]
+              AssignopEq(
+              ) [AssignopEq]
+              ExprNoMinus(
+                ExprTermNoAddop(
+                  TermNoMulop(
+                    FactorNewExpr(
+                      Types(
+                       int
+                      ) [Types]
+                      ExprNoMinus(
+                        ExprTermNoAddop(
+                          TermNoMulop(
+                            FactorNum(
+                             2
+                            ) [FactorNum]
+                          ) [TermNoMulop]
+                        ) [ExprTermNoAddop]
+                      ) [ExprNoMinus]
+                    ) [FactorNewExpr]
+                  ) [TermNoMulop]
+                ) [ExprTermNoAddop]
+              ) [ExprNoMinus]
+            ) [DesignatorAssign]
+          ) [MatchedDesignator]
+        ) [StatementMatched]
+      ) [StatementLists]
+    ) [MethodDeclarationType]
+  ) [MethodDeclarationList]
+) [Program]
+INFO  15:30:17,506 - ===================================
+INFO  15:30:17,510 - Deklarisana globalna promenjljiva bez zagrada nula na liniji 6
+INFO  15:30:17,510 - Deklarisana konstanta jedan na liniji 8
+INFO  15:30:17,510 - Deklarisana konstanta pet na liniji 9
+INFO  15:30:17,510 - Deklarisana globalna promenjljiva sa zagradama niz na liniji 11
+INFO  15:30:17,510 - Deklarisana globalna promenjljiva sa zagradama nizch na liniji 12
+INFO  15:30:17,510 - Obradjuje se return funkcija main na liniji 15
+INFO  15:30:17,510 - Deklarisana lokalna promenjljiva bez zagrada bodovi na liniji 16
+INFO  15:30:17,510 - Deklarisana lokalna promenjljiva bez zagrada nula na liniji 17
+INFO  15:30:17,510 - Deklarisana lokalna promenjljiva bez zagrada jedan na liniji 17
+INFO  15:30:17,510 - Pristup elementu niz na liniji 20
+ERROR 15:30:17,510 - Greska na liniji 15: funcija main nema return!
+INFO  15:30:17,510 - ===================================
+ERROR 15:30:17,510 - Parsiranje nije uspesno zavrseno
